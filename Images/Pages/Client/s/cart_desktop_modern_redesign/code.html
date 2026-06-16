@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;family=IBM+Plex+Sans+Arabic:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#ffffff",
+                    "secondary-container": "#a7b5ff",
+                    "on-error": "#ffffff",
+                    "on-tertiary-container": "#2a2a2a",
+                    "on-secondary-fixed": "#001257",
+                    "inverse-surface": "#2e3132",
+                    "secondary": "#4c5a9d",
+                    "error": "#ba1a1a",
+                    "surface-container-highest": "#e1e3e4",
+                    "surface-container-high": "#e7e8e9",
+                    "tertiary": "#5e5e5e",
+                    "on-tertiary-fixed": "#1b1b1b",
+                    "surface-variant": "#e1e3e4",
+                    "tertiary-container": "#919191",
+                    "primary-fixed-dim": "#ffb1c4",
+                    "on-secondary": "#ffffff",
+                    "on-background": "#191c1d",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#ffd9e0",
+                    "on-error-container": "#93000a",
+                    "outline": "#8d7076",
+                    "primary-container": "#ff4d8d",
+                    "surface-container-lowest": "#ffffff",
+                    "surface": "#f8f9fa",
+                    "secondary-fixed-dim": "#b9c3ff",
+                    "tertiary-fixed": "#e2e2e2",
+                    "on-surface-variant": "#594046",
+                    "on-primary-fixed-variant": "#8f0043",
+                    "background": "#f8f9fa",
+                    "surface-tint": "#b90a5a",
+                    "surface-bright": "#f8f9fa",
+                    "surface-dim": "#d9dadb",
+                    "on-primary-container": "#5b0028",
+                    "on-secondary-container": "#364486",
+                    "surface-container": "#edeeef",
+                    "secondary-fixed": "#dde1ff",
+                    "surface-container-low": "#f3f4f5",
+                    "on-primary-fixed": "#3f001a",
+                    "inverse-on-surface": "#f0f1f2",
+                    "primary": "#b90a5a",
+                    "on-tertiary-fixed-variant": "#474747",
+                    "tertiary-fixed-dim": "#c6c6c6",
+                    "on-secondary-fixed-variant": "#334283",
+                    "on-primary": "#ffffff",
+                    "outline-variant": "#e1bec5",
+                    "on-surface": "#191c1d",
+                    "inverse-primary": "#ffb1c4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "section-gap": "32px",
+                    "gutter": "16px",
+                    "card-padding": "16px",
+                    "container-margin": "24px"
+            },
+            "fontFamily": {
+                    "label-bold": ["IBM Plex Sans Arabic", "Plus Jakarta Sans"],
+                    "body-lg": ["IBM Plex Sans Arabic", "Plus Jakarta Sans"],
+                    "body-sm": ["IBM Plex Sans Arabic", "Plus Jakarta Sans"],
+                    "headline-md": ["IBM Plex Sans Arabic", "Plus Jakarta Sans"],
+                    "headline-xl": ["IBM Plex Sans Arabic", "Plus Jakarta Sans"],
+                    "price-display": ["Plus Jakarta Sans"],
+                    "headline-lg": ["IBM Plex Sans Arabic", "Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "label-bold": ["14px", {"lineHeight": "16px", "fontWeight": "700"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-md": ["18px", {"lineHeight": "24px", "fontWeight": "700"}],
+                    "headline-xl": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "price-display": ["20px", {"lineHeight": "24px", "fontWeight": "800"}],
+                    "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #f8f9fa;
+            color: #191c1d;
+            font-family: 'Plus Jakarta Sans', 'IBM Plex Sans Arabic', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #e1e3e4;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ff4d8d;
+        }
+        .cart-card-shadow {
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+        }
+        .summary-card-shadow {
+            box-shadow: 0 10px 40px -10px rgba(185, 10, 90, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Header / TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-surface-container">
+<div class="flex justify-between items-center px-gutter py-4 max-w-7xl mx-auto w-full">
+<div class="flex items-center gap-12">
+<a class="font-headline-xl text-headline-xl font-extrabold tracking-tight text-on-surface" href="#">Sole &amp; Style</a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-bold text-label-bold" href="#">وصلنا حديثاً</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-bold text-label-bold" href="#">أحذية</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-bold text-label-bold" href="#">حقائب</a>
+<a class="text-primary hover:opacity-80 transition-opacity font-label-bold text-label-bold" href="#">تخفيضات</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined p-2 hover:bg-surface-container rounded-full transition-colors">search</button>
+<div class="relative">
+<button class="material-symbols-outlined p-2 bg-primary-container text-on-primary-container rounded-full transition-all active:scale-95">shopping_bag</button>
+<span class="absolute -top-1 -right-1 bg-primary text-on-primary text-[10px] w-5 h-5 flex items-center justify-center rounded-full font-bold">2</span>
+</div>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-section-gap px-container-margin max-w-7xl mx-auto w-full">
+<div class="flex flex-col gap-2 mb-10">
+<h1 class="font-headline-xl text-headline-xl text-on-surface">حقيبة التسوق</h1>
+<p class="text-on-surface-variant font-body-sm">(2) عناصر في حقيبتك</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+<!-- Cart Items List -->
+<div class="lg:col-span-8 space-y-4">
+<!-- Item 1 -->
+<div class="bg-white rounded-lg p-6 flex gap-6 cart-card-shadow border border-surface-container items-center group transition-all hover:border-primary/20">
+<div class="w-28 h-28 bg-[#f3f4f6] rounded-md overflow-hidden flex-shrink-0 p-2">
+<img alt="Nike Air Max" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkPZGaozSXM2OVbtC18l351ktKgsmEWmLpgdSS_V8f1GddG4Ib03iLWaNC5Bx0Juudfpw18GEM1tuekSUfzA8StEDBU15PWkBS344Lp-uNfQUMlc1uqydjxn_nBfGFW9DwdwtaV0pp8nHrYQyDHQOdy9_rsJmCgBOWpC_FZnEjHpb9IG3g1-ET9-MRYMsmoqSQ2-He2r13Dfu4yGmVLmw1rh-dbD7URBaMu-hRyRMVe-P09PKUCEkj8hT6xa2Lc5LjyMH2vTooB0U"/>
+</div>
+<div class="flex-grow flex flex-col justify-between h-28">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">نايكي إير ماكس ٢٧٠</h3>
+<p class="text-body-sm text-on-surface-variant mt-1">أحمر رياضي • مقاس ٤٢</p>
+</div>
+<button class="text-on-surface-variant hover:text-error transition-colors p-1" title="إزالة">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+<div class="flex justify-between items-center">
+<div class="flex items-center bg-surface-container rounded-full p-1">
+<button class="w-8 h-8 flex items-center justify-center text-on-surface hover:text-primary transition-colors material-symbols-outlined text-[18px]" onclick="decrement(this)">remove</button>
+<span class="px-4 font-label-bold text-label-bold min-w-[40px] text-center" data-quantity="">1</span>
+<button class="w-8 h-8 flex items-center justify-center text-on-surface hover:text-primary transition-colors material-symbols-outlined text-[18px]" onclick="increment(this)">add</button>
+</div>
+<span class="font-price-display text-price-display text-on-surface">٧٥٠ ر.س</span>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-white rounded-lg p-6 flex gap-6 cart-card-shadow border border-surface-container items-center group transition-all hover:border-primary/20">
+<div class="w-28 h-28 bg-[#f3f4f6] rounded-md overflow-hidden flex-shrink-0 p-2">
+<img alt="Leather Bag" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAakLEfU9x_AgsanKDksiPMlywDQiKvjDSagRvQxylJP21oO-oZdOH23fHJZZJ8YNZkUgsLWKXWNmlz-RpszsdiI_f_YUAAD3ce0XRGD5KRGSK51LkXmSCe8A0I4SVDmAXO4I2lF06auE-Qt5DUaD_mesP0y7_R7ZkBxhD0rW81GJ9v7pK0nDL71cwqImCC9Lw_TTupsAcNSzFXHry-kOjUXcGuCy5vurqVTFdqZtGQw3LfiXxVJ4yzfgMKtgH2xynIf6HzqL_itsE"/>
+</div>
+<div class="flex-grow flex flex-col justify-between h-28">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">حقيبة جلدية فاخرة</h3>
+<p class="text-body-sm text-on-surface-variant mt-1">جملي • حجم متوسط</p>
+</div>
+<button class="text-on-surface-variant hover:text-error transition-colors p-1" title="إزالة">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+<div class="flex justify-between items-center">
+<div class="flex items-center bg-surface-container rounded-full p-1">
+<button class="w-8 h-8 flex items-center justify-center text-on-surface hover:text-primary transition-colors material-symbols-outlined text-[18px]" onclick="decrement(this)">remove</button>
+<span class="px-4 font-label-bold text-label-bold min-w-[40px] text-center" data-quantity="">1</span>
+<button class="w-8 h-8 flex items-center justify-center text-on-surface hover:text-primary transition-colors material-symbols-outlined text-[18px]" onclick="increment(this)">add</button>
+</div>
+<span class="font-price-display text-price-display text-on-surface">١,٢٠٠ ر.س</span>
+</div>
+</div>
+</div>
+<!-- Promo Code -->
+<div class="mt-8 bg-surface-container/50 border border-dashed border-outline-variant rounded-lg p-6">
+<div class="flex flex-col md:flex-row items-center gap-4">
+<div class="flex items-center gap-3 flex-grow">
+<span class="material-symbols-outlined text-primary">sell</span>
+<p class="font-label-bold text-label-bold text-on-surface">هل لديك كود خصم؟</p>
+</div>
+<div class="flex gap-2 w-full md:w-auto">
+<input class="w-full md:w-64 bg-white border-outline-variant rounded-lg px-4 py-2 text-body-sm focus:ring-2 focus:ring-primary focus:border-primary" placeholder="أدخل الكود هنا" type="text"/>
+<button class="bg-on-surface text-white px-6 py-2 rounded-lg font-label-bold hover:bg-on-surface/90 transition-all">تطبيق</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Order Summary Sidebar -->
+<div class="lg:col-span-4 lg:sticky lg:top-32">
+<div class="bg-white rounded-lg p-8 summary-card-shadow border border-surface-container">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-8">ملخص الطلب</h2>
+<div class="space-y-5 mb-8">
+<div class="flex justify-between text-on-surface-variant font-body-lg">
+<span>المجموع الفرعي</span>
+<span class="font-label-bold text-on-surface">١,٩٥٠ ر.س</span>
+</div>
+<div class="flex justify-between text-on-surface-variant font-body-lg">
+<span>الشحن</span>
+<span class="font-label-bold text-primary">مجاني</span>
+</div>
+<div class="flex justify-between text-on-surface-variant font-body-lg">
+<span>الضريبة (١٥%)</span>
+<span class="font-label-bold text-on-surface">٢٩٢.٥ ر.س</span>
+</div>
+<div class="pt-6 border-t border-surface-container flex justify-between items-end">
+<div class="flex flex-col">
+<span class="text-on-surface-variant font-body-sm">المجموع الكلي</span>
+<span class="font-headline-xl text-headline-xl text-primary mt-1">٢,٢٤٢.٥ ر.س</span>
+</div>
+</div>
+</div>
+<button class="w-full bg-[#ff4d8d] text-white py-4 rounded-lg font-headline-md text-headline-md shadow-lg shadow-primary/20 hover:bg-[#e63b7b] active:scale-[0.98] transition-all mb-6">
+                    إتمام الشراء
+                </button>
+<div class="flex items-center justify-center gap-2 text-on-surface-variant font-body-sm">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>دفع آمن ١٠٠٪ باستخدام أحدث التقنيات</span>
+</div>
+<div class="mt-8 pt-8 border-t border-surface-container flex justify-center gap-6 opacity-60">
+<img alt="Visa" class="h-4 grayscale hover:grayscale-0 transition-all cursor-default" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeDChqCultCeZwPNNuY5fIitwjCwY4c1N8Z9gjB-t-vCX1mXZ9M0t51GR6T5UJsiPfxoc-rJh7oGERivesVcvJnZCYeK5VxK5AIlMF9cJ8ugpXEvLoJkp8YE8tC45i9hz427CLAzNdAErAS2c24ZX1hyOMWpJWiyhezzfBlxKcDjhod1I7Jg_8cMjapfnlO11cYYiY5dMjD5LrQXF8cyLU3Ld1cVQe4LMV8wfOztIyTOdH8qkzsk5eqidaloC4f5vq7hxhnHYpyYk"/>
+<img alt="Mastercard" class="h-6 grayscale hover:grayscale-0 transition-all cursor-default" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYVyp6ZNL3aPKwh3YmbdNUoR9b_V4w6lS1qVTAu0ckyHECty24sc1g31wc8iigjaTAwsxYbx6TChCjzyOdSKGBhIpsEwzeE2MKhQjyK2TsD2--VmCCnK4oOaseUqw1UXRSk9bHSPPxl8Zv9m-Lb8gpzGoLyb3MjUFoB0GxV9Qp_zFq_xq86BPLXloHFW_YV7JNBihbDRbXpoiAFDW7O5idbaUZ4mTZPrpT3FuPl1if_szsW7DvtzFiVMjJrTqKbI7aJ_1mBPzxz20"/>
+<img alt="PayPal" class="h-4 grayscale hover:grayscale-0 transition-all cursor-default" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZHfBGWfXQp4vU_gANWapAGJji4OZ5UG2bCWZwsp5lCTrEwFhB4cMfNeaXU1vXa3Aqz_MYF09BxryITLjnuApPxYZUT7rsAPzGC1GeRUVZWxQWB5DpKCDTqFnvakKDrG5I2JyUYaCvt6nWCFj9lbLaWkVDFPQSRpEUEBu2K7x4I0ShwwRUh_rKdq4-TlxIrUg9tskK7jzbkLfdsTwrzBUYhBF8urayUyW2ZHW-Mek0EYNuTPMr_pfrEzK7IN8sC_Mpmhi_3Pf93g4"/>
+</div>
+</div>
+<a class="mt-8 flex items-center justify-center gap-2 text-on-surface-variant hover:text-primary transition-colors font-label-bold text-label-bold group" href="#">
+<span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+<span>مواصلة التسوق</span>
+</a>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-white border-t border-surface-container mt-section-gap">
+<div class="flex flex-col md:flex-row justify-between items-start gap-12 px-container-margin py-section-gap max-w-7xl mx-auto w-full">
+<div class="max-w-xs">
+<h2 class="font-headline-lg text-headline-lg font-extrabold text-on-surface mb-6">Sole &amp; Style</h2>
+<p class="text-on-surface-variant font-body-sm leading-relaxed">وجهتكم الأولى لأرقى الأحذية والحقائب العصرية التي تجمع بين الأناقة العالمية والراحة المطلقة في كل خطوة.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12 w-full md:w-auto">
+<div class="flex flex-col gap-4">
+<h4 class="font-label-bold text-label-bold text-on-surface">تسوق</h4>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-sm" href="#">وصلنا حديثاً</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-sm" href="#">أحذية</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-sm" href="#">حقائب</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-bold text-label-bold text-on-surface">الدعم</h4>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-sm" href="#">سياسة التوصيل</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-sm" href="#">الاسترجاع</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-sm" href="#">اتصل بنا</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-bold text-label-bold text-on-surface">قانوني</h4>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-sm" href="#">سياسة الخصوصية</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-sm" href="#">الشروط والأحكام</a>
+</div>
+</div>
+</div>
+<div class="border-t border-surface-container py-8 px-container-margin text-center">
+<p class="font-body-sm text-body-sm text-on-surface-variant opacity-60">© ٢٠٢٤ Sole &amp; Style. جميع الحقوق محفوظة.</p>
+</div>
+</footer>
+<script>
+    function increment(btn) {
+        const span = btn.parentElement.querySelector('[data-quantity]');
+        let val = parseInt(span.innerText);
+        span.innerText = val + 1;
+    }
+
+    function decrement(btn) {
+        const span = btn.parentElement.querySelector('[data-quantity]');
+        let val = parseInt(span.innerText);
+        if (val > 1) {
+            span.innerText = val - 1;
+        }
+    }
+</script>
+</body></html>

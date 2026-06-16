@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;family=Noto+Sans+Arabic:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Noto Sans Arabic', 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .product-card-shadow {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        .product-card-shadow:hover {
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #e1e3e4;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #5e5e5e;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container": "#edeeef",
+                        "on-secondary-fixed-variant": "#334283",
+                        "background": "#f8f9fa",
+                        "primary-fixed-dim": "#ffb1c4",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "outline": "#8d7076",
+                        "on-secondary-container": "#364486",
+                        "surface": "#f8f9fa",
+                        "inverse-primary": "#ffb1c4",
+                        "on-tertiary-container": "#2a2a2a",
+                        "tertiary-container": "#919191",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "on-primary-fixed": "#3f001a",
+                        "on-primary-container": "#5b0028",
+                        "primary-container": "#ff4d8d",
+                        "surface-container-low": "#f3f4f5",
+                        "on-surface": "#191c1d",
+                        "secondary-fixed-dim": "#b9c3ff",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#e7e8e9",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#1b1b1b",
+                        "tertiary": "#5e5e5e",
+                        "inverse-surface": "#2e3132",
+                        "tertiary-fixed": "#e2e2e2",
+                        "secondary-fixed": "#dde1ff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#b90a5a",
+                        "on-surface-variant": "#594046",
+                        "primary": "#b90a5a",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#e1bec5",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e1e3e4",
+                        "on-background": "#191c1d",
+                        "on-primary-fixed-variant": "#8f0043",
+                        "surface-dim": "#d9dadb",
+                        "inverse-on-surface": "#f0f1f2",
+                        "surface-container-highest": "#e1e3e4",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#f8f9fa",
+                        "primary-fixed": "#ffd9e0",
+                        "secondary": "#4c5a9d",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#a7b5ff",
+                        "on-secondary-fixed": "#001257"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "card-padding": "16px",
+                        "section-gap": "32px",
+                        "gutter": "16px",
+                        "container-margin": "24px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "price-display": ["Plus Jakarta Sans"],
+                        "label-bold": ["Plus Jakarta Sans"],
+                        "headline-xl": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "body-sm": ["Plus Jakarta Sans"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface antialiased">
+<!-- TopNavBar -->
+<header class="bg-surface-container-lowest dark:bg-inverse-surface shadow-[0_4px_20px_rgba(0,0,0,0.05)] full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-container-margin py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-8">
+<a class="font-headline-lg text-headline-lg font-black text-primary dark:text-primary-fixed-dim tracking-tight" href="#">Sole &amp; Style</a>
+<nav class="hidden md:flex items-center gap-6">
+<a class="font-body-lg text-body-lg text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1" href="#">Footwear</a>
+<a class="font-body-lg text-body-lg text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Bags</a>
+<a class="font-body-lg text-body-lg text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">New Arrivals</a>
+<a class="font-body-lg text-body-lg text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Sale</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center bg-surface-container px-4 py-2 rounded-full w-64">
+<span class="material-symbols-outlined text-on-surface-variant">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-sm w-full" placeholder="البحث..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity cursor-pointer">favorite</button>
+<button class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity cursor-pointer">shopping_cart</button>
+<button class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity cursor-pointer">person</button>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-container-margin py-section-gap">
+<!-- Header & Breadcrumbs -->
+<div class="mb-section-gap">
+<nav class="flex items-center gap-2 text-body-sm text-on-surface-variant mb-4">
+<a class="hover:text-primary" href="#">الرئيسية</a>
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+<span class="font-bold text-on-surface">الأحذية</span>
+</nav>
+<div class="flex justify-between items-end">
+<div>
+<h1 class="font-headline-xl text-headline-xl mb-2">أحدث التشكيلات</h1>
+<p class="text-on-surface-variant">استكشف مجموعتنا المختارة من الأحذية العصرية لكل المناسبات.</p>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-body-sm text-on-surface-variant">عرض 24 من أصل 120 منتج</span>
+<div class="relative inline-block text-right group">
+<button class="flex items-center gap-2 bg-surface-container-highest px-4 py-2 rounded-lg text-body-sm font-bold">
+                            الترتيب حسب: الأحدث
+                            <span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="flex gap-gutter">
+<!-- Persistent Sidebar Filter -->
+<aside class="w-64 flex-shrink-0 hidden lg:block">
+<div class="sticky top-24 space-y-8">
+<!-- Categories -->
+<section>
+<h3 class="font-headline-md text-headline-md mb-4 border-r-4 border-primary pr-3">الفئات</h3>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="rounded border-outline-variant text-primary focus:ring-primary w-5 h-5" type="checkbox"/>
+<span class="text-body-lg group-hover:text-primary transition-colors">أحذية رياضية</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-outline-variant text-primary focus:ring-primary w-5 h-5" type="checkbox"/>
+<span class="text-body-lg group-hover:text-primary transition-colors">أحذية كلاسيكية</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-outline-variant text-primary focus:ring-primary w-5 h-5" type="checkbox"/>
+<span class="text-body-lg group-hover:text-primary transition-colors">صنادل</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-outline-variant text-primary focus:ring-primary w-5 h-5" type="checkbox"/>
+<span class="text-body-lg group-hover:text-primary transition-colors">أحذية جري</span>
+</label>
+</div>
+</section>
+<!-- Sizes -->
+<section>
+<h3 class="font-headline-md text-headline-md mb-4 border-r-4 border-primary pr-3">المقاس</h3>
+<div class="grid grid-cols-4 gap-2">
+<button class="w-12 h-12 flex items-center justify-center rounded-lg border border-outline-variant hover:border-primary hover:text-primary transition-all text-label-bold font-label-bold">38</button>
+<button class="w-12 h-12 flex items-center justify-center rounded-lg bg-on-background text-surface border-transparent text-label-bold font-label-bold">39</button>
+<button class="w-12 h-12 flex items-center justify-center rounded-lg border border-outline-variant hover:border-primary hover:text-primary transition-all text-label-bold font-label-bold">40</button>
+<button class="w-12 h-12 flex items-center justify-center rounded-lg border border-outline-variant hover:border-primary hover:text-primary transition-all text-label-bold font-label-bold">41</button>
+<button class="w-12 h-12 flex items-center justify-center rounded-lg border border-outline-variant hover:border-primary hover:text-primary transition-all text-label-bold font-label-bold">42</button>
+<button class="w-12 h-12 flex items-center justify-center rounded-lg border border-outline-variant hover:border-primary hover:text-primary transition-all text-label-bold font-label-bold">43</button>
+<button class="w-12 h-12 flex items-center justify-center rounded-lg border border-outline-variant hover:border-primary hover:text-primary transition-all text-label-bold font-label-bold">44</button>
+</div>
+</section>
+<!-- Colors -->
+<section>
+<h3 class="font-headline-md text-headline-md mb-4 border-r-4 border-primary pr-3">اللون</h3>
+<div class="flex flex-wrap gap-3">
+<button class="w-8 h-8 rounded-full bg-black ring-2 ring-offset-2 ring-primary"></button>
+<button class="w-8 h-8 rounded-full bg-white border border-outline-variant"></button>
+<button class="w-8 h-8 rounded-full bg-blue-600"></button>
+<button class="w-8 h-8 rounded-full bg-red-500"></button>
+<button class="w-8 h-8 rounded-full bg-pink-400"></button>
+<button class="w-8 h-8 rounded-full bg-gray-400"></button>
+</div>
+</section>
+<!-- Price Range -->
+<section>
+<h3 class="font-headline-md text-headline-md mb-4 border-r-4 border-primary pr-3">نطاق السعر</h3>
+<input class="w-full accent-primary" max="1000" min="0" step="50" type="range"/>
+<div class="flex justify-between mt-4 text-body-sm font-bold">
+<span>0 ر.س</span>
+<span>1000+ ر.س</span>
+</div>
+</section>
+<button class="w-full bg-on-background text-surface py-4 rounded-xl font-bold uppercase tracking-wider hover:opacity-90 transition-opacity">تطبيق الفلاتر</button>
+</div>
+</aside>
+<!-- Product Grid -->
+<div class="flex-grow">
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-gutter">
+<!-- Product Card 1 -->
+<div class="group bg-surface-container-lowest rounded-[16px] overflow-hidden product-card-shadow transition-all duration-300">
+<div class="relative bg-[#FFEDF1] h-64 flex items-center justify-center overflow-hidden">
+<span class="absolute top-4 right-4 bg-primary text-white text-[10px] px-2 py-1 rounded-full font-bold uppercase z-10">جديد</span>
+<button class="absolute top-4 left-4 w-8 h-8 rounded-full bg-white/80 flex items-center justify-center text-primary opacity-0 group-hover:opacity-100 transition-opacity z-10">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="A side view of a vibrant red performance sneaker against a soft pastel pink studio background. The shoe is angled to show its sleek aerodynamic design and textured sole. The lighting is high-key and bright, reflecting a youthful and energetic fashion aesthetic consistent with the Sole and Style brand. Soft shadows ground the product, making it appear to float slightly." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnL9gCMOtpn5SRw1WhPQcU-Nb4MQ_WU5kEgxryow9hpVtSLirY_if6Hobrz6LoOYkfAOGBarKDgKueFV_EwKWZ3MaGdUXA7Ye9W4dljmiSXtjvb9EjwgsGp5zdyuoRpw3ml8bY9RvjoUimkSZ2E4nncWrXnWFkDKszrlMLXf3K1tn1P98R1riFFzj4UKN5w-kYNaKoGupUakcHfgjJmwPlhGw0DBdTS8EvFjVvMgdx_GCpOOPhGoczDGgeCkTxZTmn9jugbN0aj98"/>
+</div>
+<div class="p-4">
+<p class="text-body-sm text-on-surface-variant mb-1">نايكي اير ماكس</p>
+<h4 class="font-headline-md text-headline-md mb-3 text-on-surface group-hover:text-primary transition-colors">كلاسيك ريبوند 2.0</h4>
+<div class="flex justify-between items-center">
+<span class="font-price-display text-price-display text-primary">599 ر.س</span>
+<div class="flex gap-1">
+<div class="w-3 h-3 rounded-full bg-black"></div>
+<div class="w-3 h-3 rounded-full bg-red-500"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group bg-surface-container-lowest rounded-[16px] overflow-hidden product-card-shadow transition-all duration-300">
+<div class="relative bg-[#E3F2FD] h-64 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="A high-angle shot of a classic black and white canvas high-top sneaker on a light sky-blue background. The shoe features clean white laces and a contrasting white rubber toe cap. The photography is minimalist and crisp, with even, soft lighting that highlights the texture of the canvas material and the bold silhouette of the footwear." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYtimGdPKfkHQIcczv2aYprR28zS2eCAGSsZE-2W_Ri9YihwE3eImrBgMqpSC5Wdmgz6_-M5o0c7ILs3SUorik6QOWPiRp0UcdKL20R_s6Xt8d83syFPhtom9gNJLggaowl9m7vPiR_R70oRMALagw1xWvwI9hBJchbyna_jyBYl3Vx1vpE0Xy9PgJf8FbIau_huz7fnJ5QLf_Kq7b5f9ukkwR8DoYMrDmZaEGioIedfbSM6u8ykhjUWXtGQpEA-P241TVGsTenHA"/>
+</div>
+<div class="p-4">
+<p class="text-body-sm text-on-surface-variant mb-1">فانس أولد سكول</p>
+<h4 class="font-headline-md text-headline-md mb-3 text-on-surface group-hover:text-primary transition-colors">الترا وايت كانفاس</h4>
+<div class="flex justify-between items-center">
+<span class="font-price-display text-price-display text-primary">349 ر.س</span>
+<div class="flex gap-1">
+<div class="w-3 h-3 rounded-full bg-white border border-outline-variant"></div>
+<div class="w-3 h-3 rounded-full bg-blue-600"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group bg-surface-container-lowest rounded-[16px] overflow-hidden product-card-shadow transition-all duration-300">
+<div class="relative bg-[#F5F5F5] h-64 flex items-center justify-center overflow-hidden">
+<span class="absolute top-4 right-4 bg-on-background text-white text-[10px] px-2 py-1 rounded-full font-bold uppercase z-10">خصم 20%</span>
+<img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="A stylish lime green lifestyle sneaker shown from a three-quarter perspective on a neutral off-white background. The shoe design is futuristic with complex layering of materials and a chunky sole. The lighting is bright and modern, creating a professional e-commerce feel while maintaining a playful and tactile visual appeal with soft, ambient shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFxAqcZPIUPBDu3XYx-fNgYs6YaVTthOA14XVTg9qzL6RyRpi0WAJRVbizBLftmkoyTdEF-GOaUlMVV1tDpRMLtUlFuwnUgRMq5qGc7J0GehnMAkO_JqXBeZ4BLkghwy1EySx_LJMUWN1onJHQ_gFACVwLW-dfNPcNHSZ9mdf3SC79BKv_28hvw5zDScAdyNNGeVcDbya-N7pzspb1C_NaZTUI2DV0JD2zlaLvkXwmMfpaSkopkK1vwhpd54tUYMhRiSXySkNSMW4"/>
+</div>
+<div class="p-4">
+<p class="text-body-sm text-on-surface-variant mb-1">أديداس أورجينالز</p>
+<h4 class="font-headline-md text-headline-md mb-3 text-on-surface group-hover:text-primary transition-colors">سبورت نيون برو</h4>
+<div class="flex justify-between items-center">
+<div class="flex gap-2 items-center">
+<span class="font-price-display text-price-display text-primary">420 ر.س</span>
+<span class="text-body-sm text-on-surface-variant line-through">525 ر.س</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group bg-surface-container-lowest rounded-[16px] overflow-hidden product-card-shadow transition-all duration-300">
+<div class="relative bg-[#FFF4E0] h-64 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="A minimalist white sneaker with subtle gold accents displayed on a warm peach-colored background. The image captures the shoe's elegant simplicity and premium leather finish. The overall aesthetic is clean and high-end, utilizing soft, diffused lighting that enhances the creamy tones of the composition and aligns with the brand's sophisticated fashion-forward identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJVk67hpAHUGsM_wlO55lsWS00P0iJe-Wpx-p2OMdvzE3uc0eDiCgCkA88gXtT4S-BuW3hnmJgfmSYEC5OdNQPTfM7ZG8PKbWSVrz979yzM-Wo7Bieho6W0Sov3MaN3fJRLE40tEcdlWnZrEX2LnxHQomrwLUPp2ltQhs7pXnxsoUTUZwZ6Zty8efO9vh83o5Co1pL1xDhqzXK6xQkQ5yp4Vr_IjQTRVwB4_CgncKKZKB5GCiaActaEhXYNKrB2M579F908C3xovg"/>
+</div>
+<div class="p-4">
+<p class="text-body-sm text-on-surface-variant mb-1">كونفرس شاتوه</p>
+<h4 class="font-headline-md text-headline-md mb-3 text-on-surface group-hover:text-primary transition-colors">بيور إليجانس</h4>
+<div class="flex justify-between items-center">
+<span class="font-price-display text-price-display text-primary">499 ر.س</span>
+<div class="flex gap-1">
+<div class="w-3 h-3 rounded-full bg-[#E5B80B]"></div>
+<div class="w-3 h-3 rounded-full bg-white border border-outline-variant"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Row 2 Card 1 -->
+<div class="group bg-surface-container-lowest rounded-[16px] overflow-hidden product-card-shadow transition-all duration-300">
+<div class="relative bg-[#F3E5F5] h-64 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="A pair of trendy multi-colored chunky sneakers in pastel shades of purple, yellow, and blue. The shoes are staged against a soft lavender background with high-key lighting. The style is playful and energetic, emphasizing the tactile textures and bold design patterns. This visual is perfect for a youthful, fashion-focused audience looking for expressive footwear." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8Pg8pTKf6rEb-9C7cM3Ft-dSdx5VQZ82KNF4_aZEFnPxxo2nxTtidIiQJzaEGQddAIaKXDov-H4X-jIQGSDschn6r-Ucv3KCN4kCT1xMjTihJ4yJURCXsAP_ssgZUSWBndWpNCi2IYJg-yvl-YeWeJiGPA0vZLVhtNOJ_cW8zV9npAzwGjUHzMZDYiZbzG8yX4SZHThxYrT_4ZjEKYkjeNRX61WuBZFqlgBLfautXcowZBpqozt9x1GzwohpdbjFkNVcfzTR-6mI"/>
+</div>
+<div class="p-4">
+<p class="text-body-sm text-on-surface-variant mb-1">ريبوك كلاسيك</p>
+<h4 class="font-headline-md text-headline-md mb-3 text-on-surface group-hover:text-primary transition-colors">باستيل دريم</h4>
+<div class="flex justify-between items-center">
+<span class="font-price-display text-price-display text-primary">375 ر.س</span>
+</div>
+</div>
+</div>
+<!-- Row 2 Card 2 -->
+<div class="group bg-surface-container-lowest rounded-[16px] overflow-hidden product-card-shadow transition-all duration-300">
+<div class="relative bg-[#E8F5E9] h-64 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="A dark forest green leather boot with rugged textures, presented on a light mint green background. The lighting is focused and cinematic, highlighting the durability and quality of the materials. The composition is balanced and professional, creating a sense of reliability and style for an outdoor-inspired footwear collection." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDisdKll6hWWVUiLGbckdzcGH67Z0Yp5NOHSe5mlA7L9xl-PjYy94OwvfNPOTZFX5cB6EfvWEY2c40Bsmrngmyl4-DLpyWU7WHcxc_RR26Q0bVVwJ_hgSIRNzqQCnpBafHNxd47njpiKiL9tkrAYONc8XwwTzlXOuWUTXIVwXX3Hq6nYEFR9u981chtpj-2853yjDyDs4oIvRJxWWwRXSB_Vbbt3WbfSmZGzF4ku68GBLlvgI8nj6AXy5oeuWQ1SMvp7AfhyFnW8iQ"/>
+</div>
+<div class="p-4">
+<p class="text-body-sm text-on-surface-variant mb-1">تيمبرلاند بريميوم</p>
+<h4 class="font-headline-md text-headline-md mb-3 text-on-surface group-hover:text-primary transition-colors">بوت المغامرة</h4>
+<div class="flex justify-between items-center">
+<span class="font-price-display text-price-display text-primary">850 ر.س</span>
+</div>
+</div>
+</div>
+<!-- Row 2 Card 3 -->
+<div class="group bg-surface-container-lowest rounded-[16px] overflow-hidden product-card-shadow transition-all duration-300">
+<div class="relative bg-[#FFFDE7] h-64 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="A crisp, white lifestyle sneaker with minimal gray detailing shown in profile on a pale yellow background. The lighting is clean and high-contrast, bringing out the subtle textures of the upper material. The overall vibe is fresh and modern, perfect for a contemporary casual wardrobe, maintaining the brand's focus on ease and clarity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdH2ad2hpiGAJzS8glpgG4DFh-uPvG3g3BviAasEyBUSF7OmEp97duO9CWxpBJxfgGUDKI5K32ufxXPUe1EDRgLO9dIB148jIMv19d8CTPC42tgjtR-AINJNcwYVoGF9BWqM8iKnODQ80ihuzm2lE3WL2Tx_ASv-g52rZs3kuS8cZmjGZyBCl5mRztv00LJ_KaHI_SGPUG9HmqCaYpB7HySO3uT9nHkMSmKp2bo_Vo5C-6glUkH3_ODTZ3yICIV9O0KUjvwzm1mYw"/>
+</div>
+<div class="p-4">
+<p class="text-body-sm text-on-surface-variant mb-1">بوما ميرور</p>
+<h4 class="font-headline-md text-headline-md mb-3 text-on-surface group-hover:text-primary transition-colors">ديلي وايت</h4>
+<div class="flex justify-between items-center">
+<span class="font-price-display text-price-display text-primary">299 ر.س</span>
+</div>
+</div>
+</div>
+<!-- Row 2 Card 4 -->
+<div class="group bg-surface-container-lowest rounded-[16px] overflow-hidden product-card-shadow transition-all duration-300">
+<div class="relative bg-[#FFEBEE] h-64 flex items-center justify-center overflow-hidden">
+<span class="absolute top-4 right-4 bg-primary text-white text-[10px] px-2 py-1 rounded-full font-bold z-10">نفذت الكمية</span>
+<img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500 opacity-60" data-alt="A detailed shot of a brown leather casual shoe with intricate stitching and high-quality leather grain, placed on a light pink background. The lighting is soft and ambient, emphasizing the warmth of the leather and the craftsmanship of the product. The mood is calm and professional, appealing to customers looking for timeless classic styles." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY0alrYmDxwxsT15x1ul-NdCvxIo260aH8fBXLmotxHk5IRR7nmv-4rz0rVPfYlwrFtSBcJSBm-oYfGwBYjQamBFjn8rRdBYB-Ozn9KaCdGL7alxalPcMUwTzkIiXL2RHdChb-j1lY5-uC5AQv9ZAu6GTGfOkSm98DYoSto8O99Y5AS0Gupy6Uer-o-e86W1oWIabPM16Hz8-13y26gISNrei3JEw-trJ3ajCKNhV6u9e5qdZKuifZAbnwZwgHxia6tHRyxMMk9uI"/>
+</div>
+<div class="p-4 opacity-60">
+<p class="text-body-sm text-on-surface-variant mb-1">نيو بالانس 574</p>
+<h4 class="font-headline-md text-headline-md mb-3 text-on-surface">إيرث تون كلاسيك</h4>
+<div class="flex justify-between items-center">
+<span class="font-price-display text-price-display text-primary">450 ر.س</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-section-gap flex justify-center items-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container-highest text-on-surface-variant hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-white font-bold">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container-highest text-on-surface-variant hover:bg-primary hover:text-white transition-all font-bold">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container-highest text-on-surface-variant hover:bg-primary hover:text-white transition-all font-bold">3</button>
+<span class="px-2">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container-highest text-on-surface-variant hover:bg-primary hover:text-white transition-all font-bold">10</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container-highest text-on-surface-variant hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-high dark:bg-surface-dim mt-section-gap">
+<div class="flex flex-col md:flex-row justify-between items-start w-full px-container-margin py-section-gap max-w-7xl mx-auto border-t border-outline-variant gap-12">
+<div class="max-w-xs">
+<h2 class="font-headline-md text-headline-md text-on-surface dark:text-on-surface mb-4">Sole &amp; Style</h2>
+<p class="text-body-sm text-on-surface-variant leading-relaxed">نحن نقدم لك أفضل تشكيلات الأحذية والحقائب العصرية التي تجمع بين الجودة والأناقة، لتناسب أسلوب حياتك اليومي.</p>
+<div class="flex gap-4 mt-6">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">face_nod</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">photo_camera</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+<div>
+<h4 class="font-bold text-on-surface mb-4">الروابط السريعة</h4>
+<ul class="space-y-2">
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">About Us</a></li>
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Contact</a></li>
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-4">خدمة العملاء</h4>
+<ul class="space-y-2">
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Shipping &amp; Returns</a></li>
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Privacy Policy</a></li>
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div class="col-span-2 md:col-span-1">
+<h4 class="font-bold text-on-surface mb-4">النشرة الإخبارية</h4>
+<p class="text-body-sm text-on-surface-variant mb-4">اشترك للحصول على آخر العروض والخصومات.</p>
+<div class="flex bg-surface-container px-2 py-1 rounded-lg">
+<input class="bg-transparent border-none focus:ring-0 text-body-sm w-full" placeholder="بريدك الإلكتروني" type="email"/>
+<button class="bg-on-background text-surface px-4 py-2 rounded-md font-bold text-body-sm">اشترك</button>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-container-margin py-8 border-t border-outline-variant/30 text-center">
+<p class="text-body-sm text-on-surface-variant">© 2024 Sole &amp; Style. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Micro-interactions for buttons
+        document.querySelectorAll('button, a').forEach(el => {
+            el.addEventListener('mousedown', () => el.classList.add('scale-95'));
+            el.addEventListener('mouseup', () => el.classList.remove('scale-95'));
+            el.addEventListener('mouseleave', () => el.classList.remove('scale-95'));
+        });
+
+        // Simple cart counter animation simulation
+        let cartCount = 0;
+        const cartBtn = document.querySelector('.material-symbols-outlined[data-icon="shopping_cart"]');
+        if (cartBtn) {
+            cartBtn.addEventListener('click', () => {
+                cartCount++;
+                console.log('Cart count:', cartCount);
+                // Simple visual feedback
+                cartBtn.style.transform = 'translateY(-5px)';
+                setTimeout(() => cartBtn.style.transform = 'translateY(0)', 200);
+            });
+        }
+    </script>
+</body></html>

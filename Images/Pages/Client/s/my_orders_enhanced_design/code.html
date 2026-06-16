@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>طلباتي | Sole &amp; Style</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#ffb1c4",
+                    "outline": "#8d7076",
+                    "surface-container-highest": "#e1e3e4",
+                    "tertiary-fixed-dim": "#c6c6c6",
+                    "error": "#ba1a1a",
+                    "on-surface-variant": "#594046",
+                    "inverse-surface": "#2e3132",
+                    "on-primary-container": "#5b0028",
+                    "on-secondary-fixed-variant": "#334283",
+                    "inverse-on-surface": "#f0f1f2",
+                    "primary": "#b90a5a",
+                    "primary-container": "#ff4d8d",
+                    "on-tertiary-container": "#2a2a2a",
+                    "surface-bright": "#f8f9fa",
+                    "surface": "#f8f9fa",
+                    "background": "#f8f9fa",
+                    "on-tertiary": "#ffffff",
+                    "surface-variant": "#e1e3e4",
+                    "outline-variant": "#e1bec5",
+                    "on-secondary": "#ffffff",
+                    "surface-tint": "#b90a5a",
+                    "on-surface": "#191c1d",
+                    "surface-container-high": "#e7e8e9",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#f3f4f5",
+                    "on-tertiary-fixed-variant": "#474747",
+                    "error-container": "#ffdad6",
+                    "surface-dim": "#d9dadb",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary": "#5e5e5e",
+                    "secondary-fixed-dim": "#b9c3ff",
+                    "secondary-container": "#a7b5ff",
+                    "tertiary-fixed": "#e2e2e2",
+                    "on-error-container": "#93000a",
+                    "on-secondary-container": "#364486",
+                    "on-primary-fixed": "#3f001a",
+                    "surface-container": "#edeeef",
+                    "secondary-fixed": "#dde1ff",
+                    "inverse-primary": "#ffb1c4",
+                    "on-primary": "#ffffff",
+                    "tertiary-container": "#919191",
+                    "secondary": "#4c5a9d",
+                    "on-secondary-fixed": "#001257",
+                    "primary-fixed": "#ffd9e0",
+                    "on-background": "#191c1d",
+                    "on-primary-fixed-variant": "#8f0043",
+                    "on-tertiary-fixed": "#1b1b1b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.5rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-gap": "32px",
+                    "card-padding": "16px",
+                    "gutter": "16px",
+                    "base": "8px",
+                    "container-margin": "24px"
+            },
+            "fontFamily": {
+                    "label-bold": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "body-sm": ["Plus Jakarta Sans"],
+                    "price-display": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "headline-xl": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "label-bold": ["14px", {"lineHeight": "16px", "fontWeight": "700"}],
+                    "headline-md": ["18px", {"lineHeight": "24px", "fontWeight": "700"}],
+                    "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "price-display": ["20px", {"lineHeight": "24px", "fontWeight": "800"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-xl": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+            background-color: #f8f9fa;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .order-card-shadow {
+            box-shadow: 0 4px 24px -4px rgba(0, 0, 0, 0.04);
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .active-tab-shadow {
+            box-shadow: 0 8px 16px -4px rgba(185, 10, 90, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 bg-surface/90 backdrop-blur-lg flex justify-between items-center w-full px-container-margin py-5">
+<button class="w-10 h-10 flex items-center justify-center hover:bg-surface-variant/30 rounded-full transition-all active:scale-90">
+<span class="material-symbols-outlined text-on-surface">arrow_forward</span>
+</button>
+<h1 class="text-headline-md font-black text-on-surface">طلباتي</h1>
+<button class="w-10 h-10 flex items-center justify-center hover:bg-surface-variant/30 rounded-full transition-all active:scale-90">
+<span class="material-symbols-outlined text-on-surface">shopping_cart</span>
+</button>
+</header>
+<main class="px-container-margin mt-2">
+<!-- Filter Tabs -->
+<div class="flex gap-2.5 mb-8 overflow-x-auto scrollbar-hide py-1">
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full text-label-bold font-label-bold whitespace-nowrap active-tab-shadow">الكل</button>
+<button class="bg-surface-container-low text-on-surface-variant px-6 py-2.5 rounded-full text-label-bold font-label-bold whitespace-nowrap hover:bg-surface-variant/50 transition-colors">قيد التنفيذ</button>
+<button class="bg-surface-container-low text-on-surface-variant px-6 py-2.5 rounded-full text-label-bold font-label-bold whitespace-nowrap hover:bg-surface-variant/50 transition-colors">تم التوصيل</button>
+<button class="bg-surface-container-low text-on-surface-variant px-6 py-2.5 rounded-full text-label-bold font-label-bold whitespace-nowrap hover:bg-surface-variant/50 transition-colors">الملغاة</button>
+</div>
+<!-- Orders List -->
+<div class="flex flex-col gap-5">
+<!-- Order Card 1 (Active) -->
+<div class="bg-surface-container-lowest rounded-2xl p-card-padding order-card-shadow border border-surface-variant/20">
+<div class="flex justify-between items-start mb-5">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<h3 class="font-headline-md text-on-surface">طلب رقم #98231</h3>
+</div>
+<p class="text-body-sm text-on-surface-variant mr-3.5">12 أكتوبر 2023</p>
+</div>
+<span class="bg-primary-fixed/50 text-on-primary-fixed-variant px-3 py-1 rounded-lg text-[12px] font-label-bold">قيد التنفيذ</span>
+</div>
+<div class="flex items-center gap-3 mb-6">
+<div class="flex -space-x-3 space-x-reverse overflow-hidden">
+<div class="w-16 h-16 rounded-xl bg-surface-container-low border-2 border-white overflow-hidden shadow-sm">
+<img alt="Product thumbnail" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2ELVaojHBQlWQKlDCG0c_Exyvuw6yPLA0RV_Se2vBKae68Rj_H3UGoHmSRqZ4B8QfB2HzrLKMkj2bl9KdfCyd6AHwAugs_OsnRVljT6y7zyhzNY-j-uUFOLPLLCtfjsio9dQx_qXF2xGikEl-IMuwgRouht-ACmtovxKT3U8w8ryHnZuBoCNDk5UbuGE472SISaiV2oaozz301gb0dvANAde4Q_M3WMaUdK3Dw0IGW2KcnF6M0oKc75b6l8yUHvMl50Xs_Irz1bQ"/>
+</div>
+<div class="w-16 h-16 rounded-xl bg-surface-container-low border-2 border-white overflow-hidden shadow-sm">
+<img alt="Product thumbnail" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJltfDu-bTcEtBt3t2qIBakgBp0ptaNJ1RBjfb6T4z2EZ8BEOmCZRC1wNmZCz1vCiB4_untRQBxGBO9-WYbL17sWS_BLCrjRiMavByBqxLR9hmZF58_j4Q-YD80AFXQameH2j0cp7eXc8dEBWsFYJDR0YGWNmRpAKHeWBWbe61UtvarcdvytYT8FBsBfMyFyzIv2_Pijua1eur85aaqBr-I5B7YmEXO6GDEZnRTRisCiG9aGjrHkRMXrXiR1gtyFvXNRZLsh6Mw8M"/>
+</div>
+<div class="w-16 h-16 rounded-xl bg-primary-container/20 border-2 border-white flex items-center justify-center text-primary font-bold text-label-bold shadow-sm backdrop-blur-sm">
+                            +1
+                        </div>
+</div>
+<div class="flex-grow"></div>
+</div>
+<div class="flex justify-between items-center pt-5 border-t border-surface-variant/10">
+<div>
+<p class="text-[12px] font-label-bold text-on-surface-variant uppercase tracking-wider mb-0.5">الإجمالي</p>
+<p class="text-price-display text-primary">540.00 ر.س</p>
+</div>
+<button class="bg-on-background text-on-primary px-6 py-3 rounded-full text-label-bold font-bold transition-all active:scale-95 shadow-lg shadow-black/10">تتبع الطلب</button>
+</div>
+</div>
+<!-- Order Card 2 (Delivered) -->
+<div class="bg-surface-container-lowest rounded-2xl p-card-padding order-card-shadow border border-surface-variant/20">
+<div class="flex justify-between items-start mb-5">
+<div>
+<h3 class="font-headline-md text-on-surface mb-1">طلب رقم #97104</h3>
+<p class="text-body-sm text-on-surface-variant">05 أكتوبر 2023</p>
+</div>
+<span class="bg-secondary-fixed/40 text-on-secondary-fixed-variant px-3 py-1 rounded-lg text-[12px] font-label-bold">تم التوصيل</span>
+</div>
+<div class="flex items-center gap-4 mb-6">
+<div class="w-16 h-16 rounded-xl bg-[#FEF3C7]/40 flex-shrink-0 flex items-center justify-center overflow-hidden border border-surface-variant/10">
+<img alt="Product thumbnail" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeYnWqU4kqsnTtHRhtS_XwFuV7ihGsJV96IqF27OgCwUtpqUdXsbjtBNOQrzMPx81LttMYD2YM0rbXKsPTgsdhWITtsRZYUblR7eVI7Co0EUnXmP8nlS46_e9gvZgywXk2GrhB5fiQafrhz9XSJVnZSGu11DYni6fQtvn0W8KJP52MXObV5St8hE0mJURICJR8qOCaxXYApndPUEcEfA-6F_rUSrkNF1CBP6OS-3sKWomUV7MUf_7zWA_G6S0FBsm1K8NrVba0yec"/>
+</div>
+<div class="flex-grow">
+<p class="text-label-bold font-bold text-on-surface leading-snug">حقيبة ظهر عصرية + 1 قطعة أخرى</p>
+<p class="text-body-sm text-on-surface-variant mt-1">توصيل منزلي • الرياض</p>
+</div>
+</div>
+<div class="flex justify-between items-center pt-5 border-t border-surface-variant/10">
+<div>
+<p class="text-[12px] font-label-bold text-on-surface-variant uppercase tracking-wider mb-0.5">الإجمالي</p>
+<p class="text-price-display text-on-surface">320.00 ر.س</p>
+</div>
+<button class="bg-surface-container-low text-on-surface px-6 py-3 rounded-full text-label-bold font-bold transition-all active:scale-95 border border-surface-variant/20">إعادة الطلب</button>
+</div>
+</div>
+<!-- Order Card 3 (Cancelled) -->
+<div class="bg-surface-container-lowest rounded-2xl p-card-padding order-card-shadow border border-surface-variant/20 opacity-70">
+<div class="flex justify-between items-start mb-5">
+<div>
+<h3 class="font-headline-md text-on-surface-variant mb-1">طلب رقم #96550</h3>
+<p class="text-body-sm text-on-surface-variant/70">28 سبتمبر 2023</p>
+</div>
+<span class="bg-surface-variant/40 text-on-surface-variant px-3 py-1 rounded-lg text-[12px] font-label-bold">تم الإلغاء</span>
+</div>
+<div class="flex items-center gap-4 mb-6">
+<div class="w-16 h-16 rounded-xl bg-surface-container-high/50 flex-shrink-0 flex items-center justify-center overflow-hidden grayscale border border-surface-variant/10">
+<img alt="Product thumbnail" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDO4_tUJG5Vck5q27p_mMoREWReaeejSpb6vo4hcJv4vJIO3Dxq6ZGjxFJl3IjO3KgmPtR_6W2FI2qrtVExKOAJzcQ9jwgBeyrgflDsfciKSgk1Kdr6NDypaDqo7gL3jGNKTvRzzWxYKS6kOvSiSq7KrdZbhkGHQJ16KyOeamkj3x17C5vRj8_-e4zanGr4GbNGjAaBVAQJqyfirRaR2JKBc7TbtQrJyomhMlyGQWmsECFFxDMbILCtuNZe09ImtFIb-s7FYkpNZuA"/>
+</div>
+<div class="flex-grow">
+<p class="text-label-bold font-bold text-on-surface-variant leading-snug">حذاء جلدي كلاسيكي</p>
+<p class="text-body-sm text-on-surface-variant/60 mt-1">مقاس 42 • بني غامق</p>
+</div>
+</div>
+<div class="flex justify-between items-center pt-5 border-t border-surface-variant/10">
+<div>
+<p class="text-[12px] font-label-bold text-on-surface-variant/60 uppercase tracking-wider mb-0.5">الإجمالي</p>
+<p class="text-price-display text-on-surface-variant/60">415.00 ر.س</p>
+</div>
+<button class="bg-surface-container-low text-on-surface-variant px-6 py-3 rounded-full text-label-bold font-bold transition-all active:scale-95">التفاصيل</button>
+</div>
+</div>
+</div>
+<!-- Help Section -->
+<div class="mt-10 bg-primary-container/10 rounded-3xl p-6 flex items-center justify-between border border-primary-container/10 relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 w-24 h-24 bg-primary/5 rounded-full blur-2xl"></div>
+<div class="flex items-center gap-4 relative z-10">
+<div class="w-12 h-12 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined">support_agent</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface leading-tight">هل تواجه مشكلة؟</h4>
+<p class="text-body-sm text-on-surface-variant mt-0.5">تواصل معنا 24/7 للمساعدة</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary/60">chevron_left</span>
+</div>
+</main>
+<!-- BottomNavBar (Shared Component Style) -->
+<nav class="fixed bottom-8 left-1/2 -translate-x-1/2 w-[calc(100%-48px)] max-w-md z-50 flex justify-around items-center px-4 py-3 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] rounded-full border border-white/40">
+<button class="flex items-center justify-center text-on-surface-variant/60 w-12 h-12 hover:bg-surface-variant/20 rounded-full transition-all duration-300 active:scale-75">
+<span class="material-symbols-outlined">home</span>
+</button>
+<button class="flex items-center justify-center text-on-surface-variant/60 w-12 h-12 hover:bg-surface-variant/20 rounded-full transition-all duration-300 active:scale-75">
+<span class="material-symbols-outlined">chat_bubble</span>
+</button>
+<button class="flex items-center justify-center bg-primary text-on-primary rounded-full w-14 h-14 transition-all duration-300 active:scale-90 shadow-lg shadow-primary/30 ring-4 ring-white/50">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">notifications</span>
+</button>
+<button class="flex items-center justify-center text-on-surface-variant/60 w-12 h-12 hover:bg-surface-variant/20 rounded-full transition-all duration-300 active:scale-75">
+<span class="material-symbols-outlined">person</span>
+</button>
+</nav>
+<script>
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function() {
+                this.classList.add('scale-95');
+                setTimeout(() => this.classList.remove('scale-95'), 100);
+            });
+        });
+    </script>
+</body></html>

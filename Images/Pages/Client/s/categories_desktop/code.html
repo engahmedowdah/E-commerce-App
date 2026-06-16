@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sole &amp; Style | الفئات</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;family=Noto+Sans+Arabic:wght@400;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Noto Sans Arabic', 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #e1bec5;
+            border-radius: 10px;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container": "#edeeef",
+                      "on-secondary-fixed-variant": "#334283",
+                      "background": "#f8f9fa",
+                      "primary-fixed-dim": "#ffb1c4",
+                      "tertiary-fixed-dim": "#c6c6c6",
+                      "outline": "#8d7076",
+                      "on-secondary-container": "#364486",
+                      "surface": "#f8f9fa",
+                      "inverse-primary": "#ffb1c4",
+                      "on-tertiary-container": "#2a2a2a",
+                      "tertiary-container": "#919191",
+                      "on-tertiary-fixed-variant": "#474747",
+                      "on-primary-fixed": "#3f001a",
+                      "on-primary-container": "#5b0028",
+                      "primary-container": "#ff4d8d",
+                      "surface-container-low": "#f3f4f5",
+                      "on-surface": "#191c1d",
+                      "secondary-fixed-dim": "#b9c3ff",
+                      "on-tertiary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "surface-container-high": "#e7e8e9",
+                      "error": "#ba1a1a",
+                      "on-tertiary-fixed": "#1b1b1b",
+                      "tertiary": "#5e5e5e",
+                      "inverse-surface": "#2e3132",
+                      "tertiary-fixed": "#e2e2e2",
+                      "secondary-fixed": "#dde1ff",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-tint": "#b90a5a",
+                      "on-surface-variant": "#594046",
+                      "primary": "#b90a5a",
+                      "on-primary": "#ffffff",
+                      "outline-variant": "#e1bec5",
+                      "on-error-container": "#93000a",
+                      "surface-variant": "#e1e3e4",
+                      "on-background": "#191c1d",
+                      "on-primary-fixed-variant": "#8f0043",
+                      "surface-dim": "#d9dadb",
+                      "inverse-on-surface": "#f0f1f2",
+                      "surface-container-highest": "#e1e3e4",
+                      "error-container": "#ffdad6",
+                      "surface-bright": "#f8f9fa",
+                      "primary-fixed": "#ffd9e0",
+                      "secondary": "#4c5a9d",
+                      "on-secondary": "#ffffff",
+                      "secondary-container": "#a7b5ff",
+                      "on-secondary-fixed": "#001257"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "card-padding": "16px",
+                      "section-gap": "32px",
+                      "gutter": "16px",
+                      "container-margin": "24px",
+                      "base": "8px"
+              },
+              "fontFamily": {
+                      "price-display": ["Plus Jakarta Sans", "Noto Sans Arabic"],
+                      "label-bold": ["Plus Jakarta Sans", "Noto Sans Arabic"],
+                      "headline-xl": ["Plus Jakarta Sans", "Noto Sans Arabic"],
+                      "headline-lg": ["Plus Jakarta Sans", "Noto Sans Arabic"],
+                      "headline-md": ["Plus Jakarta Sans", "Noto Sans Arabic"],
+                      "body-lg": ["Plus Jakarta Sans", "Noto Sans Arabic"],
+                      "body-sm": ["Plus Jakarta Sans", "Noto Sans Arabic"]
+              },
+              "fontSize": {
+                      "price-display": ["20px", {"lineHeight": "24px", "fontWeight": "800"}],
+                      "label-bold": ["14px", {"lineHeight": "16px", "fontWeight": "700"}],
+                      "headline-xl": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                      "headline-md": ["18px", {"lineHeight": "24px", "fontWeight": "700"}],
+                      "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar (Shared Component) -->
+<header class="bg-surface-container-lowest dark:bg-inverse-surface shadow-[0_4px_20px_rgba(0,0,0,0.05)] full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-container-margin py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-12">
+<a class="font-headline-lg text-headline-lg font-black text-primary dark:text-primary-fixed-dim tracking-tight" href="#">Sole &amp; Style</a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-body-lg text-body-lg text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Footwear</a>
+<a class="font-body-lg text-body-lg text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Bags</a>
+<a class="font-body-lg text-body-lg text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1" href="#">New Arrivals</a>
+<a class="font-body-lg text-body-lg text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Sale</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="bg-surface-container-low border-none rounded-full py-2 pr-10 pl-4 w-64 focus:ring-2 focus:ring-primary text-body-sm" placeholder="ابحث عن موديل..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:opacity-80 transition-opacity cursor-pointer scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-primary">favorite</span>
+</button>
+<button class="hover:opacity-80 transition-opacity cursor-pointer scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-primary">shopping_cart</span>
+</button>
+<button class="hover:opacity-80 transition-opacity cursor-pointer scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-primary">person</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-container-margin py-section-gap flex flex-col md:flex-row gap-gutter">
+<!-- Sidebar Filter -->
+<aside class="w-full md:w-64 flex-shrink-0">
+<div class="sticky top-24 space-y-8">
+<div>
+<h2 class="font-headline-md text-headline-md mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="filter_list">filter_list</span>
+                        الفئات الرئيسيّة
+                    </h2>
+<ul class="space-y-3">
+<li>
+<button class="w-full flex items-center justify-between p-3 rounded-xl bg-primary-container text-on-primary-container font-label-bold">
+<span>أحذية رياضية</span>
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+</li>
+<li>
+<button class="w-full flex items-center justify-between p-3 rounded-xl hover:bg-surface-container-high transition-colors text-on-surface-variant font-label-bold">
+<span>أحذية كلاسيكية</span>
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+</li>
+<li>
+<button class="w-full flex items-center justify-between p-3 rounded-xl hover:bg-surface-container-high transition-colors text-on-surface-variant font-label-bold">
+<span>صنادل وصيفيات</span>
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+</li>
+<li>
+<button class="w-full flex items-center justify-between p-3 rounded-xl hover:bg-surface-container-high transition-colors text-on-surface-variant font-label-bold">
+<span>حقائب ظهر</span>
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+</li>
+<li>
+<button class="w-full flex items-center justify-between p-3 rounded-xl hover:bg-surface-container-high transition-colors text-on-surface-variant font-label-bold">
+<span>حقائب يد فاخرة</span>
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+</li>
+</ul>
+</div>
+<div class="pt-6 border-t border-outline-variant">
+<h3 class="font-label-bold text-on-surface-variant mb-4">تصفية حسب المقاس</h3>
+<div class="grid grid-cols-3 gap-2">
+<button class="h-10 border border-outline-variant rounded-lg flex items-center justify-center hover:border-primary transition-all font-body-sm">38</button>
+<button class="h-10 bg-inverse-surface text-surface rounded-lg flex items-center justify-center font-body-sm">39</button>
+<button class="h-10 border border-outline-variant rounded-lg flex items-center justify-center hover:border-primary transition-all font-body-sm">40</button>
+<button class="h-10 border border-outline-variant rounded-lg flex items-center justify-center hover:border-primary transition-all font-body-sm">41</button>
+<button class="h-10 border border-outline-variant rounded-lg flex items-center justify-center hover:border-primary transition-all font-body-sm">42</button>
+<button class="h-10 border border-outline-variant rounded-lg flex items-center justify-center hover:border-primary transition-all font-body-sm">43</button>
+</div>
+</div>
+<div class="pt-6 border-t border-outline-variant">
+<h3 class="font-label-bold text-on-surface-variant mb-4">نطاق السعر</h3>
+<input class="w-full h-2 bg-secondary-container rounded-lg appearance-none cursor-pointer accent-primary" type="range"/>
+<div class="flex justify-between mt-2 font-body-sm text-on-surface-variant">
+<span>0 ر.س</span>
+<span>2000 ر.س</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<section class="flex-1">
+<!-- Hero Category Banner -->
+<div class="relative w-full h-80 rounded-[2rem] overflow-hidden mb-12 group cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A dynamic, high-angle lifestyle photograph of a sleek crimson athletic sneaker resting on a pastel pink podium. The background features a soft-focus minimalist architectural space with clean lines and warm, diffused golden hour lighting. The image conveys a sense of youthful energy and premium quality with high contrast and vibrant color saturation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUC6sKovDqHLsuw48Sn8G5pWMeFfIY5oTbyGYOT7cx0xKZeBsDT5PaaVjUlaBNeug3uKwopZQv1nHwLxPTi6wnq-1TsLg0fYoMeIzSPk5Vycz1q1QSIOoMXfMipJXx7f4av8iHLpG_5brs9510w4EknTKxErz2TlWr4-HklpEjfZ10bkvQwkMuWMzEn4DIjqrNq9_jl4QvxeQn_zc27YqH76jUBQKEmwkGnFxq2QkpvWdtAwO7Oq2qWpaQUW3PnDwzxIfb3QiyAgs"/>
+<div class="absolute inset-0 bg-gradient-to-l from-black/60 to-transparent flex flex-col justify-center items-end px-12 text-white">
+<span class="bg-primary text-on-primary px-4 py-1 rounded-full text-label-bold mb-4">وصلنا حديثاً</span>
+<h1 class="font-headline-xl text-headline-xl mb-2">مجموعة الجري لعام 2024</h1>
+<p class="font-body-lg text-body-lg mb-6 max-w-sm text-right opacity-90">اكتشف الراحة والأداء الفائق مع أحدث تقنيات الوسائد الهوائية والتصاميم العصرية.</p>
+<button class="bg-surface-container-lowest text-on-surface px-8 py-3 rounded-full font-label-bold uppercase hover:bg-primary hover:text-on-primary transition-all">تسوق الآن</button>
+</div>
+</div>
+<!-- Category Grid (Bento Style) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Large Card 1 -->
+<div class="md:col-span-2 relative h-[450px] rounded-[2rem] overflow-hidden group">
+<div class="absolute inset-0 bg-[#E3F2FD] transition-colors group-hover:bg-[#BBDEFB]"></div>
+<img class="absolute bottom-0 right-0 w-4/5 h-4/5 object-contain transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-4" data-alt="A sophisticated studio shot of premium leather loafers in a rich tan color, placed on an off-white geometric block. The surrounding environment is characterized by soft pastel blue shadows and bright, airy lighting. The composition is clean, modern, and high-fashion, emphasizing the texture and craftsmanship of the footwear." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlz08E0aHUPJjfYNqiUHsXI2SsDkoTXr8GagC-7onME-QSMRxxr8XSQJuiuxnoyBderaF-JoR_z-qrVJxoyyRFhK-hR_ZkAyH2O0J707jhzSPncVBAzVmYbBKPjeS9RCcNnLxcB5ey8fHm_h0Gzp3GsqGvpOu3-8INeoLVO8eqRvO0EWeDA2tAY3dOFJc5o4cCdmnvIAAxqx6Zjli_11HAFK6spyetGK3c8M443M5iW964IC8Q0Tt_w48xg7mKYMAhWCjA18YQ9jM"/>
+<div class="absolute top-10 left-10 text-right">
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-2">أحذية الجلد الكلاسيكية</h3>
+<p class="font-body-sm text-on-surface-variant mb-4">لإطلالة عمل أنيقة ومريحة</p>
+<span class="text-primary font-label-bold flex items-center gap-2">
+                            اكتشف المزيد
+                            <span class="material-symbols-outlined">arrow_back</span>
+</span>
+</div>
+</div>
+<!-- Tall Card 1 -->
+<div class="relative h-[450px] rounded-[2rem] overflow-hidden group">
+<div class="absolute inset-0 bg-[#FCE4EC] transition-colors group-hover:bg-[#F8BBD0]"></div>
+<img class="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-80 group-hover:scale-110 transition-transform duration-500" data-alt="A chic, minimalist designer handbag in a soft blush pink shade, hanging from a thin metallic stand against a neutral cream background. The lighting is soft and ambient, creating a luxury retail atmosphere. The scene is elegant and feminine, perfectly aligning with a high-end fashion boutique aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCw6phHFoqVZ3XgX1HmFiIrM2N3E9eeNM6uLbf8hOwQGo23daagb25oPdiyyXuxuU0wN4UB8tPNg24hduB1NIXqypzWzSOtbA7fGUYiyHkLivvLPcARwYx7NsfDoTS1OthHDvw9A1eWHDmE6IN3nttBcyYLsvXNirFwOiichtfMc1TCZmwuWCWifaFOomOEwYTTnqNsuDpM3m9Mr-SdmdfarqvPfqCDsWEdfNVRNbMHdmTT_5V6eGpgX2Yf9G-yrRMXQ3HZtHysf8M"/>
+<div class="absolute bottom-10 inset-x-10 text-center">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">حقائب اليد</h3>
+<div class="w-12 h-1 bg-primary mx-auto mb-4 rounded-full"></div>
+<button class="bg-on-surface text-surface py-2 px-6 rounded-full font-label-bold text-sm">عرض الكل</button>
+</div>
+</div>
+<!-- Small Card 1 -->
+<div class="relative h-[300px] rounded-[2rem] overflow-hidden group bg-surface-container-lowest shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-outline-variant/30">
+<div class="p-8 h-full flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined" data-icon="handyman">handyman</span>
+</span>
+<span class="font-price-display text-primary">خصم 20%</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md mb-2">حقائب الظهر</h4>
+<p class="font-body-sm text-on-surface-variant">مثالية للدراسة والسفر</p>
+</div>
+</div>
+</div>
+<!-- Small Card 2 -->
+<div class="md:col-span-2 relative h-[300px] rounded-[2rem] overflow-hidden group">
+<div class="absolute inset-0 bg-[#F1F8E9] transition-colors group-hover:bg-[#DCEDC8]"></div>
+<img class="absolute -right-20 -bottom-10 w-full h-full object-contain group-hover:-translate-x-8 transition-transform duration-500" data-alt="A collection of colorful unisex sneakers arranged in an artistic, overlapping pattern on a mint green surface. The lighting is bright and shadowless, giving it a playful, youthful look. The image is clean and high-contrast, designed to appeal to a trend-conscious audience looking for versatility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3rbUUsRI-ou_UkpTV9xn3GrC3cYBoZZpHGAOTCu5izkv4pQDVtc962mX0OD0adUQhMJh28KAGcv8rJ0P2rcygjarvJG3mtacw0WuMzI_08SS7cu2K_vWZtvlDn3a1tf8AwCuWd0v1J9PrdwASvzvuSoJYRDkXebX58EW8KitM8BlVjRjVZ9OxWGYqpuzzpZgKIVoTLmIjVgXbXF1T00Mp4kUsrTYH051jZ2GTfq5VB-CtscI6eUgz9BGmHNEIP17iQkhu_ZPIpcQ"/>
+<div class="relative p-10 h-full flex flex-col justify-center max-w-xs">
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-2">أحذية كاجوال</h3>
+<p class="font-body-sm text-on-surface-variant mb-6">تصاميم تناسب كل يوم وكل مناسبة</p>
+<a class="inline-flex items-center gap-2 font-label-bold text-primary hover:gap-4 transition-all" href="#">
+                            تسوق التشكيلة
+                            <span class="material-symbols-outlined">arrow_back</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Tag Cloud / Quick Links -->
+<div class="mt-section-gap">
+<h3 class="font-headline-md text-headline-md mb-6">روابط سريعة</h3>
+<div class="flex flex-wrap gap-3">
+<a class="px-6 py-2 bg-surface-container-low rounded-full hover:bg-primary-container hover:text-on-primary-container transition-colors font-body-sm" href="#">نايكي</a>
+<a class="px-6 py-2 bg-surface-container-low rounded-full hover:bg-primary-container hover:text-on-primary-container transition-colors font-body-sm" href="#">أديداس</a>
+<a class="px-6 py-2 bg-surface-container-low rounded-full hover:bg-primary-container hover:text-on-primary-container transition-colors font-body-sm" href="#">حقائب جلدية</a>
+<a class="px-6 py-2 bg-surface-container-low rounded-full hover:bg-primary-container hover:text-on-primary-container transition-colors font-body-sm" href="#">مقاسات خاصة</a>
+<a class="px-6 py-2 bg-surface-container-low rounded-full hover:bg-primary-container hover:text-on-primary-container transition-colors font-body-sm" href="#">إصدارات محدودة</a>
+<a class="px-6 py-2 bg-surface-container-low rounded-full hover:bg-primary-container hover:text-on-primary-container transition-colors font-body-sm" href="#">الأكثر مبيعاً</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-surface-container-high dark:bg-surface-dim full-width mt-12 border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-container-margin py-section-gap max-w-7xl mx-auto">
+<div class="mb-8 md:mb-0 text-center md:text-right">
+<h2 class="font-headline-md text-headline-md text-on-surface dark:text-on-surface mb-2">Sole &amp; Style</h2>
+<p class="font-body-sm text-on-surface-variant max-w-xs">وجهتكم الأولى لأحدث صيحات الموضة في عالم الأحذية والحقائب الفاخرة.</p>
+</div>
+<div class="flex gap-12 mb-8 md:mb-0">
+<div class="flex flex-col gap-3">
+<span class="font-label-bold text-on-surface">عن المتجر</span>
+<a class="font-body-sm text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all" href="#">About Us</a>
+<a class="font-body-sm text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all" href="#">Contact</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-bold text-on-surface">خدمة العملاء</span>
+<a class="font-body-sm text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all" href="#">Shipping &amp; Returns</a>
+<a class="font-body-sm text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all" href="#">Privacy Policy</a>
+</div>
+</div>
+<div class="text-on-surface-variant font-body-sm text-center md:text-left">
+<div class="flex gap-4 mb-4 justify-center md:justify-end">
+<button class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined">public</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined">mail</span>
+</button>
+</div>
+                © 2024 Sole &amp; Style. All rights reserved.
+            </div>
+</div>
+</footer>
+<script>
+        // Micro-interactions
+        document.querySelectorAll('aside button').forEach(button => {
+            button.addEventListener('click', function() {
+                // Toggle active state for filters
+                if (!this.classList.contains('bg-primary-container')) {
+                    document.querySelectorAll('aside button').forEach(b => {
+                        b.classList.remove('bg-primary-container', 'text-on-primary-container');
+                        b.classList.add('hover:bg-surface-container-high', 'text-on-surface-variant');
+                    });
+                    this.classList.add('bg-primary-container', 'text-on-primary-container');
+                    this.classList.remove('hover:bg-surface-container-high', 'text-on-surface-variant');
+                }
+            });
+        });
+
+        // Hover effects for the bento cards
+        document.querySelectorAll('.group').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const arrow = card.querySelector('.material-symbols-outlined');
+                if (arrow) arrow.style.transform = 'translateX(-5px)';
+            });
+            card.addEventListener('mouseleave', () => {
+                const arrow = card.querySelector('.material-symbols-outlined');
+                if (arrow) arrow.style.transform = 'translateX(0)';
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html><html dir="rtl" lang="ar"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;family=Noto+Sans+Arabic:wght@400;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        body {
+            font-family: 'Noto Sans Arabic', 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .product-card-shadow {
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-variant": "#e1e3e4",
+                      "on-primary": "#ffffff",
+                      "tertiary": "#5e5e5e",
+                      "primary-fixed-dim": "#ffb1c4",
+                      "surface-container-highest": "#e1e3e4",
+                      "on-secondary": "#ffffff",
+                      "error": "#ba1a1a",
+                      "error-container": "#ffdad6",
+                      "on-secondary-fixed": "#001257",
+                      "on-primary-fixed-variant": "#8f0043",
+                      "surface-dim": "#d9dadb",
+                      "surface-container-high": "#e7e8e9",
+                      "inverse-on-surface": "#f0f1f2",
+                      "on-error-container": "#93000a",
+                      "background": "#f8f9fa",
+                      "on-tertiary": "#ffffff",
+                      "outline": "#8d7076",
+                      "primary": "#b90a5a",
+                      "surface-bright": "#f8f9fa",
+                      "outline-variant": "#e1bec5",
+                      "on-surface-variant": "#594046",
+                      "on-surface": "#191c1d",
+                      "secondary": "#4c5a9d",
+                      "surface-container": "#edeeef",
+                      "on-primary-container": "#5b0028",
+                      "on-tertiary-container": "#2a2a2a",
+                      "tertiary-fixed-dim": "#c6c6c6",
+                      "on-background": "#191c1d",
+                      "on-primary-fixed": "#3f001a",
+                      "on-tertiary-fixed-variant": "#474747",
+                      "tertiary-container": "#919191",
+                      "on-secondary-container": "#364486",
+                      "inverse-surface": "#2e3132",
+                      "primary-fixed": "#ffd9e0",
+                      "on-secondary-fixed-variant": "#334283",
+                      "on-tertiary-fixed": "#1b1b1b",
+                      "surface-container-low": "#f3f4f5",
+                      "tertiary-fixed": "#e2e2e2",
+                      "on-error": "#ffffff",
+                      "inverse-primary": "#ffb1c4",
+                      "secondary-container": "#a7b5ff",
+                      "primary-container": "#ff4d8d",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-tint": "#b90a5a",
+                      "surface": "#f8f9fa",
+                      "secondary-fixed-dim": "#b9c3ff",
+                      "secondary-fixed": "#dde1ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "card-padding": "16px",
+                      "base": "8px",
+                      "gutter": "16px",
+                      "container-margin": "24px",
+                      "section-gap": "32px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Noto Sans Arabic", "Plus Jakarta Sans"],
+                      "price-display": ["Noto Sans Arabic", "Plus Jakarta Sans"],
+                      "headline-lg": ["Noto Sans Arabic", "Plus Jakarta Sans"],
+                      "body-lg": ["Noto Sans Arabic", "Plus Jakarta Sans"],
+                      "headline-xl": ["Noto Sans Arabic", "Plus Jakarta Sans"],
+                      "label-bold": ["Noto Sans Arabic", "Plus Jakarta Sans"],
+                      "body-sm": ["Noto Sans Arabic", "Plus Jakarta Sans"]
+              },
+              "fontSize": {
+                      "headline-md": ["18px", {"lineHeight": "24px", "fontWeight": "700"}],
+                      "price-display": ["20px", {"lineHeight": "24px", "fontWeight": "800"}],
+                      "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                      "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-xl": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "label-bold": ["14px", {"lineHeight": "16px", "fontWeight": "700"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-background dark:bg-background flex justify-between items-center w-full px-container-margin py-4">
+<div class="flex items-center gap-4">
+<button class="hover:bg-surface-variant/20 dark:hover:bg-surface-variant/10 rounded-full p-2 active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined text-on-surface">menu</span>
+</button>
+<h1 class="text-headline-md font-headline-md font-extrabold text-on-surface dark:text-on-surface">Sole &amp; Style</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="hover:bg-surface-variant/20 dark:hover:bg-surface-variant/10 rounded-full p-2 active:scale-95 transition-transform duration-150 relative">
+<span class="material-symbols-outlined text-on-surface">shopping_cart</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-primary rounded-full"></span>
+</button>
+</div>
+</header>
+<main class="pb-32 px-container-margin">
+<!-- Hero Section / Title -->
+<section class="py-section-gap">
+<h2 class="text-headline-xl font-headline-xl mb-2">أحدث التشكيلات</h2>
+<p class="text-body-lg text-on-surface-variant">اكتشف أرقى الأحذية والحقائب المصممة بلمسة عصرية.</p>
+</section>
+<!-- Filters Section -->
+<section class="mb-section-gap">
+<div class="flex flex-col gap-6">
+<!-- Category Chips (Horizontal Scroll) -->
+<div class="flex gap-3 overflow-x-auto no-scrollbar pb-2">
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-bold text-label-bold whitespace-nowrap active:scale-95 transition-transform">الكل</button>
+<button class="bg-surface-container-low text-on-surface-variant px-6 py-2 rounded-full font-label-bold text-label-bold whitespace-nowrap hover:bg-surface-variant/30 active:scale-95 transition-transform">أحذية رياضية</button>
+<button class="bg-surface-container-low text-on-surface-variant px-6 py-2 rounded-full font-label-bold text-label-bold whitespace-nowrap hover:bg-surface-variant/30 active:scale-95 transition-transform">حقائب يد</button>
+<button class="bg-surface-container-low text-on-surface-variant px-6 py-2 rounded-full font-label-bold text-label-bold whitespace-nowrap hover:bg-surface-variant/30 active:scale-95 transition-transform">رسمي</button>
+<button class="bg-surface-container-low text-on-surface-variant px-6 py-2 rounded-full font-label-bold text-label-bold whitespace-nowrap hover:bg-surface-variant/30 active:scale-95 transition-transform">إكسسوارات</button>
+</div>
+<!-- Detailed Filters -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- Size Selector -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm">
+<span class="text-label-bold font-label-bold block mb-3">المقاس</span>
+<div class="flex flex-wrap gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-on-surface text-on-primary font-label-bold text-label-bold">38</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container text-on-surface-variant font-label-bold text-label-bold hover:bg-surface-variant">39</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container text-on-surface-variant font-label-bold text-label-bold hover:bg-surface-variant">40</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container text-on-surface-variant font-label-bold text-label-bold hover:bg-surface-variant">41</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container text-on-surface-variant font-label-bold text-label-bold hover:bg-surface-variant">42</button>
+</div>
+</div>
+<!-- Color Selector -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm">
+<span class="text-label-bold font-label-bold block mb-3">اللون</span>
+<div class="flex gap-3">
+<button class="w-8 h-8 rounded-full bg-black ring-2 ring-offset-2 ring-outline"></button>
+<button class="w-8 h-8 rounded-full bg-blue-500"></button>
+<button class="w-8 h-8 rounded-full bg-rose-400"></button>
+<button class="w-8 h-8 rounded-full bg-amber-200"></button>
+<button class="w-8 h-8 rounded-full bg-white border border-outline-variant"></button>
+</div>
+</div>
+<!-- Price Range -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm">
+<span class="text-label-bold font-label-bold block mb-3">نطاق السعر</span>
+<input class="w-full accent-primary h-2 bg-surface-container rounded-lg appearance-none cursor-pointer" type="range">
+<div class="flex justify-between mt-2 text-label-bold font-label-bold text-on-surface-variant">
+<span>0 ر.س</span>
+<span>2000 ر.س</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Grid -->
+<section class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-gutter">
+<!-- Product 1 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden product-card-shadow transition-transform hover:-translate-y-1">
+<div class="relative bg-[#E3F2FD] aspect-square flex items-center justify-center p-4">
+<img alt="Red Sneaker" class="w-full h-full object-contain mix-blend-multiply transition-transform group-hover:scale-110 duration-500" data-alt="A high-performance red athletic sneaker captured in a professional studio setting with soft side lighting. The shoe is positioned dynamically against a clean pastel blue background, emphasizing its sleek design and vibrant primary red color. The overall mood is energetic and youthful, perfectly aligning with a modern footwear lifestyle brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8NhmpM_TK3s6Z_Zs0BRrpe23iHVlUoV1P6hwoTNkJwioGzoQpSUOhKsXrdCllCxxFk_CW5SXLDpRiVVdcveMsXyH0_QBIhszAszLrFuPFqtU3v43R-S2nOAZIEQlsR3brl6ink6DRS8VgYmeU4SkmjyqOOeq1n3ynQ168Il5UMTiOMD-Hi0Fy-gDrBF2y1caVqJevH1AINoQ9oHAOvGr_rHAslo-BtvIsopcdBF9uAU4zgkCkGy6n3g2wtFPPoopoOZF0TpgRzDc">
+<span class="absolute top-3 left-3 bg-primary text-on-primary text-[10px] px-2 py-1 rounded-full font-bold uppercase">جديد</span>
+<button class="absolute bottom-3 right-3 bg-on-surface text-on-primary w-10 h-10 rounded-full flex items-center justify-center shadow-lg active:scale-90 transition-all opacity-0 group-hover:opacity-100">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+<div class="p-4 flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<h3 class="text-label-bold font-label-bold text-on-surface">نايك إير ماكس</h3>
+<div class="flex items-center gap-1 text-amber-500">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[12px] font-bold">4.8</span>
+</div>
+</div>
+<span class="text-body-sm text-on-surface-variant">أحذية رياضية</span>
+<span class="text-price-display font-price-display text-primary mt-2">599 ر.س</span>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden product-card-shadow transition-transform hover:-translate-y-1">
+<div class="relative bg-[#FCE4EC] aspect-square flex items-center justify-center p-4">
+<img alt="Leather Bag" class="w-full h-full object-contain mix-blend-multiply transition-transform group-hover:scale-110 duration-500" data-alt="A premium designer leather handbag in a rich tan brown color, showcased on a soft pastel pink background. The lighting is diffused and warm, highlighting the high-quality stitching and texture of the leather. The composition is minimalist and elegant, reflecting a high-end fashion aesthetic for sophisticated shoppers." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHIFZQ4XCEbgTCokmMC8eUeJXCtQyr-h2nUcXC50p8mKhWU8oXg13SfUmR66GjtFUhp-tl1jwBnlg-V9h3hy2_dJ9HjIOnOZpI6FgZPtnFcbiVJbXcvkuswWCFkCaoXJ2nmriBMjGs8h_SUlYGjdXFaegqSRylCAXUebuwHsywo2xwv9GJ0U8IJ8auuvKm8InWepqU0nDz8aUWhuwbH6KSuSpmZS2kAbD2t_gVwPqM7eF5m33cCf33LCB2eh2rt1AgOX7Y3leNv-8">
+<button class="absolute bottom-3 right-3 bg-on-surface text-on-primary w-10 h-10 rounded-full flex items-center justify-center shadow-lg active:scale-90 transition-all opacity-0 group-hover:opacity-100">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+<div class="p-4 flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<h3 class="text-label-bold font-label-bold text-on-surface">حقيبة كلاسيك</h3>
+<div class="flex items-center gap-1 text-amber-500">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[12px] font-bold">4.9</span>
+</div>
+</div>
+<span class="text-body-sm text-on-surface-variant">حقائب يد</span>
+<span class="text-price-display font-price-display text-primary mt-2">1,200 ر.س</span>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden product-card-shadow transition-transform hover:-translate-y-1">
+<div class="relative bg-[#F3E5F5] aspect-square flex items-center justify-center p-4">
+<img alt="Casual Shoes" class="w-full h-full object-contain mix-blend-multiply transition-transform group-hover:scale-110 duration-500" data-alt="A pair of stylish, colorful modern sneakers featuring a mix of lavender, white, and mint accents. The product is centered against a soft lavender background with bright, even lighting that emphasizes the layered materials and playful design. The vibe is fresh and trendy, perfect for a youthful lifestyle footwear collection." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPz99wzbc4qIWq7cktJ5ZdYhp6g6MVMOYXv4K1YBMyq2I1tGr3H8-PXCfxGU6QXDEQ4itKc27gwk5s4-NPLJTwg8xn-s9dk5aEvXn5wvWfzPVZsLzTBWNIB-0OHPJ0QTE4U0Be79WjVH9kY5ru7Wpk67Q9IUSH2__0W46Bp03lfE1Drm-_xAPBKD7PXnFeujUTwqVvRXmzjYgB0u_ab_F-iTg5MU04Dgabrh48NPhsvDa4sOh60USmZGZs6r_as5FIHX6JbfiKwUI">
+<span class="absolute top-3 left-3 bg-error text-on-error text-[10px] px-2 py-1 rounded-full font-bold uppercase">خصم 20%</span>
+<button class="absolute bottom-3 right-3 bg-on-surface text-on-primary w-10 h-10 rounded-full flex items-center justify-center shadow-lg active:scale-90 transition-all opacity-0 group-hover:opacity-100">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+<div class="p-4 flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<h3 class="text-label-bold font-label-bold text-on-surface">حذاء كاجوال مودرن</h3>
+<div class="flex items-center gap-1 text-amber-500">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[12px] font-bold">4.5</span>
+</div>
+</div>
+<span class="text-body-sm text-on-surface-variant">أحذية</span>
+<div class="flex gap-2 items-center mt-2">
+<span class="text-price-display font-price-display text-primary">340 ر.س</span>
+<span class="text-body-sm text-on-surface-variant line-through">425 ر.س</span>
+</div>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden product-card-shadow transition-transform hover:-translate-y-1">
+<div class="relative bg-[#E8F5E9] aspect-square flex items-center justify-center p-4">
+<img alt="Mini Bag" class="w-full h-full object-contain mix-blend-multiply transition-transform group-hover:scale-110 duration-500" data-alt="A petite, minimalist designer bag in a soft cream-white leather, displayed on a light mint green background. The lighting is crisp and modern, casting soft ambient shadows that define the bag's structural form. The aesthetic is extremely clean and high-contrast, conveying a sense of luxury and contemporary style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEuC7php8m0tYFc7RIN34zsZpVFuIfUiSby-_e6o5STL5IKlaRjuRZe1SCxyK8S75fH8qyNJHzD1M0YXTwJQ6js7EnNJUwtjG3F-RnC0uEniU6j6qXIxjIXyleqH2N2odiQitHwaIq7kexm6CMXPQN8TshZi5uLil0-0bNfa_soRJikc3ANhIPuFm0cRD76NGhT2CRa7LTf-k_am3o-fHUboUAKMaMj2yKz76JTrdJyKAFCtTnioKOGjVlMaEaOnUZ4z9st7w-RIw">
+<button class="absolute bottom-3 right-3 bg-on-surface text-on-primary w-10 h-10 rounded-full flex items-center justify-center shadow-lg active:scale-90 transition-all opacity-0 group-hover:opacity-100">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+<div class="p-4 flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<h3 class="text-label-bold font-label-bold text-on-surface">حقيبة ميني لوكس</h3>
+<div class="flex items-center gap-1 text-amber-500">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[12px] font-bold">5.0</span>
+</div>
+</div>
+<span class="text-body-sm text-on-surface-variant">حقائب</span>
+<span class="text-price-display font-price-display text-primary mt-2">850 ر.س</span>
+</div>
+</div>
+<!-- Product 5 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden product-card-shadow transition-transform hover:-translate-y-1">
+<div class="relative bg-[#FFF3E0] aspect-square flex items-center justify-center p-4">
+<img alt="Volt Running Shoe" class="w-full h-full object-contain mix-blend-multiply transition-transform group-hover:scale-110 duration-500" data-alt="A vibrant neon green running shoe presented in a sharp studio photograph against a soft peach background. High-key lighting makes the electric color pop while revealing the technical mesh texture of the footwear. The composition is sleek and professional, targeting a fashion-forward athletic audience with high-energy visuals." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxbU2Q8ivhTd5Ghl4l0k6NJ7D__NRvwLwhkTT-Y159nSJBlwDGeISC-w5XetjPaBbboq_YXEZFyTMUDb9UNtekRooKc3HXeu_JMSHpbjI_P9jHiqD9XYCuSz6ES4k0Y55ouHBg0XJ3lETVFEXkLRBaLR0DEBokF9mn7dtm-CnhN787PWo4QOiJlKzqQvpeOaTYTg1FMsJzVlpjili3ilLDvjopH-ap3E_UuRBsoQjokr05faDoHOV_mhNXFhr0TFKNsLy5XD7SDB4">
+<button class="absolute bottom-3 right-3 bg-on-surface text-on-primary w-10 h-10 rounded-full flex items-center justify-center shadow-lg active:scale-90 transition-all opacity-0 group-hover:opacity-100">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+<div class="p-4 flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<h3 class="text-label-bold font-label-bold text-on-surface">حذاء الجري فولت</h3>
+<div class="flex items-center gap-1 text-amber-500">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[12px] font-bold">4.7</span>
+</div>
+</div>
+<span class="text-body-sm text-on-surface-variant">أحذية رياضية</span>
+<span class="text-price-display font-price-display text-primary mt-2">620 ر.س</span>
+</div>
+</div>
+<!-- Product 6 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden product-card-shadow transition-transform hover:-translate-y-1">
+<div class="relative bg-[#E0F7FA] aspect-square flex items-center justify-center p-4">
+<img alt="Blue Backpack" class="w-full h-full object-contain mix-blend-multiply transition-transform group-hover:scale-110 duration-500" data-alt="A modern urban backpack in a deep navy blue, displayed on a cool sky-blue background. Soft, diffused lighting highlights the durable fabric and minimal hardware details. The design is presented in a clean, professional manner, focusing on functionality and sleek aesthetics for the modern professional or student." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD18ALUwl_39XSScLAo0wbtin38bAEMUcQC37q8GfJP9UStrZc9V4Rru_6EAwVNmDBkxINHS7uFvb2Iw0bEMXe0bbMFmGZHLMG_dxSfYX1ys0y5r7JmK5wTEkcK2PCfJIzfS_4S44JINb2pkf8BsE6Mdd_2wWij5I0TgtQaRsKfgaZxbd-lwcdEt1c5hkv3DUZn-2rLdSVrXillY-X73NMPzh83TEoFqi6lF9FHckTFT2Ol-qCpoqqJgLB_QFhsZ_AxJyf9WJwI8Oo">
+<button class="absolute bottom-3 right-3 bg-on-surface text-on-primary w-10 h-10 rounded-full flex items-center justify-center shadow-lg active:scale-90 transition-all opacity-0 group-hover:opacity-100">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+<div class="p-4 flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<h3 class="text-label-bold font-label-bold text-on-surface">حقيبة الظهر سيتي</h3>
+<div class="flex items-center gap-1 text-amber-500">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[12px] font-bold">4.6</span>
+</div>
+</div>
+<span class="text-body-sm text-on-surface-variant">حقائب</span>
+<span class="text-price-display font-price-display text-primary mt-2">450 ر.س</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-6 left-1/2 -translate-x-1/2 w-[calc(100%-48px)] max-w-md z-50 flex justify-around items-center px-4 py-2 bg-surface-container-lowest dark:bg-surface-container-lowest rounded-full shadow-2xl">
+<a class="flex items-center justify-center bg-primary-container text-on-primary-container rounded-full p-3 scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+</a>
+<a class="flex items-center justify-center text-on-surface-variant p-3 hover:bg-surface-variant/30 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined">chat_bubble</span>
+</a>
+<a class="flex items-center justify-center text-on-surface-variant p-3 hover:bg-surface-variant/30 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined">notifications</span>
+</a>
+<a class="flex items-center justify-center text-on-surface-variant p-3 hover:bg-surface-variant/30 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined">person</span>
+</a>
+</nav>
+<script>
+        // Micro-interactions for product cards
+        document.querySelectorAll('.group').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                // Future expansion for dynamic effects
+            });
+        });
+
+        // Simple cart update simulation
+        const cartBtns = document.querySelectorAll('button .material-symbols-outlined');
+        cartBtns.forEach(btn => {
+            if(btn.innerText === 'add_shopping_cart') {
+                btn.parentElement.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    btn.innerText = 'done';
+                    btn.parentElement.classList.add('bg-secondary');
+                    setTimeout(() => {
+                        btn.innerText = 'add_shopping_cart';
+                        btn.parentElement.classList.remove('bg-secondary');
+                    }, 1500);
+                });
+            }
+        });
+    </script>
+</body></html>

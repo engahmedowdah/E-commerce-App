@@ -1,0 +1,297 @@
+<!DOCTYPE html><html dir="rtl" lang="ar"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;family=Noto+Sans+Arabic:wght@400;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        body {
+            font-family: 'Noto Sans Arabic', 'Plus Jakarta Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#e1e3e4",
+                    "on-primary": "#ffffff",
+                    "tertiary": "#5e5e5e",
+                    "primary-fixed-dim": "#ffb1c4",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-secondary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed": "#001257",
+                    "on-primary-fixed-variant": "#8f0043",
+                    "surface-dim": "#d9dadb",
+                    "surface-container-high": "#e7e8e9",
+                    "inverse-on-surface": "#f0f1f2",
+                    "on-error-container": "#93000a",
+                    "background": "#f8f9fa",
+                    "on-tertiary": "#ffffff",
+                    "outline": "#8d7076",
+                    "primary": "#b90a5a",
+                    "surface-bright": "#f8f9fa",
+                    "outline-variant": "#e1bec5",
+                    "on-surface-variant": "#594046",
+                    "on-surface": "#191c1d",
+                    "secondary": "#4c5a9d",
+                    "surface-container": "#edeeef",
+                    "on-primary-container": "#5b0028",
+                    "on-tertiary-container": "#2a2a2a",
+                    "tertiary-fixed-dim": "#c6c6c6",
+                    "on-background": "#191c1d",
+                    "on-primary-fixed": "#3f001a",
+                    "on-tertiary-fixed-variant": "#474747",
+                    "tertiary-container": "#919191",
+                    "on-secondary-container": "#364486",
+                    "inverse-surface": "#2e3132",
+                    "primary-fixed": "#ffd9e0",
+                    "on-secondary-fixed-variant": "#334283",
+                    "on-tertiary-fixed": "#1b1b1b",
+                    "surface-container-low": "#f3f4f5",
+                    "tertiary-fixed": "#e2e2e2",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#ffb1c4",
+                    "secondary-container": "#a7b5ff",
+                    "primary-container": "#ff4d8d",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#b90a5a",
+                    "surface": "#f8f9fa",
+                    "secondary-fixed-dim": "#b9c3ff",
+                    "secondary-fixed": "#dde1ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "card-padding": "16px",
+                    "base": "8px",
+                    "gutter": "16px",
+                    "container-margin": "24px",
+                    "section-gap": "32px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Noto Sans Arabic", "Plus Jakarta Sans"],
+                    "price-display": ["Noto Sans Arabic", "Plus Jakarta Sans"],
+                    "headline-lg": ["Noto Sans Arabic", "Plus Jakarta Sans"],
+                    "body-lg": ["Noto Sans Arabic", "Plus Jakarta Sans"],
+                    "headline-xl": ["Noto Sans Arabic", "Plus Jakarta Sans"],
+                    "label-bold": ["Noto Sans Arabic", "Plus Jakarta Sans"],
+                    "body-sm": ["Noto Sans Arabic", "Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "headline-md": ["18px", {"lineHeight": "24px", "fontWeight": "700"}],
+                    "price-display": ["20px", {"lineHeight": "24px", "fontWeight": "800"}],
+                    "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-xl": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "label-bold": ["14px", {"lineHeight": "16px", "fontWeight": "700"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="bg-background dark:bg-background flex justify-between items-center w-full px-container-margin py-4 sticky top-0 z-50">
+<div class="flex items-center gap-4">
+<button class="hover:bg-surface-variant/20 dark:hover:bg-surface-variant/10 rounded-full p-2 flex items-center justify-center active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined text-on-surface">menu</span>
+</button>
+<h1 class="text-headline-md font-headline-md font-extrabold text-on-surface dark:text-on-surface">Sole &amp; Style</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="hover:bg-surface-variant/20 dark:hover:bg-surface-variant/10 rounded-full p-2 flex items-center justify-center active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined text-on-surface">shopping_cart</span>
+</button>
+</div>
+</header>
+<main class="px-container-margin mt-4">
+<!-- Main Categories Tabs -->
+<section class="mb-section-gap">
+<div class="flex items-center gap-4 overflow-x-auto hide-scrollbar py-2">
+<button class="px-6 py-2 rounded-full whitespace-nowrap transition-all duration-200 font-label-bold text-label-bold text-on-surface font-bold bg-secondary-container text-on-secondary-container" id="tab-footwear" onclick="switchCategory('footwear')">أحذية</button>
+<button class="px-6 py-2 rounded-full whitespace-nowrap transition-all duration-200 font-label-bold text-label-bold text-on-surface-variant hover:bg-surface-variant/20" id="tab-bags" onclick="switchCategory('bags')">حقائب</button>
+<button class="px-6 py-2 rounded-full whitespace-nowrap transition-all duration-200 font-label-bold text-label-bold text-on-surface-variant hover:bg-surface-variant/20" id="tab-watches" onclick="switchCategory('watches')">ساعات</button>
+</div>
+</section>
+<!-- Featured Banner -->
+<section class="mb-section-gap relative rounded-xl overflow-hidden aspect-[16/9] group shadow-xl">
+<img alt="Featured Collection" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A cinematic shot of high-end vibrant red sneakers placed against a minimalist light blue background. The lighting is soft and artistic, highlighting the textures of the leather and mesh. The composition is modern and balanced, perfectly aligning with a premium fashion footwear aesthetic with soft ambient shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6iD7wU3kudbtM6WteVAXXZRxd6b80ZgqLG6QyNKcUhbj-fQObJwJ4e57s-H6f-2r_9s2ewjn2GLVsISrGiQ9fhuwSpqpCjYu3E-xp6aK6MATT1ggQHpy5lKyq5mOfEiNXt3r9xyhU-GCBSShbfo2fkKhpwUI3rU-b4pTg2EgYdFHLX5EMDe2YtjQv2H09f1ixH0i1ChGz7uURD-ZB0VfO9PKY8fWh0RNkRhSaRSUF4fXr7MwIe-UeQrXoGirdyCEWiLpvvCpqkK0">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6">
+<span class="bg-primary text-on-primary text-label-bold font-label-bold px-3 py-1 rounded-full w-fit mb-2">وصل حديثاً</span>
+<h2 class="text-white font-headline-lg text-headline-lg mb-2">مجموعة الصيف 2024</h2>
+<p class="text-white/80 font-body-sm text-body-sm">اكتشف أحدث التصاميم العصرية بلمسة رياضية</p>
+</div>
+</section>
+<!-- Subcategories Grid -->
+<section id="subcategory-container">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-headline-lg font-headline-lg" id="category-title">تصفح حسب النوع</h3>
+<span class="text-primary font-label-bold text-label-bold">عرض الكل</span>
+</div>
+<!-- This grid changes based on selection -->
+<div class="grid grid-cols-2 gap-gutter" id="sub-grid">
+<!-- Shoes Default -->
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center gap-3 hover:shadow-lg transition-all duration-300 group cursor-pointer">
+<div class="w-16 h-16 bg-[#FFE5EC] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">ice_skating</span>
+</div>
+<span class="font-label-bold text-label-bold text-on-surface">أحذية رياضية</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center gap-3 hover:shadow-lg transition-all duration-300 group cursor-pointer">
+<div class="w-16 h-16 bg-[#E3F2FD] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-secondary text-3xl">steps</span>
+</div>
+<span class="font-label-bold text-label-bold text-on-surface">صنادل</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center gap-3 hover:shadow-lg transition-all duration-300 group cursor-pointer">
+<div class="w-16 h-16 bg-[#F3E5F5] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-surface-variant text-3xl">bolt</span>
+</div>
+<span class="font-label-bold text-label-bold text-on-surface">أحذية رسمية</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center gap-3 hover:shadow-lg transition-all duration-300 group cursor-pointer">
+<div class="w-16 h-16 bg-[#E8F5E9] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-tertiary text-3xl">hiking</span>
+</div>
+<span class="font-label-bold text-label-bold text-on-surface">أحذية شتوية</span>
+</div>
+</div>
+</section>
+<!-- Trending Now -->
+<section class="mt-section-gap">
+<h3 class="text-headline-lg font-headline-lg mb-6">الأكثر طلباً</h3>
+<div class="flex gap-4 overflow-x-auto hide-scrollbar pb-4">
+<div class="min-w-[160px] bg-white rounded-xl shadow-sm border border-surface-variant/30 overflow-hidden">
+<div class="aspect-square bg-[#FFF0F3] relative p-4">
+<img alt="Product" class="w-full h-full object-contain" data-alt="A high-fashion sneaker in pastel pink and white colors, floating in a clean studio environment with soft shadows. The lighting is bright and airy, reflecting a modern youthful vibe. Premium quality materials like mesh and suede are clearly visible." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBNgKVe60cPyd8qiWJWDMCefeO7Xh4sgVgr_qD4_CjpJ-f5Hwi41s1K3slKDT_SpW02kBd7FYBU77yMYSR1lua2SUcxu0b-36OaQa8VLzUavhL6-bLW13LbeujzR25dkcQ6QhZw9i1NYvO_uQ19NiEACJG7PSW5j_MHViczSSkR_dYRAXq3JoCaBeJP1HQV1HJgP5PqC7hU2zMcjaNEoL32UJijrhQ5IjaCr79kC9b6Uxnj_Lh5BRL4mMULj-z0Y7Hw6YxuE6Sqfw">
+<span class="absolute top-2 left-2 bg-black text-white text-[10px] px-2 py-1 rounded-full uppercase font-bold">New</span>
+</div>
+<div class="p-3">
+<p class="text-body-sm font-label-bold truncate">نايك اير فابورماكس</p>
+<p class="text-primary font-price-display text-price-display mt-1">٧٩٩ ر.س</p>
+</div>
+</div>
+<div class="min-w-[160px] bg-white rounded-xl shadow-sm border border-surface-variant/30 overflow-hidden">
+<div class="aspect-square bg-[#E8F1F2] relative p-4">
+<img alt="Product" class="w-full h-full object-contain" data-alt="Minimalist high-top white sneakers displayed on a smooth light grey pedestal. The lighting is architectural and clean, casting sharp but soft-edged shadows. The overall aesthetic is professional, minimalist, and luxury-focused." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLpCebobAmKylGRtA20aCXddS2wEdDq4534k2XGRCbuVDLGTMEcfBRG918IaTggyjyEhhz6B-PcuMgtlIUq-hOaogZAMEzxJJygbI4OV7WktQo0revhJelO3WBcmKbpqPsuRe1SmYeyYTH5_q-H1eeFFO0WqsR8hGrNCGy6gqhcBG1FwYW7x6GVMugJgfasntIAKKXiD-k_xuJo6c600-SRy6UzTk2F2FEyugBVullMtJxq65mbEI3fzVLHjVXV63eUUUpLsMay1I">
+</div>
+<div class="p-3">
+<p class="text-body-sm font-label-bold truncate">كونفرس كلاسيك</p>
+<p class="text-primary font-price-display text-price-display mt-1">٣٤٩ ر.س</p>
+</div>
+</div>
+<div class="min-w-[160px] bg-white rounded-xl shadow-sm border border-surface-variant/30 overflow-hidden">
+<div class="aspect-square bg-[#F5F5F5] relative p-4">
+<img alt="Product" class="w-full h-full object-contain" data-alt="Bright lime green athletic running shoes showcased against a high-contrast white background. The shoes feature reflective detailing and a modern aerodynamic design. The atmosphere is energetic, vibrant, and sports-oriented." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmpPzoQrMq-YKlrIteddiOB7DF2G6cJLl729Awyn0Xud4Ng0WKHZyFiij7mHTSg8msphs4MSf1A1CCl9OvUXfq5IfaROCRatDt9aBX5VDHWZKhGvJd8psN51Fi3D-dmLb540ePJRVzfWNYI15V5I9wlj6_9AyNUDSd_MWEeSMpLNCKiO5rOQJfSeKOO3qmlabZ1tzqwN-3wCYPvYLTCe5_-AeT_Zd7EvgB3DnGH3C_fTAqwIsIcnOJWEy2NXB4euL2Zsz_jYrnCLw">
+<span class="absolute top-2 left-2 bg-red-600 text-white text-[10px] px-2 py-1 rounded-full uppercase font-bold">Sale</span>
+</div>
+<div class="p-3">
+<p class="text-body-sm font-label-bold truncate">نايك زووم اكس</p>
+<p class="text-primary font-price-display text-price-display mt-1">٥٤٠ ر.س</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-6 left-1/2 -translate-x-1/2 w-[calc(100%-48px)] max-w-md z-50 flex justify-around items-center px-4 py-2 bg-surface-container-lowest dark:bg-surface-container-lowest rounded-full shadow-2xl border border-surface-variant/10">
+<a class="flex items-center justify-center text-on-surface-variant p-3 hover:bg-surface-variant/30 rounded-full active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">home</span>
+</a>
+<a class="flex items-center justify-center bg-primary-container text-on-primary-container rounded-full p-3 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">category</span>
+</a>
+<a class="flex items-center justify-center text-on-surface-variant p-3 hover:bg-surface-variant/30 rounded-full active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">notifications</span>
+</a>
+<a class="flex items-center justify-center text-on-surface-variant p-3 hover:bg-surface-variant/30 rounded-full active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">person</span>
+</a>
+</nav>
+<script>
+        const categories = {
+            footwear: {
+                title: 'تصفح الأحذية',
+                items: [
+                    { label: 'أحذية رياضية', icon: 'ice_skating', color: '#FFE5EC' },
+                    { label: 'صنادل', icon: 'steps', color: '#E3F2FD' },
+                    { label: 'أحذية رسمية', icon: 'boot', color: '#F3E5F5' },
+                    { label: 'أحذية شتوية', icon: 'hiking', color: '#E8F5E9' }
+                ]
+            },
+            bags: {
+                title: 'تصفح الحقائب',
+                items: [
+                    { label: 'حقائب يد', icon: 'shopping_bag', color: '#FFF3E0' },
+                    { label: 'حقائب ظهر', icon: 'backpack', color: '#E0F2F1' },
+                    { label: 'حقائب سفر', icon: 'luggage', color: '#FCE4EC' },
+                    { label: 'محافظ', icon: 'wallet', color: '#F1F8E9' }
+                ]
+            },
+            watches: {
+                title: 'تصفح الساعات',
+                items: [
+                    { label: 'ساعات ذكية', icon: 'watch', color: '#E8EAF6' },
+                    { label: 'ساعات كلاسيكية', icon: 'watch_off', color: '#FFFDE7' },
+                    { label: 'ساعات رياضية', icon: 'timer', color: '#EFEBE9' },
+                    { label: 'إكسسوارات ساعات', icon: 'settings', color: '#ECEFF1' }
+                ]
+            }
+        };
+
+        function switchCategory(cat) {
+            // Update tabs
+            document.querySelectorAll('[id^="tab-"]').forEach(btn => {
+                btn.classList.remove('bg-secondary-container', 'text-on-secondary-container', 'font-bold');
+                btn.classList.add('text-on-surface-variant');
+            });
+            const activeTab = document.getElementById(`tab-${cat}`);
+            activeTab.classList.add('bg-secondary-container', 'text-on-secondary-container', 'font-bold');
+            activeTab.classList.remove('text-on-surface-variant');
+
+            // Update title
+            document.getElementById('category-title').innerText = categories[cat].title;
+
+            // Update grid
+            const grid = document.getElementById('sub-grid');
+            grid.style.opacity = '0';
+            
+            setTimeout(() => {
+                grid.innerHTML = categories[cat].items.map(item => `
+                    <div class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center gap-3 hover:shadow-lg transition-all duration-300 group cursor-pointer">
+                        <div class="w-16 h-16 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform" style="background-color: ${item.color}">
+                            <span class="material-symbols-outlined text-3xl" style="color: #191c1d">${item.icon}</span>
+                        </div>
+                        <span class="font-label-bold text-label-bold text-on-surface">${item.label}</span>
+                    </div>
+                `).join('');
+                grid.style.opacity = '1';
+            }, 150);
+        }
+
+        // Initialize transition effect
+        document.getElementById('sub-grid').style.transition = 'opacity 0.15s ease-in-out';
+    </script>
+</body></html>
