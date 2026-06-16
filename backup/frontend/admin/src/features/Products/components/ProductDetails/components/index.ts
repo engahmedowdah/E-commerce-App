@@ -1,0 +1,9 @@
+export {default as ProductDetailsHeader } from "./ProductDetailsHeader/ProductDetailsHeader";
+export {default as ProductDetailsTabs } from "./ProductDetailsTabs/ProductDetailsTabs";
+export {default as ProductDetailsInfo } from "./ProductDetailsInfo/ProductDetailsInfo";
+export {default as ProductDetailsImages } from "./ProductDetailsImages/ProductDetailsImages";
+export {default as ProductDetailsSEO } from "./ProductDetailsSEO/ProductDetailsSEO";
+export {default as ProductDetailsStatus } from "./ProductDetailsStatus/ProductDetailsStatus";
+export {default as ProductDetailsProducts } from "./ProductDetailsProducts/ProductDetailsProducts";
+export {default as ProductDetailsSettings } from "./ProductDetailsSettings/ProductDetailsSettings";
+export {default as ProductDetailsContent } from "./ProductDetailsContent/ProductDetailsContent";

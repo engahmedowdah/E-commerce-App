@@ -1,0 +1,16 @@
+import express from "express";
+import CreateAdmin from "./routers/CreateAdmin.routes.js";
+import DeleteAdmin from "./routers/DeleteAdmin.routes.js";
+import GetAdminByID from "./routers/GetAdminByID.routes.js";
+import GetAllAdmins from "./routers/GetAllAdmins.routes.js";
+import UpdateAdmin from "./routers/UpdateAdmin.routes.js";
+import ActiveAdminByID from "./routers/ActiveAdminByID.routes.js";
+const admin = express.Router();
+admin.use("/", CreateAdmin);
+admin.use("/", DeleteAdmin);
+admin.use("/", GetAdminByID);
+admin.use("/", UpdateAdmin);
+admin.use("/active", ActiveAdminByID);
+const admins = express.Router();
+admins.use("/", GetAllAdmins);
+export { admin, admins };

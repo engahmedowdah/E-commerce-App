@@ -1,0 +1,16 @@
+import express from "express";
+import CreateRole from "./routers/CreateRole.routes.js";
+import DeleteRole from "./routers/DeleteRole.routes.js";
+import GetAllRoles from "./routers/GetAllRoles.routes.js";
+import GetRoleByID from "./routers/GetRoleByID.routes.js";
+import UpdateRole from "./routers/UpdateRole.routes.js";
+import ActiveRoleByID from "./routers/ActiveRoleByID.routes.js";
+const role = express.Router();
+role.use("/", CreateRole);
+role.use("/", DeleteRole);
+role.use("/", GetRoleByID);
+role.use("/", UpdateRole);
+role.use("/active", ActiveRoleByID);
+const roles = express.Router();
+roles.use("/", GetAllRoles);
+export { role, roles };

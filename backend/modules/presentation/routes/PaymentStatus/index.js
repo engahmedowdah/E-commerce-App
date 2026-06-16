@@ -1,0 +1,16 @@
+import express from "express";
+import CreatePaymentStatus from "./routers/CreatePaymentStatus.routes.js";
+import DeletePaymentStatus from "./routers/DeletePaymentStatus.routes.js";
+import GetAllPaymentStatuses from "./routers/GetAllPaymentStatuses.routes.js";
+import GetPaymentStatusByID from "./routers/GetPaymentStatusByID.routes.js";
+import UpdatePaymentStatus from "./routers/UpdatePaymentStatus.routes.js";
+import ActivePaymentStatusByID from "./routers/ActivePaymentStatusByID.routes.js";
+const payment_status = express.Router();
+payment_status.use("/", CreatePaymentStatus);
+payment_status.use("/", DeletePaymentStatus);
+payment_status.use("/", GetPaymentStatusByID);
+payment_status.use("/", UpdatePaymentStatus);
+payment_status.use("/active", ActivePaymentStatusByID);
+const payment_statuses = express.Router();
+payment_statuses.use("/", GetAllPaymentStatuses);
+export { payment_status, payment_statuses };

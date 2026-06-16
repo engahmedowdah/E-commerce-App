@@ -1,0 +1,16 @@
+import express from "express";
+import CreateOrderStatus from "./routers/CreateOrderStatus.routes.js";
+import DeleteOrderStatus from "./routers/DeleteOrderStatus.routes.js";
+import GetAllOrderStatuses from "./routers/GetAllOrderStatuses.routes.js";
+import GetOrderStatusByID from "./routers/GetOrderStatusByID.routes.js";
+import UpdateOrderStatus from "./routers/UpdateOrderStatus.routes.js";
+import ActiveOrderStatusByID from "./routers/ActiveOrderStatusByID.routes.js";
+const order_status = express.Router();
+order_status.use("/", CreateOrderStatus);
+order_status.use("/", DeleteOrderStatus);
+order_status.use("/", GetOrderStatusByID);
+order_status.use("/", UpdateOrderStatus);
+order_status.use("/active", ActiveOrderStatusByID);
+const order_statuses = express.Router();
+order_statuses.use("/", GetAllOrderStatuses);
+export { order_status, order_statuses };

@@ -1,0 +1,18 @@
+import express from "express";
+import CreateCategory from "./routers/CreateCategory.routes.js";
+import DeleteCategory from "./routers/DeleteCategory.routes.js";
+import GetAllCategories from "./routers/GetAllCategories.routes.js";
+import GetCategoryByID from "./routers/GetCategoryByID.routes.js";
+import GetCategoryBySlug from "./routers/GetCategoryBySlug.routes.js";
+import UpdateCategory from "./routers/UpdateCategory.routes.js";
+import ActiveCategoryByID from "./routers/ActiveCategoryByID.routes.js";
+const category = express.Router();
+category.use("/", CreateCategory);
+category.use("/", DeleteCategory);
+category.use("/", GetCategoryByID);
+category.use("/", UpdateCategory);
+category.use("/slug", GetCategoryBySlug);
+category.use("/active", ActiveCategoryByID);
+const categories = express.Router();
+categories.use("/", GetAllCategories);
+export { category, categories };

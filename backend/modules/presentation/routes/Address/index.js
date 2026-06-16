@@ -1,0 +1,16 @@
+import express from "express";
+import CreateAddress from "./routers/CreateAddress.routes.js";
+import DeleteAddress from "./routers/DeleteAddress.routes.js";
+import GetAllUserAddressesByUserID from "./routers/GetAllUserAddressesByUserID.routes.js";
+import UpdateAddress from "./routers/UpdateAddress.routes.js";
+import GetAddressByAddressID from "./routers/GetAddressByAddressID.routes.js";
+import GetAllAddresses from "./routers/GetAllAddresses.routes.js";
+const address = express.Router();
+address.use("/", CreateAddress);
+address.use("/", DeleteAddress);
+address.use("/", UpdateAddress);
+address.use("/", GetAddressByAddressID);
+const addresses = express.Router();
+addresses.use("/", GetAllAddresses);
+addresses.use("/user", GetAllUserAddressesByUserID);
+export { address, addresses };

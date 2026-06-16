@@ -1,0 +1,11 @@
+import express from "express";
+import Login from "./routers/Login.routes.js";
+import Register from "./routers/Register.routes.js";
+import ResetPassword from "./routers/ResetPassword.routes.js";
+import Logout from "./routers/Logout.routes.js";
+const auth = express.Router();
+auth.use("/login", Login);
+auth.use("/register", Register);
+auth.use("/reset-password", ResetPassword);
+auth.use("/logout", Logout);
+export { auth };

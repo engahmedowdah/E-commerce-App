@@ -1,0 +1,14 @@
+import express from "express";
+import DeleteUser from "./routers/DeleteUser.routes.js";
+import GetUserByID from "./routers/GetUserByID.routes.js";
+import GetAllUsers from "./routers/GetAllUsers.routes.js";
+import UpdateUser from "./routers/UpdateUser.routes.js";
+import ActiveUserByID from "./routers/ActiveUserByID.routes.js";
+const user = express.Router();
+user.use("/", DeleteUser);
+user.use("/", GetUserByID);
+user.use("/", UpdateUser);
+user.use("/active", ActiveUserByID);
+const users = express.Router();
+users.use("/", GetAllUsers);
+export { user, users };

@@ -1,0 +1,16 @@
+import express from "express";
+import CreateCity from "./routers/CreateCity.routes.js";
+import DeleteCity from "./routers/DeleteCity.routes.js";
+import GetAllCities from "./routers/GetAllCities.routes.js";
+import GetCityByID from "./routers/GetCityByID.routes.js";
+import UpdateCity from "./routers/UpdateCity.routes.js";
+import ActiveCityByID from "./routers/ActiveCityByID.routes.js";
+const city = express.Router();
+city.use("/", CreateCity);
+city.use("/", DeleteCity);
+city.use("/", GetCityByID);
+city.use("/", UpdateCity);
+city.use("/active", ActiveCityByID);
+const cities = express.Router();
+cities.use("/", GetAllCities);
+export { city, cities };

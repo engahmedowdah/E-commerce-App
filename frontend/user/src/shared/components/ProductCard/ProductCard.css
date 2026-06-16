@@ -1,0 +1,157 @@
+.figma-product-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.figma-product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.figma-product-card__media {
+  position: relative;
+  height: 16rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.figma-product-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+
+.figma-product-card:hover .figma-product-card__img {
+  transform: scale(1.1);
+}
+
+.figma-product-card__badge {
+  position: absolute;
+  top: 1rem;
+  inset-inline-end: 1rem;
+  z-index: 2;
+  padding: 0.2rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.625rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.figma-product-card__badge--new {
+  background: #b90a5a;
+  color: #fff;
+}
+
+.figma-product-card__badge--sale {
+  background: #191c1d;
+  color: #fff;
+}
+
+.figma-product-card__badge--sold {
+  background: #b90a5a;
+  color: #fff;
+}
+
+.figma-product-card__fav {
+  position: absolute;
+  top: 1rem;
+  inset-inline-start: 1rem;
+  z-index: 2;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b90a5a;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.figma-product-card:hover .figma-product-card__fav {
+  opacity: 1;
+}
+
+.figma-product-card__body {
+  padding: 1rem;
+}
+
+.figma-product-card__brand {
+  font-size: 0.8125rem;
+  color: #594046;
+  margin-bottom: 0.25rem;
+}
+
+.figma-product-card__name {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #191c1d;
+  margin-bottom: 0.75rem;
+  transition: color 0.2s;
+}
+
+.figma-product-card:hover .figma-product-card__name {
+  color: #b90a5a;
+}
+
+.figma-product-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.figma-product-card__prices {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.figma-product-card__price {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #b90a5a;
+  line-height: 1.2;
+}
+
+.figma-product-card__price-old {
+  font-size: 0.875rem;
+  color: #594046;
+  text-decoration: line-through;
+}
+
+.figma-product-card__colors {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.figma-product-card__dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  border: 1px solid #e1bec5;
+}
+
+.figma-product-card__cart {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #b90a5a;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}

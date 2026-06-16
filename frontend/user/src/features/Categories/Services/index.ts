@@ -1,0 +1,2 @@
+export { default as GetAllCategories } from '../../../business/services/Categories/services/GetAllCategories.service';
+export { default as GetCategoryByID } from '../../../business/services/Categories/services/GetCategoryByID.service';
