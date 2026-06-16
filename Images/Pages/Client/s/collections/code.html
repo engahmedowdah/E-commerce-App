@@ -1,0 +1,307 @@
+<!DOCTYPE html><html dir="rtl" lang="ar"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;family=Noto+Sans+Arabic:wght@400;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        body {
+            font-family: 'Noto Sans Arabic', 'Plus Jakarta Sans', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .soft-shadow {
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05), 0 20px 25px -5px rgba(0, 0, 0, 0.03);
+        }
+        .glass-effect {
+            backdrop-filter: blur(8px);
+            background: rgba(255, 255, 255, 0.7);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#e1e3e4",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#5e5e5e",
+                        "primary-fixed-dim": "#ffb1c4",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#001257",
+                        "on-primary-fixed-variant": "#8f0043",
+                        "surface-dim": "#d9dadb",
+                        "surface-container-high": "#e7e8e9",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-error-container": "#93000a",
+                        "background": "#f8f9fa",
+                        "on-tertiary": "#ffffff",
+                        "outline": "#8d7076",
+                        "primary": "#b90a5a",
+                        "surface-bright": "#f8f9fa",
+                        "outline-variant": "#e1bec5",
+                        "on-surface-variant": "#594046",
+                        "on-surface": "#191c1d",
+                        "secondary": "#4c5a9d",
+                        "surface-container": "#edeeef",
+                        "on-primary-container": "#5b0028",
+                        "on-tertiary-container": "#2a2a2a",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "on-background": "#191c1d",
+                        "on-primary-fixed": "#3f001a",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "tertiary-container": "#919191",
+                        "on-secondary-container": "#364486",
+                        "inverse-surface": "#2e3132",
+                        "primary-fixed": "#ffd9e0",
+                        "on-secondary-fixed-variant": "#334283",
+                        "on-tertiary-fixed": "#1b1b1b",
+                        "surface-container-low": "#f3f4f5",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#ffb1c4",
+                        "secondary-container": "#a7b5ff",
+                        "primary-container": "#ff4d8d",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#b90a5a",
+                        "surface": "#f8f9fa",
+                        "secondary-fixed-dim": "#b9c3ff",
+                        "secondary-fixed": "#dde1ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "card-padding": "16px",
+                        "base": "8px",
+                        "gutter": "16px",
+                        "container-margin": "24px",
+                        "section-gap": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Noto Sans Arabic", "Plus Jakarta Sans"],
+                        "price-display": ["Noto Sans Arabic", "Plus Jakarta Sans"],
+                        "headline-lg": ["Noto Sans Arabic", "Plus Jakarta Sans"],
+                        "body-lg": ["Noto Sans Arabic", "Plus Jakarta Sans"],
+                        "headline-xl": ["Noto Sans Arabic", "Plus Jakarta Sans"],
+                        "label-bold": ["Noto Sans Arabic", "Plus Jakarta Sans"],
+                        "body-sm": ["Noto Sans Arabic", "Plus Jakarta Sans"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen pb-32 overflow-x-hidden">
+<!-- Top AppBar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md">
+<div class="flex justify-between items-center w-full px-container-margin py-4">
+<button class="hover:bg-surface-variant/20 rounded-full p-2 active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined text-on-surface">menu</span>
+</button>
+<h1 class="text-headline-md font-extrabold text-on-surface tracking-tight">Sole &amp; Style</h1>
+<button class="hover:bg-surface-variant/20 rounded-full p-2 active:scale-95 transition-transform duration-150 relative">
+<span class="material-symbols-outlined text-on-surface">shopping_cart</span>
+<span class="absolute top-1 right-1 bg-primary text-on-primary text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">2</span>
+</button>
+</div>
+</header>
+<main class="mt-20 px-container-margin">
+<!-- Hero Section -->
+<section class="py-6 mb-section-gap">
+<div class="flex justify-between items-end mb-6">
+<div>
+<h2 class="text-headline-xl font-headline-xl text-on-surface leading-tight">استكشف<br>المجموعات</h2>
+<p class="text-on-surface-variant text-body-lg mt-2">تصاميم عصرية تناسب أسلوبك</p>
+</div>
+<div class="hidden md:flex gap-2">
+<button class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+<button class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+</div>
+</div>
+<!-- Categories Chips -->
+<div class="flex gap-3 overflow-x-auto hide-scrollbar pb-2 -mx-6 px-6">
+<button class="bg-black text-white px-6 py-2 rounded-full text-label-bold whitespace-nowrap active:scale-95 transition-transform">الكل</button>
+<button class="bg-white border border-outline-variant text-on-surface px-6 py-2 rounded-full text-label-bold whitespace-nowrap hover:bg-surface-container transition-colors">أحذية</button>
+<button class="bg-white border border-outline-variant text-on-surface px-6 py-2 rounded-full text-label-bold whitespace-nowrap hover:bg-surface-container transition-colors">حقائب</button>
+<button class="bg-white border border-outline-variant text-on-surface px-6 py-2 rounded-full text-label-bold whitespace-nowrap hover:bg-surface-container transition-colors">إكسسوارات</button>
+<button class="bg-white border border-outline-variant text-on-surface px-6 py-2 rounded-full text-label-bold whitespace-nowrap hover:bg-surface-container transition-colors">رياضة</button>
+</div>
+</section>
+<!-- Collections Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Featured Card: Summer Kicks -->
+<div class="lg:col-span-2 group relative overflow-hidden rounded-[40px] bg-[#E3F2FD] aspect-[4/3] md:aspect-[16/9] soft-shadow flex items-center justify-center p-8 transition-transform duration-500 hover:scale-[1.01]">
+<div class="absolute inset-0 z-0">
+<img alt="Summer Kicks" class="w-full h-full object-cover mix-blend-multiply opacity-40 group-hover:scale-110 transition-transform duration-700" data-alt="A pair of vibrant, multi-colored high-top sneakers suspended mid-air against a soft pastel blue studio background. The lighting is diffused and airy, emphasizing the youthful and energetic mood. The image has a clean, high-fashion aesthetic with minimalist composition and professional product photography style using soft shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5tW1jFiheSvEjy29B_6AYegZZsBBS0yyg7tDPR7cEN9EcbHwcYocacyOnEIR9oNqNyVCjYwiyf9-i7a25Vc1WgG1Ku3mmhfTgVNV-iUeyXXtanyICqyQuAQ_Oiv-AOTO0WTYiGiKeGQU3_8eRvwtLJXhPrpDttnf5mUVN6CAgMwcmsnxTD_sKAIObjeJosC3plpemCNLdKdpdb2y5bhl3HqPA200yBAwgPj-47CZgwhkUFTtKaoo3SvSKrW1H4s1cTCt_kRpBm3Y">
+</div>
+<div class="relative z-10 w-full h-full flex flex-col justify-end">
+<div class="bg-white/40 backdrop-blur-xl p-8 rounded-[32px] border border-white/30 max-w-xs">
+<span class="inline-block bg-primary text-white text-[10px] px-3 py-1 rounded-full font-bold uppercase tracking-widest mb-3">New Arrival</span>
+<h3 class="text-headline-xl font-headline-xl text-black mb-2">أحذية الصيف</h3>
+<p class="text-body-lg text-black/70 mb-4">خفة وأناقة لكل خطوة تحت الشمس</p>
+<button class="bg-black text-white px-8 py-3 rounded-full text-label-bold flex items-center gap-2 group/btn">
+                            تصفح الآن
+                            <span class="material-symbols-outlined text-sm group-hover/btn:-translate-x-1 transition-transform">arrow_back</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Elegant Bags -->
+<div class="group relative overflow-hidden rounded-[40px] bg-[#FCE4EC] aspect-square soft-shadow transition-transform duration-500 hover:scale-[1.01]">
+<div class="absolute inset-0">
+<img alt="Elegant Bags" class="w-full h-full object-cover mix-blend-multiply opacity-50 group-hover:scale-110 transition-transform duration-700" data-alt="A minimalist arrangement of premium leather handbags in soft blush pink and ivory colors, displayed on geometric pedestals. The setting is a bright, airy studio with soft shadows and a modern, professional fashion catalog aesthetic. The lighting is high-key and clean, highlighting the sophisticated textures and elegant designs of the accessories." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0gFtEiQbFX4ynXsOY26aX3ebczKa42eqbS4KSUs8xFv_TJd_t7R7t6VRN-ZSxxsgS20vvBpTuxr9gAH8kU_F-VZn9KodyOT2Fw6y8o-LXzZFrCG_0FRFBZpwlPXlB9M1PQoWtEV6c6Lh5UES6gcsu-x8dr569qTH1Gv9uc4xjzPPT5OheyeTZaQTeIztDYgLVu6P8N8QHLnX0vxKAG7NQtjKo6yByURvWopJzsykiAuNBkHbGFQJpbnfi3CJEFR-mK4NG79cnBCQ">
+</div>
+<div class="absolute bottom-0 left-0 right-0 p-8">
+<div class="bg-white/60 backdrop-blur-md p-6 rounded-[28px]">
+<h3 class="text-headline-lg font-headline-lg text-on-surface">حقائب راقية</h3>
+<p class="text-body-sm text-on-surface-variant">اللمسة النهائية المثالية لإطلالتك</p>
+</div>
+</div>
+</div>
+<!-- Sport Edition -->
+<div class="group relative overflow-hidden rounded-[40px] bg-[#F1F8E9] aspect-square lg:aspect-auto lg:h-[450px] soft-shadow transition-transform duration-500 hover:scale-[1.01]">
+<div class="absolute inset-0">
+<img alt="Sport Edition" class="w-full h-full object-cover mix-blend-multiply opacity-40 group-hover:scale-110 transition-transform duration-700" data-alt="Modern athletic running shoes in dynamic lime green and charcoal black colors, placed on a clean reflective surface. The mood is powerful and high-performance, with dramatic yet soft lighting that creates deep but soft-edged shadows. The background is a very pale pastel green, maintaining a fresh and professional sporting goods store aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuta1nN3y7f36g23sjrstspQ-xUzdkQ-9zap0Ped8ZKSXw1T_Wi2JM1if_AX-0bmDOSDpnazF6Rph1pMDOWbYP9U7iUtuAekrnx60nLxixULrimUGHr6IVhEMw2ttIdy2Asih2-NdDlGuiNWHkhmNNg5SQhLPH8hbuMIZjkVkfp6cWkA8TIy1zGels0iAUKOfW2eaqyOjgc6p49Z5bX7MiP__5ZtO3BVHUMk4aWF-wI46zslNaSxFbCJQSnRZOUpYTiYGbBFr5_CQ">
+</div>
+<div class="absolute inset-0 p-8 flex flex-col justify-between">
+<div class="flex justify-end">
+<div class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center">
+<span class="material-symbols-outlined">fitness_center</span>
+</div>
+</div>
+<div class="bg-white/80 backdrop-blur-md p-6 rounded-[28px]">
+<h3 class="text-headline-lg font-headline-lg text-on-surface">إصدار الرياضة</h3>
+<p class="text-body-sm text-on-surface-variant">أداء عالٍ بتصميم عصري وجريء</p>
+</div>
+</div>
+</div>
+<!-- Accessories -->
+<div class="group relative overflow-hidden rounded-[40px] bg-[#FFF3E0] aspect-square soft-shadow transition-transform duration-500 hover:scale-[1.01]">
+<div class="absolute inset-0">
+<img alt="Accessories" class="w-full h-full object-cover mix-blend-multiply opacity-50 group-hover:scale-110 transition-transform duration-700" data-alt="A curated collection of minimalist watches and leather wallets displayed on a warm pastel orange background. The lighting is soft and golden, creating a premium and approachable lifestyle atmosphere. The composition is clean and organized, following a modern minimalist design aesthetic with gentle, ambient shadows that provide depth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsHzUfBaicQr1RPi5SiRnUGCUfgSAwLp_SIYfJIQnjj7ls6m_0Roro7_y15HsBiAIVaoitYhEkYPp2PlIyoThgC1glFx4zNqFkaIEoH15yP1eO1QQJECjqGQ1k0eCFUihvdjcndZWFdvdSpjSYSRBUI9CBrMBbHzFwdLeTAvQGF2_l6zvPtu1e4K7OvocB0-5TGIUsQqooN4bL1he21udaxLQmTVTIwOh_7sOGis9Uz77YMEU5m6Rv5Bw46KXoCjo0LriBDISUMHc">
+</div>
+<div class="absolute bottom-0 left-0 right-0 p-8">
+<div class="bg-white p-6 rounded-[28px] flex justify-between items-center">
+<div>
+<h3 class="text-headline-lg font-headline-lg text-on-surface">إكسسوارات</h3>
+<p class="text-body-sm text-on-surface-variant">تفاصيل تصنع الفارق</p>
+</div>
+<button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined">arrow_outward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Limited Edition -->
+<div class="lg:col-span-1 group relative overflow-hidden rounded-[40px] bg-[#F3E5F5] aspect-square soft-shadow transition-transform duration-500 hover:scale-[1.01]">
+<div class="absolute inset-0">
+<img alt="Limited Edition" class="w-full h-full object-cover mix-blend-multiply opacity-40 group-hover:scale-110 transition-transform duration-700" data-alt="Exclusive premium leather sneakers in a minimalist lavender and white colorway, elegantly showcased in a high-end boutique setting. The lighting is sophisticated and directional, casting long, soft shadows. The overall mood is luxurious and exclusive, with a color palette dominated by soft purples and crisp whites, embodying a clean modern UI style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNyZRHcvXbzRQ_v-4_ikTxzz0BJ5jBHbcoMqP_lznyihRCUi-caMUiYR7g8JzDBscLGDHaW21_qek19rU90IehfG8EyeCnZOYhT1FCxVdzBYZ08PxoLRUWoNzKZ3DXzQZLVvkqRRlUlyp0zom33BzmzzLL1KirRKYuAantXbvmOdginbmzwglXcwfxAb5GSZXa1cSFOIYGN1vg78YtpkW7Pc9gQGpKZ2w6FS7iqCKrEgVCe5iPlHUsy7NUpL9VKVUgLCG5sob5KC0">
+</div>
+<div class="absolute inset-0 p-8 flex flex-col justify-end">
+<div class="bg-black text-white p-8 rounded-[32px]">
+<h3 class="text-headline-lg font-headline-lg mb-2">إصدار محدود</h3>
+<p class="text-body-sm opacity-70 mb-4">قطع حصرية لن تتكرر، احصل عليها الآن</p>
+<div class="h-1 w-full bg-white/20 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-2/3"></div>
+</div>
+<p class="text-[10px] mt-2 opacity-50">تبقي 12 قطعة فقط</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / Community Section -->
+<section class="mt-section-gap mb-8">
+<div class="bg-surface-container-low rounded-[40px] p-8 md:p-16 flex flex-col md:flex-row items-center gap-8 border border-white">
+<div class="flex-1 text-center md:text-right">
+<h2 class="text-headline-xl font-headline-xl text-on-surface mb-4">انضم إلى مجتمعنا</h2>
+<p class="text-body-lg text-on-surface-variant mb-6">كن أول من يعرف عن المجموعات الجديدة والخصومات الحصرية.</p>
+<div class="flex flex-col sm:flex-row gap-3">
+<input class="flex-1 bg-white border-none rounded-full px-6 py-4 focus:ring-2 focus:ring-primary soft-shadow" placeholder="بريدك الإلكتروني" type="email">
+<button class="bg-black text-white px-10 py-4 rounded-full text-label-bold hover:scale-105 transition-transform active:scale-95">اشتراك</button>
+</div>
+</div>
+<div class="hidden md:block w-64 h-64 relative">
+<div class="absolute inset-0 bg-primary-fixed-dim rounded-full animate-pulse opacity-20"></div>
+<div class="absolute inset-4 bg-secondary-fixed rounded-full animate-bounce duration-3000 opacity-30"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-[80px] text-primary">mail</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-6 left-1/2 -translate-x-1/2 w-[calc(100%-48px)] max-w-md z-50 flex justify-around items-center px-4 py-2 bg-surface-container-lowest/80 backdrop-blur-xl rounded-full shadow-2xl transition-all duration-300 hover:shadow-primary/10">
+<a class="flex items-center justify-center text-on-surface-variant p-3 hover:bg-surface-variant/30 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined">home</span>
+</a>
+<a class="flex items-center justify-center bg-primary-container text-on-primary-container rounded-full p-3 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+</a>
+<a class="flex items-center justify-center text-on-surface-variant p-3 hover:bg-surface-variant/30 rounded-full transition-all relative" href="#">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full"></span>
+</a>
+<a class="flex items-center justify-center text-on-surface-variant p-3 hover:bg-surface-variant/30 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined">person</span>
+</a>
+</nav>
+<!-- Micro-interaction Script -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.group');
+            
+            cards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const { left, top, width, height } = card.getBoundingClientRect();
+                    const x = (e.clientX - left) / width - 0.5;
+                    const y = (e.clientY - top) / height - 0.5;
+                    
+                    const img = card.querySelector('img');
+                    if(img) {
+                        img.style.transform = `scale(1.1) translate(${x * 20}px, ${y * 20}px)`;
+                    }
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    const img = card.querySelector('img');
+                    if(img) {
+                        img.style.transform = 'scale(1) translate(0, 0)';
+                    }
+                });
+            });
+
+            // Smooth scroll shadow for bottom nav
+            window.addEventListener('scroll', () => {
+                const nav = document.querySelector('nav');
+                if (window.scrollY > 20) {
+                    nav.classList.add('shadow-primary/20');
+                } else {
+                    nav.classList.remove('shadow-primary/20');
+                }
+            });
+        });
+    </script>
+</body></html>

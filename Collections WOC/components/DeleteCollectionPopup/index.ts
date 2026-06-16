@@ -1,0 +1,1 @@
+export { default as DeleteCollectionPopup } from "./DeleteCollectionPopup";

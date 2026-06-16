@@ -1,0 +1,287 @@
+<!DOCTYPE html><html dir="rtl" lang="ar"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .custom-shadow {
+            box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#e1e3e4",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#5e5e5e",
+                        "primary-fixed-dim": "#ffb1c4",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#001257",
+                        "on-primary-fixed-variant": "#8f0043",
+                        "surface-dim": "#d9dadb",
+                        "surface-container-high": "#e7e8e9",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-error-container": "#93000a",
+                        "background": "#f8f9fa",
+                        "on-tertiary": "#ffffff",
+                        "outline": "#8d7076",
+                        "primary": "#b90a5a",
+                        "surface-bright": "#f8f9fa",
+                        "outline-variant": "#e1bec5",
+                        "on-surface-variant": "#594046",
+                        "on-surface": "#191c1d",
+                        "secondary": "#4c5a9d",
+                        "surface-container": "#edeeef",
+                        "on-primary-container": "#5b0028",
+                        "on-tertiary-container": "#2a2a2a",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "on-background": "#191c1d",
+                        "on-primary-fixed": "#3f001a",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "tertiary-container": "#919191",
+                        "on-secondary-container": "#364486",
+                        "inverse-surface": "#2e3132",
+                        "primary-fixed": "#ffd9e0",
+                        "on-secondary-fixed-variant": "#334283",
+                        "on-tertiary-fixed": "#1b1b1b",
+                        "surface-container-low": "#f3f4f5",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#ffb1c4",
+                        "secondary-container": "#a7b5ff",
+                        "primary-container": "#ff4d8d",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#b90a5a",
+                        "surface": "#f8f9fa",
+                        "secondary-fixed-dim": "#b9c3ff",
+                        "secondary-fixed": "#dde1ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "card-padding": "16px",
+                        "base": "8px",
+                        "gutter": "16px",
+                        "container-margin": "24px",
+                        "section-gap": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "price-display": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-xl": ["Plus Jakarta Sans"],
+                        "label-bold": ["Plus Jakarta Sans"],
+                        "body-sm": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["18px", {"lineHeight": "24px", "fontWeight": "700"}],
+                        "price-display": ["20px", {"lineHeight": "24px", "fontWeight": "800"}],
+                        "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-xl": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "label-bold": ["14px", {"lineHeight": "16px", "fontWeight": "700"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopAppBar -->
+<header class="bg-background fixed top-0 z-50 flex justify-between items-center w-full px-container-margin py-4">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface hover:bg-surface-variant/20 rounded-full p-2 active:scale-95 transition-transform">menu</button>
+<span class="text-headline-md font-headline-md font-extrabold text-on-surface">Sole &amp; Style</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="material-symbols-outlined text-on-surface hover:bg-surface-variant/20 rounded-full p-2 active:scale-95 transition-transform">shopping_cart</button>
+</div>
+</header>
+<main class="pt-24 pb-32 px-container-margin max-w-7xl mx-auto">
+<!-- Hero Section -->
+<section class="mb-section-gap">
+<div class="relative h-64 md:h-96 w-full rounded-3xl overflow-hidden mb-8">
+<img class="w-full h-full object-cover" data-alt="A high-end, minimalist retail interior with soft pink and blue pastel walls, featuring elegant display shelves for footwear and accessories. The lighting is airy and bright, reflecting a modern light-mode aesthetic with clean lines and premium materials. High-contrast black elements ground the ethereal atmosphere of this premium fashion boutique." src="https://lh3.googleusercontent.com/aida-public/AB6AXuALgHFo0IQjIYelVISYTwVX8YpAklLB6aISWxegKLrwc_v_hZpyipM6BDn1R0Hs6tYwX6pVXd6wL3qc1_MrUX6vEC9y25fs5OKPXSAs-IYoTLupp53Mq16C1ar1Uul2-3rVQfhS-_MSjuWcAo21t3F3VQFwI4YMQmNJqehdSQp5OFXdNht-i49qtXYGUl9wlnIBdOubFQQX-dUrEjzG58HEu3vlvvNCgR12M8tBzwc7fzfK1TSemGp57BImdQUOPTQ7AdkNZiN8vAo">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
+<h1 class="text-headline-xl font-headline-xl text-white">تواصل معنا</h1>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Contact Form Section (Bento Style) -->
+<div class="lg:col-span-7 flex flex-col gap-gutter">
+<div class="glass-card rounded-3xl p-8 custom-shadow">
+<h2 class="text-headline-lg font-headline-lg mb-6">أرسل لنا رسالة</h2>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-label-bold font-label-bold block pr-1">الاسم الكامل</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-primary outline-none transition-all" placeholder="أدخل اسمك" type="text">
+</div>
+<div class="space-y-2">
+<label class="text-label-bold font-label-bold block pr-1">البريد الإلكتروني</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-primary outline-none transition-all" placeholder="example@mail.com" type="email">
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-label-bold font-label-bold block pr-1">الموضوع</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-primary outline-none transition-all" placeholder="كيف يمكننا مساعدتك؟" type="text">
+</div>
+<div class="space-y-2">
+<label class="text-label-bold font-label-bold block pr-1">الرسالة</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-primary outline-none transition-all" placeholder="اكتب رسالتك هنا..." rows="4"></textarea>
+</div>
+<button class="w-full bg-on-surface text-white py-4 rounded-xl font-bold uppercase hover:bg-on-surface-variant transition-colors active:scale-[0.98] duration-150" type="submit">إرسال الرسالة</button>
+</form>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="bg-primary-container/10 p-6 rounded-3xl flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary mb-3 text-3xl">phone_in_talk</span>
+<p class="text-label-bold font-label-bold">اتصل بنا</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant">+966 50 000 0000</p>
+</div>
+<div class="bg-secondary-container/10 p-6 rounded-3xl flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-secondary mb-3 text-3xl">mail</span>
+<p class="text-label-bold font-label-bold">البريد الإلكتروني</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant">hello@soleandstyle.com</p>
+</div>
+<div class="bg-surface-variant/20 p-6 rounded-3xl flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-on-surface mb-3 text-3xl">schedule</span>
+<p class="text-label-bold font-label-bold">ساعات العمل</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant">10 صباحاً - 10 مساءً</p>
+</div>
+</div>
+</div>
+<!-- Locations & Map Section -->
+<div class="lg:col-span-5 flex flex-col gap-gutter">
+<div class="glass-card rounded-3xl p-8 custom-shadow flex-1">
+<h2 class="text-headline-lg font-headline-lg mb-6">مواقعنا</h2>
+<div class="space-y-6">
+<!-- Location Card 1 -->
+<div class="group cursor-pointer">
+<div class="flex gap-4 items-start p-4 rounded-2xl hover:bg-white transition-all">
+<div class="bg-surface-container rounded-xl p-3 flex-shrink-0 group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<h3 class="text-label-bold font-label-bold mb-1">الرياض، مجمع النخيل</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">الطريق الدائري الشرقي، الرياض، المملكة العربية السعودية</p>
+</div>
+</div>
+</div>
+<!-- Location Card 2 -->
+<div class="group cursor-pointer">
+<div class="flex gap-4 items-start p-4 rounded-2xl hover:bg-white transition-all">
+<div class="bg-surface-container rounded-xl p-3 flex-shrink-0 group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<h3 class="text-label-bold font-label-bold mb-1">جدة، رد سي مول</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">طريق الملك عبدالعزيز، جدة، المملكة العربية السعودية</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Map Placeholder -->
+<div class="mt-8 relative aspect-square rounded-2xl overflow-hidden border-4 border-white shadow-inner">
+<div class="w-full h-full bg-surface-variant flex items-center justify-center relative overflow-hidden" data-location="Riyadh">
+<img class="w-full h-full object-cover opacity-80" data-alt="A stylized, top-down minimalist urban map graphic with soft pastel color blocks representing buildings and clean white lines for streets. The aesthetic is modern and playful, utilizing a light-mode palette of soft pinks, blues, and greys. A vibrant magenta map pin with a soft shadow marks a central location, conveying a sense of premium service and easy navigation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDikrenQf4aJV1coCFiu17RwyfF5WSuoWjEOXQcqoxnRB9vJSHIzHfrTsycFc0AhxHWfWdo2T_yvu_97KvLzzb2SrRjeRVY5vHPE1vRycpR3auxA3mbpMWELqmnqjhPJXnvG11jaNAprouf7d9Knwo84FpWX2mRiBLrsl1G1a3tVBPGdHuquEpQs1mKEHNHiEvCN-eeH6fFi2AtuBQuZxjCvPqcWFH1V1uaTzLadUXzaBQ7ZzboLKZ0Ryn2ZNIg8Q4pfXYkXd7ErM8">
+<div class="absolute inset-0 bg-primary/5"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<span class="material-symbols-outlined text-primary text-5xl animate-bounce" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+</div>
+<div class="absolute bottom-4 right-4 flex flex-col gap-2">
+<button class="bg-white rounded-lg p-2 shadow-md hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="bg-white rounded-lg p-2 shadow-md hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">remove</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Social Links -->
+<div class="glass-card rounded-3xl p-6 custom-shadow">
+<div class="flex justify-around items-center">
+<a class="w-12 h-12 flex items-center justify-center rounded-full bg-surface-container hover:bg-primary-container hover:text-on-primary-container transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="w-12 h-12 flex items-center justify-center rounded-full bg-surface-container hover:bg-primary-container hover:text-on-primary-container transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="w-12 h-12 flex items-center justify-center rounded-full bg-surface-container hover:bg-primary-container hover:text-on-primary-container transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined">camera</span>
+</a>
+<a class="w-12 h-12 flex items-center justify-center rounded-full bg-surface-container hover:bg-primary-container hover:text-on-primary-container transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined">chat</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[calc(100%-48px)] max-w-md z-50 bg-surface-container-lowest flex justify-around items-center px-4 py-2 rounded-full shadow-2xl">
+<button class="flex items-center justify-center text-on-surface-variant p-3 hover:bg-surface-variant/30 rounded-full transition-all duration-200 active:scale-90">
+<span class="material-symbols-outlined">home</span>
+</button>
+<button class="flex items-center justify-center text-on-surface-variant p-3 hover:bg-surface-variant/30 rounded-full transition-all duration-200 active:scale-90">
+<span class="material-symbols-outlined">chat_bubble</span>
+</button>
+<button class="flex items-center justify-center text-on-surface-variant p-3 hover:bg-surface-variant/30 rounded-full transition-all duration-200 active:scale-90">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="flex items-center justify-center bg-primary-container text-on-primary-container rounded-full p-3 transition-all duration-200 active:scale-90">
+<span class="material-symbols-outlined">person</span>
+</button>
+</nav>
+<script>
+        // Simple micro-interaction for form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button');
+            const originalText = btn.textContent;
+            btn.textContent = 'تم الإرسال بنجاح!';
+            btn.classList.replace('bg-on-surface', 'bg-secondary');
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.classList.replace('bg-secondary', 'bg-on-surface');
+                this.reset();
+            }, 3000);
+        });
+    </script>
+</body></html>

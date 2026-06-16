@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Location Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#e7e8e9",
+                    "on-primary": "#ffffff",
+                    "surface-container": "#edeeef",
+                    "primary-fixed-dim": "#ffb1c4",
+                    "on-tertiary": "#ffffff",
+                    "outline-variant": "#e1bec5",
+                    "on-surface-variant": "#594046",
+                    "on-tertiary-fixed-variant": "#474747",
+                    "on-secondary-fixed": "#001257",
+                    "tertiary-fixed": "#e2e2e2",
+                    "on-secondary-fixed-variant": "#334283",
+                    "on-primary-fixed": "#3f001a",
+                    "surface": "#f8f9fa",
+                    "secondary-container": "#a7b5ff",
+                    "inverse-on-surface": "#f0f1f2",
+                    "surface-bright": "#f8f9fa",
+                    "error": "#ba1a1a",
+                    "tertiary-container": "#919191",
+                    "on-tertiary-fixed": "#1b1b1b",
+                    "surface-variant": "#e1e3e4",
+                    "background": "#f8f9fa",
+                    "on-primary-fixed-variant": "#8f0043",
+                    "primary-container": "#ff4d8d",
+                    "surface-tint": "#b90a5a",
+                    "on-error-container": "#93000a",
+                    "surface-container-lowest": "#ffffff",
+                    "on-background": "#191c1d",
+                    "outline": "#8d7076",
+                    "on-surface": "#191c1d",
+                    "error-container": "#ffdad6",
+                    "tertiary": "#5e5e5e",
+                    "surface-container-highest": "#e1e3e4",
+                    "primary-fixed": "#ffd9e0",
+                    "surface-container-low": "#f3f4f5",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#c6c6c6",
+                    "on-tertiary-container": "#2a2a2a",
+                    "on-secondary-container": "#364486",
+                    "on-primary-container": "#5b0028",
+                    "secondary": "#4c5a9d",
+                    "secondary-fixed-dim": "#b9c3ff",
+                    "surface-dim": "#d9dadb",
+                    "inverse-primary": "#ffb1c4",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#2e3132",
+                    "secondary-fixed": "#dde1ff",
+                    "primary": "#b90a5a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "16px",
+                    "section-gap": "32px",
+                    "base": "8px",
+                    "container-margin": "24px",
+                    "card-padding": "16px"
+            },
+            "fontFamily": {
+                    "price-display": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "body-sm": ["Plus Jakarta Sans"],
+                    "headline-xl": ["Plus Jakarta Sans"],
+                    "label-bold": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+        .active-selection {
+            border: 2px solid #ff4d8d;
+            background-color: #fff0f5;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #e1e3e4;
+            border-radius: 10px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased min-h-screen pb-32">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-50 bg-surface dark:bg-surface-dim shadow-sm flex items-center justify-between px-container-margin w-full h-16">
+<button class="material-symbols-outlined text-primary hover:bg-surface-container-high transition-colors active:scale-95 p-2 rounded-full" data-icon="arrow_back">arrow_back</button>
+<h1 class="font-headline-md text-headline-md text-primary">Location Settings</h1>
+<button class="material-symbols-outlined text-primary hover:bg-surface-container-high transition-colors active:scale-95 p-2 rounded-full" data-icon="help">help</button>
+</header>
+<main class="px-container-margin pt-6">
+<!-- Search Section -->
+<div class="relative mb-8">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full h-14 pl-12 pr-4 bg-surface-container-low border-none rounded-xl font-body-lg focus:ring-2 focus:ring-primary-container transition-all" placeholder="Search for country or city..." type="text"/>
+</div>
+<!-- Selection Container (Bento-like layout) -->
+<div class="grid grid-cols-1 gap-6">
+<!-- Country Selection -->
+<section>
+<div class="flex items-center justify-between mb-4">
+<h2 class="font-headline-md text-headline-md">Select Country</h2>
+<span class="text-primary font-label-bold text-label-bold">Required</span>
+</div>
+<div class="flex flex-wrap gap-3" id="country-chips">
+<!-- Default countries provided -->
+<button class="country-chip px-5 py-3 rounded-xl bg-surface-container-lowest shadow-sm border-2 border-transparent transition-all active:scale-95 font-label-bold text-label-bold" onclick="selectCountry(this, 'Saudi Arabia')">Saudi Arabia</button>
+<button class="country-chip px-5 py-3 rounded-xl bg-surface-container-lowest shadow-sm border-2 border-transparent transition-all active:scale-95 font-label-bold text-label-bold" onclick="selectCountry(this, 'UAE')">UAE</button>
+<button class="country-chip px-5 py-3 rounded-xl bg-surface-container-lowest shadow-sm border-2 border-transparent transition-all active:scale-95 font-label-bold text-label-bold" onclick="selectCountry(this, 'Kuwait')">Kuwait</button>
+<button class="country-chip px-5 py-3 rounded-xl bg-surface-container-lowest shadow-sm border-2 border-transparent transition-all active:scale-95 font-label-bold text-label-bold" onclick="selectCountry(this, 'Qatar')">Qatar</button>
+<button class="country-chip px-5 py-3 rounded-xl bg-surface-container-lowest shadow-sm border-2 border-transparent transition-all active:scale-95 font-label-bold text-label-bold" onclick="selectCountry(this, 'Bahrain')">Bahrain</button>
+<button class="country-chip px-5 py-3 rounded-xl bg-surface-container-lowest shadow-sm border-2 border-transparent transition-all active:scale-95 font-label-bold text-label-bold" onclick="selectCountry(this, 'Oman')">Oman</button>
+</div>
+</section>
+<!-- City Selection (Asymmetric Grid) -->
+<section class="mt-4 opacity-40 transition-opacity pointer-events-none" id="city-section">
+<h2 class="font-headline-md text-headline-md mb-4">Select City</h2>
+<div class="grid grid-cols-2 gap-4" id="city-list">
+<!-- Dynamically populated cities -->
+</div>
+</section>
+<!-- Visual Context Image -->
+<div class="mt-8 rounded-2xl overflow-hidden shadow-lg h-48 relative">
+<div class="absolute inset-0 bg-black/20 z-10"></div>
+<img alt="Riyadh Skyline" class="w-full h-full object-cover" data-alt="A cinematic, high-angle wide shot of Riyadh's skyline during the golden hour, featuring the Kingdom Centre and other modern architectural landmarks. The sky is a gradient of warm pink and soft lavender, matching the brand's vibrant palette. The lighting is soft and atmospheric, highlighting the sleek glass surfaces of the skyscrapers against a clean, minimalist urban horizon. The mood is optimistic and professional, reflecting a high-end travel and lifestyle aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvhasmh-JPrCkUq5lGvJiIfj6VYLD87fzjOthi3iluggtMcEb-m67AbRPM2sHlzQRTM4ABSzRRWEpTyKTFGQyIedEYL3OxykmUmLl0KRQkt3GiG5zp3L45Cg2IGnSQoXEXcBE7dVYTYMu6RIuwFjAZsImqTbLCKSKoZxEDpFCpJEXMZ48XD1YcMHmGATqIsDdt_RGoiGrvuqYdhXE6ThxNAwljFCvQAdC2uqKTO5sd1_THXnXmNz7vO19NW1wkNmkntnUkym6d5ic"/>
+<div class="absolute bottom-4 left-4 z-20 text-white">
+<p class="font-headline-lg text-headline-lg font-extrabold leading-none">Find Your Style</p>
+<p class="font-body-sm text-body-sm opacity-90">In your favorite local spots.</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Fixed Action Footer -->
+<div class="fixed bottom-24 left-0 w-full px-container-margin z-40">
+<button class="w-full bg-black text-white h-14 rounded-xl font-label-bold text-label-bold uppercase tracking-widest shadow-xl active:scale-95 transition-all opacity-50 cursor-not-allowed" id="save-btn">
+            Save Location
+        </button>
+</div>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 py-base pb-safe bg-surface-container-lowest shadow-[0_-4px_20px_0_rgba(0,0,0,0.05)] rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:opacity-80 transition-opacity active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="font-label-bold text-label-bold">Shop</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:opacity-80 transition-opacity active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-label-bold text-label-bold">Search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:opacity-80 transition-opacity active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="local_mall">local_mall</span>
+<span class="font-label-bold text-label-bold">Bag</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary after:content-[''] after:w-1 after:h-1 after:bg-primary after:rounded-full after:mt-1 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-bold text-label-bold">Profile</span>
+</a>
+</nav>
+<script>
+        const cityData = {
+            'Saudi Arabia': ['Riyadh', 'Jeddah', 'Dammam', 'Khobar', 'Medina', 'Mecca'],
+            'UAE': ['Dubai', 'Abu Dhabi', 'Sharjah', 'Ajman'],
+            'Kuwait': ['Kuwait City', 'Salmiya', 'Jahra'],
+            'Qatar': ['Doha', 'Al Wakrah', 'Al Rayyan'],
+            'Bahrain': ['Manama', 'Riffa', 'Muharraq'],
+            'Oman': ['Muscat', 'Salalah', 'Sohar']
+        };
+
+        let selectedCountry = null;
+        let selectedCity = null;
+
+        function selectCountry(el, country) {
+            // UI Update for chips
+            document.querySelectorAll('.country-chip').forEach(chip => {
+                chip.classList.remove('active-selection', 'text-primary');
+            });
+            el.classList.add('active-selection', 'text-primary');
+
+            selectedCountry = country;
+            selectedCity = null;
+            
+            // Enable city section
+            const citySection = document.getElementById('city-section');
+            citySection.classList.remove('opacity-40', 'pointer-events-none');
+            
+            // Populate cities
+            const cityList = document.getElementById('city-list');
+            cityList.innerHTML = '';
+            
+            cityData[country].forEach(city => {
+                const cityBtn = document.createElement('button');
+                cityBtn.className = 'city-item flex items-center justify-between p-4 rounded-xl bg-surface-container-lowest shadow-sm border-2 border-transparent transition-all active:scale-95 font-body-lg text-body-lg text-left';
+                cityBtn.innerHTML = `
+                    <span>${city}</span>
+                    <span class="material-symbols-outlined text-primary text-sm opacity-0 select-icon">check_circle</span>
+                `;
+                cityBtn.onclick = () => selectCity(cityBtn, city);
+                cityList.appendChild(cityBtn);
+            });
+
+            validateForm();
+        }
+
+        function selectCity(el, city) {
+            document.querySelectorAll('.city-item').forEach(item => {
+                item.classList.remove('active-selection', 'text-primary');
+                item.querySelector('.select-icon').classList.add('opacity-0');
+            });
+            el.classList.add('active-selection', 'text-primary');
+            el.querySelector('.select-icon').classList.remove('opacity-0');
+
+            selectedCity = city;
+            validateForm();
+        }
+
+        function validateForm() {
+            const saveBtn = document.getElementById('save-btn');
+            if (selectedCountry && selectedCity) {
+                saveBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+                saveBtn.classList.add('bg-primary-container', 'hover:brightness-110');
+            } else {
+                saveBtn.classList.add('opacity-50', 'cursor-not-allowed');
+                saveBtn.classList.remove('bg-primary-container', 'hover:brightness-110');
+            }
+        }
+
+        // Search Mock Interaction
+        document.querySelector('input').addEventListener('input', (e) => {
+            const val = e.target.value.toLowerCase();
+            const chips = document.querySelectorAll('.country-chip');
+            chips.forEach(chip => {
+                const text = chip.textContent.toLowerCase();
+                chip.style.display = text.includes(val) ? 'block' : 'none';
+            });
+        });
+    </script>
+</body></html>

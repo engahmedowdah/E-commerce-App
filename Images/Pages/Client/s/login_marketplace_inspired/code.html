@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sole &amp; Style | تسجيل الدخول</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;family=Noto+Sans+Arabic:wght@400;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Noto Sans Arabic', 'Plus Jakarta Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        input:focus + label,
+        input:not(:placeholder-shown) + label {
+            transform: translateY(-1.5rem) scale(0.85);
+            color: #b90a5a;
+        }
+        .tab-transition {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-fixed": "#ffd9e0",
+                      "inverse-surface": "#2e3132",
+                      "on-tertiary-fixed-variant": "#474747",
+                      "on-tertiary-container": "#2a2a2a",
+                      "on-surface-variant": "#594046",
+                      "tertiary": "#5e5e5e",
+                      "surface-tint": "#b90a5a",
+                      "on-primary": "#ffffff",
+                      "surface-dim": "#d9dadb",
+                      "surface-bright": "#f8f9fa",
+                      "on-secondary-fixed-variant": "#334283",
+                      "primary": "#b90a5a",
+                      "on-error": "#ffffff",
+                      "surface": "#f8f9fa",
+                      "inverse-primary": "#ffb1c4",
+                      "outline": "#8d7076",
+                      "surface-container-low": "#f3f4f5",
+                      "on-secondary-container": "#364486",
+                      "tertiary-fixed-dim": "#c6c6c6",
+                      "on-primary-fixed": "#3f001a",
+                      "primary-fixed-dim": "#ffb1c4",
+                      "on-background": "#191c1d",
+                      "surface-container-highest": "#e1e3e4",
+                      "secondary-fixed-dim": "#b9c3ff",
+                      "on-primary-fixed-variant": "#8f0043",
+                      "inverse-on-surface": "#f0f1f2",
+                      "error-container": "#ffdad6",
+                      "surface-variant": "#e1e3e4",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-container": "#5b0028",
+                      "secondary": "#4c5a9d",
+                      "primary-container": "#ff4d8d",
+                      "error": "#ba1a1a",
+                      "on-secondary-fixed": "#001257",
+                      "background": "#f8f9fa",
+                      "secondary-fixed": "#dde1ff",
+                      "secondary-container": "#a7b5ff",
+                      "on-tertiary-fixed": "#1b1b1b",
+                      "on-secondary": "#ffffff",
+                      "surface-container": "#edeeef",
+                      "on-tertiary": "#ffffff",
+                      "tertiary-fixed": "#e2e2e2",
+                      "tertiary-container": "#919191",
+                      "surface-container-high": "#e7e8e9",
+                      "on-surface": "#191c1d",
+                      "on-error-container": "#93000a",
+                      "outline-variant": "#e1bec5"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "16px",
+                      "container-margin": "24px",
+                      "section-gap": "32px",
+                      "base": "8px",
+                      "card-padding": "16px"
+              },
+              "fontFamily": {
+                      "price-display": ["Plus Jakarta Sans", "Noto Sans Arabic"],
+                      "body-lg": ["Plus Jakarta Sans", "Noto Sans Arabic"],
+                      "headline-xl": ["Plus Jakarta Sans", "Noto Sans Arabic"],
+                      "headline-md": ["Plus Jakarta Sans", "Noto Sans Arabic"],
+                      "body-sm": ["Plus Jakarta Sans", "Noto Sans Arabic"],
+                      "label-bold": ["Plus Jakarta Sans", "Noto Sans Arabic"],
+                      "headline-lg": ["Plus Jakarta Sans", "Noto Sans Arabic"]
+              },
+              "fontSize": {
+                      "price-display": ["20px", {"lineHeight": "24px", "fontWeight": "800"}],
+                      "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-xl": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "headline-md": ["18px", {"lineHeight": "24px", "fontWeight": "700"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "label-bold": ["14px", {"lineHeight": "16px", "fontWeight": "700"}],
+                      "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen flex flex-col items-center overflow-x-hidden">
+<!-- Top Navigation Anchor (Simulating TopAppBar structure from JSON) -->
+<header class="w-full bg-background flex justify-between items-center px-container-margin py-4 top-0 z-50">
+<button class="material-symbols-outlined text-on-surface p-2 hover:bg-surface-variant/20 rounded-full transition-transform active:scale-95" data-icon="close">close</button>
+<span class="text-headline-md font-headline-md font-extrabold text-on-surface tracking-tight">Sole &amp; Style</span>
+<div class="w-10"></div> <!-- Spacer for symmetry -->
+</header>
+<main class="w-full max-w-md px-container-margin mt-base flex-grow flex flex-col">
+<!-- Logo/Branding Section -->
+<div class="flex flex-col items-center my-section-gap">
+<div class="w-20 h-20 bg-primary-container rounded-3xl flex items-center justify-center shadow-2xl shadow-primary/20 mb-base">
+<span class="material-symbols-outlined text-on-primary-container text-4xl" data-icon="shopping_bag" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+</div>
+<h1 class="text-headline-lg font-headline-lg text-on-surface mt-4">أهلاً بك في سول أند ستايل</h1>
+<p class="text-body-sm font-body-sm text-on-surface-variant text-center px-8 mt-2">اكتشف أحدث صيحات الأحذية والحقائب الفاخرة</p>
+</div>
+<!-- Tab Navigation -->
+<div class="bg-surface-container rounded-full p-1.5 flex mb-8 relative">
+<button class="flex-1 py-3 text-label-bold font-label-bold rounded-full z-10 tab-transition text-on-surface" id="loginTab" onclick="switchTab('login')">تسجيل الدخول</button>
+<button class="flex-1 py-3 text-label-bold font-label-bold rounded-full z-10 tab-transition text-on-surface-variant" id="signupTab" onclick="switchTab('signup')">إنشاء حساب</button>
+<div class="absolute top-1.5 bottom-1.5 right-1.5 w-[calc(50%-6px)] bg-surface-container-lowest rounded-full shadow-md tab-transition" id="tabIndicator"></div>
+</div>
+<!-- Forms Container -->
+<div class="relative overflow-hidden min-h-[400px]">
+<!-- Login Form -->
+<form class="tab-transition opacity-100 translate-x-0" id="loginForm">
+<div class="space-y-6">
+<div class="relative">
+<span class="absolute right-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-on-surface-variant" data-icon="mail">mail</span>
+<input class="w-full bg-surface-container-low border-none rounded-xl pr-12 pl-4 py-4 focus:ring-2 focus:ring-primary-container text-body-lg font-body-lg peer" placeholder=" " type="email"/>
+<label class="absolute right-12 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none transition-all duration-200">البريد الإلكتروني أو الهاتف</label>
+</div>
+<div class="relative">
+<span class="absolute right-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-on-surface-variant" data-icon="lock">lock</span>
+<input class="w-full bg-surface-container-low border-none rounded-xl pr-12 pl-12 py-4 focus:ring-2 focus:ring-primary-container text-body-lg font-body-lg peer" placeholder=" " type="password"/>
+<label class="absolute right-12 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none transition-all duration-200">كلمة المرور</label>
+<button class="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-on-surface-variant" data-icon="visibility" type="button">visibility</button>
+</div>
+<div class="flex justify-end">
+<a class="text-label-bold font-label-bold text-primary hover:underline" href="#">نسيت كلمة المرور؟</a>
+</div>
+<button class="w-full bg-black text-white font-label-bold py-4 rounded-xl shadow-xl hover:shadow-2xl transition-all active:scale-95 uppercase tracking-wider" type="submit">
+                        تسجيل الدخول
+                    </button>
+</div>
+</form>
+<!-- Sign Up Form (Hidden initially) -->
+<form class="tab-transition absolute inset-0 opacity-0 translate-x-full pointer-events-none" id="signupForm">
+<div class="space-y-4">
+<div class="relative">
+<span class="absolute right-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-on-surface-variant" data-icon="person">person</span>
+<input class="w-full bg-surface-container-low border-none rounded-xl pr-12 pl-4 py-4 focus:ring-2 focus:ring-primary-container text-body-lg font-body-lg peer" placeholder=" " type="text"/>
+<label class="absolute right-12 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none transition-all duration-200">الاسم الكامل</label>
+</div>
+<div class="relative">
+<span class="absolute right-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-on-surface-variant" data-icon="mail">mail</span>
+<input class="w-full bg-surface-container-low border-none rounded-xl pr-12 pl-4 py-4 focus:ring-2 focus:ring-primary-container text-body-lg font-body-lg peer" placeholder=" " type="email"/>
+<label class="absolute right-12 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none transition-all duration-200">البريد الإلكتروني</label>
+</div>
+<div class="relative">
+<span class="absolute right-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-on-surface-variant" data-icon="lock">lock</span>
+<input class="w-full bg-surface-container-low border-none rounded-xl pr-12 pl-4 py-4 focus:ring-2 focus:ring-primary-container text-body-lg font-body-lg peer" placeholder=" " type="password"/>
+<label class="absolute right-12 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none transition-all duration-200">كلمة المرور</label>
+</div>
+<p class="text-[12px] text-on-surface-variant leading-relaxed">
+                        بالتسجيل، أنت توافق على شروط الخدمة وسياسة الخصوصية الخاصة بنا.
+                    </p>
+<button class="w-full bg-primary-container text-on-primary-container font-label-bold py-4 rounded-xl shadow-lg hover:shadow-xl transition-all active:scale-95 uppercase tracking-wider mt-4" type="submit">
+                        إنشاء حساب جديد
+                    </button>
+</div>
+</form>
+</div>
+<!-- Social Auth -->
+<div class="my-section-gap flex flex-col items-center">
+<div class="flex items-center w-full mb-6">
+<div class="h-[1px] bg-outline-variant flex-grow"></div>
+<span class="px-4 text-body-sm font-body-sm text-on-surface-variant">أو المتابعة باستخدام</span>
+<div class="h-[1px] bg-outline-variant flex-grow"></div>
+</div>
+<div class="flex gap-4 w-full">
+<button class="flex-1 flex items-center justify-center gap-2 py-3 border border-outline-variant rounded-xl hover:bg-surface-variant/10 transition-colors">
+<img alt="Google" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwWjraWLuNWwHjK8v5pT3YmlXmXnVVlHpD6m4yXMre92a6G-q3GnrxQY0BYwWgs7-t1vIKA6k6kaHIuqldAmWvUpa9ojfar_S17z3rn9EaAdw7OvPMCthxrR3syHm2v1pOlAR7zGRQomI4ebMK1XHDLHr-g7t9i83KUjmWAS-TAbvNAb1YfZG9FZSPAkhR9e2PRape1MoIjUNPT5vRvXhl1v2Bke5SBG-r2U9mzndyC8K4rCGUg_Wht_v1BwNYEKUuh94AC9wi7ak"/>
+<span class="text-label-bold font-label-bold">Google</span>
+</button>
+<button class="flex-1 flex items-center justify-center gap-2 py-3 border border-outline-variant rounded-xl hover:bg-surface-variant/10 transition-colors">
+<span class="material-symbols-outlined text-xl" data-icon="apple" style="font-variation-settings: 'FILL' 1;">apps</span>
+<span class="text-label-bold font-label-bold">Apple</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Footer Links -->
+<footer class="w-full py-8 flex flex-col items-center gap-4 text-body-sm font-body-sm text-on-surface-variant px-container-margin text-center">
+<div class="flex gap-6">
+<a class="hover:text-primary transition-colors" href="#">شروط الاستخدام</a>
+<a class="hover:text-primary transition-colors" href="#">سياسة الخصوصية</a>
+<a class="hover:text-primary transition-colors" href="#">المساعدة</a>
+</div>
+<p>© 2024 Sole &amp; Style. جميع الحقوق محفوظة.</p>
+</footer>
+<!-- Image for atmospheric context (hidden but present for descriptive prompt) -->
+<div class="hidden">
+<img data-alt="A highly detailed, modern aesthetic close-up of premium leather footwear and designer bags arranged artistically on a marble pedestal. The scene is bathed in soft, diffused daylight with a light-mode white background, featuring a palette of pastel pinks, deep blacks, and minimalist whites. The mood is sophisticated, energetic, and visually optimistic, reflecting a high-end retail experience for a youthful fashion-forward audience. Soft ambient shadows create depth without harsh lines." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAZf1p7ffzDzni8zuK95M7rz9lki-3pTCvjEIChJXvkaAy8YYJdScJ1vfa8UzO9NXbVBmjCNCMmFBVLiPiOoawFsflOe-tZ8OGfzk25j-eP06j0BCVl4xoip4rVD8dEAYCHul7TPY_dx5lUl_efd9EKnipSaE9VadrUW24fC6hsUOpk59RLmwcyZIfX4zIVJeQ8bdn_9dIgltKTHzcUXOf59UGraIxz_chH1eFDvrQOHbSGJeMAfpVHelN53JMpBRE2ZUqYeJ2BII"/>
+</div>
+<script>
+        function switchTab(type) {
+            const loginForm = document.getElementById('loginForm');
+            const signupForm = document.getElementById('signupForm');
+            const indicator = document.getElementById('tabIndicator');
+            const loginTab = document.getElementById('loginTab');
+            const signupTab = document.getElementById('signupTab');
+
+            if (type === 'login') {
+                loginForm.classList.remove('opacity-0', '-translate-x-full', 'pointer-events-none');
+                loginForm.classList.add('opacity-100', 'translate-x-0');
+                
+                signupForm.classList.add('opacity-0', 'translate-x-full', 'pointer-events-none');
+                signupForm.classList.remove('opacity-100', 'translate-x-0');
+
+                indicator.style.transform = 'translateX(0)';
+                loginTab.classList.add('text-on-surface');
+                loginTab.classList.remove('text-on-surface-variant');
+                signupTab.classList.add('text-on-surface-variant');
+                signupTab.classList.remove('text-on-surface');
+            } else {
+                signupForm.classList.remove('opacity-0', 'translate-x-full', 'pointer-events-none');
+                signupForm.classList.add('opacity-100', 'translate-x-0');
+                
+                loginForm.classList.add('opacity-0', '-translate-x-full', 'pointer-events-none');
+                loginForm.classList.remove('opacity-100', 'translate-x-0');
+
+                indicator.style.transform = 'translateX(-100%)';
+                signupTab.classList.add('text-on-surface');
+                signupTab.classList.remove('text-on-surface-variant');
+                loginTab.classList.add('text-on-surface-variant');
+                loginTab.classList.remove('text-on-surface');
+            }
+        }
+
+        // Language toggle logic could go here if needed, but primary focus is RTL Arabic per prompt.
+    </script>
+</body></html>

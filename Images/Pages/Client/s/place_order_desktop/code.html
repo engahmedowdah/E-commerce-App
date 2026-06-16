@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .sticky-summary {
+            position: sticky;
+            top: 100px;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container": "#edeeef",
+                      "on-secondary-fixed-variant": "#334283",
+                      "background": "#f8f9fa",
+                      "primary-fixed-dim": "#ffb1c4",
+                      "tertiary-fixed-dim": "#c6c6c6",
+                      "outline": "#8d7076",
+                      "on-secondary-container": "#364486",
+                      "surface": "#f8f9fa",
+                      "inverse-primary": "#ffb1c4",
+                      "on-tertiary-container": "#2a2a2a",
+                      "tertiary-container": "#919191",
+                      "on-tertiary-fixed-variant": "#474747",
+                      "on-primary-fixed": "#3f001a",
+                      "on-primary-container": "#5b0028",
+                      "primary-container": "#ff4d8d",
+                      "surface-container-low": "#f3f4f5",
+                      "on-surface": "#191c1d",
+                      "secondary-fixed-dim": "#b9c3ff",
+                      "on-tertiary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "surface-container-high": "#e7e8e9",
+                      "error": "#ba1a1a",
+                      "on-tertiary-fixed": "#1b1b1b",
+                      "tertiary": "#5e5e5e",
+                      "inverse-surface": "#2e3132",
+                      "tertiary-fixed": "#e2e2e2",
+                      "secondary-fixed": "#dde1ff",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-tint": "#b90a5a",
+                      "on-surface-variant": "#594046",
+                      "primary": "#b90a5a",
+                      "on-primary": "#ffffff",
+                      "outline-variant": "#e1bec5",
+                      "on-error-container": "#93000a",
+                      "surface-variant": "#e1e3e4",
+                      "on-background": "#191c1d",
+                      "on-primary-fixed-variant": "#8f0043",
+                      "surface-dim": "#d9dadb",
+                      "inverse-on-surface": "#f0f1f2",
+                      "surface-container-highest": "#e1e3e4",
+                      "error-container": "#ffdad6",
+                      "surface-bright": "#f8f9fa",
+                      "primary-fixed": "#ffd9e0",
+                      "secondary": "#4c5a9d",
+                      "on-secondary": "#ffffff",
+                      "secondary-container": "#a7b5ff",
+                      "on-secondary-fixed": "#001257"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "card-padding": "16px",
+                      "section-gap": "32px",
+                      "gutter": "16px",
+                      "container-margin": "24px",
+                      "base": "8px"
+              },
+              "fontFamily": {
+                      "price-display": ["Plus Jakarta Sans"],
+                      "label-bold": ["Plus Jakarta Sans"],
+                      "headline-xl": ["Plus Jakarta Sans"],
+                      "headline-lg": ["Plus Jakarta Sans"],
+                      "headline-md": ["Plus Jakarta Sans"],
+                      "body-lg": ["Plus Jakarta Sans"],
+                      "body-sm": ["Plus Jakarta Sans"]
+              },
+              "fontSize": {
+                      "price-display": ["20px", {"lineHeight": "24px", "fontWeight": "800"}],
+                      "label-bold": ["14px", {"lineHeight": "16px", "fontWeight": "700"}],
+                      "headline-xl": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                      "headline-md": ["18px", {"lineHeight": "24px", "fontWeight": "700"}],
+                      "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-surface overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="bg-surface-container-lowest dark:bg-inverse-surface shadow-[0_4px_20px_rgba(0,0,0,0.05)] full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-container-margin py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-8">
+<a class="font-headline-lg text-headline-lg font-black text-primary dark:text-primary-fixed-dim tracking-tight" href="#">Sole &amp; Style</a>
+<nav class="hidden md:flex items-center gap-6">
+<a class="font-body-lg text-body-lg text-on-surface-variant hover:text-primary transition-colors" href="#">Footwear</a>
+<a class="font-body-lg text-body-lg text-on-surface-variant hover:text-primary transition-colors" href="#">Bags</a>
+<a class="font-body-lg text-body-lg text-on-surface-variant hover:text-primary transition-colors" href="#">New Arrivals</a>
+<a class="font-body-lg text-body-lg text-on-surface-variant hover:text-primary transition-colors" href="#">Sale</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center bg-surface-container rounded-full px-4 py-2 w-64">
+<span class="material-symbols-outlined text-on-surface-variant mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-sm w-full" placeholder="بحث..." type="text"/>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 hover:opacity-80 transition-opacity cursor-pointer">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<button class="p-2 hover:opacity-80 transition-opacity cursor-pointer relative">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute top-0 right-0 bg-primary text-on-primary text-[10px] rounded-full w-4 h-4 flex items-center justify-center">3</span>
+</button>
+<button class="p-2 hover:opacity-80 transition-opacity cursor-pointer">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-container-margin py-section-gap">
+<h1 class="font-headline-xl text-headline-xl mb-8 text-right">إتمام الطلب</h1>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Column: Forms (8 cols) -->
+<div class="lg:col-span-8 space-y-8">
+<!-- Shipping Address Section -->
+<section class="bg-surface-container-lowest rounded-xl p-8 shadow-sm">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary">local_shipping</span>
+<h2 class="font-headline-lg text-headline-lg">عنوان الشحن</h2>
+</div>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="md:col-span-1">
+<label class="block font-label-bold text-label-bold mb-2">الاسم الأول</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-3 focus:ring-2 focus:ring-primary-container" placeholder="أدخل اسمك الأول" type="text"/>
+</div>
+<div class="md:col-span-1">
+<label class="block font-label-bold text-label-bold mb-2">اسم العائلة</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-3 focus:ring-2 focus:ring-primary-container" placeholder="أدخل اسم العائلة" type="text"/>
+</div>
+<div class="md:col-span-2">
+<label class="block font-label-bold text-label-bold mb-2">العنوان بالتفصيل</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-3 focus:ring-2 focus:ring-primary-container" placeholder="اسم الشارع، رقم المبنى، الشقة" type="text"/>
+</div>
+<div class="md:col-span-1">
+<label class="block font-label-bold text-label-bold mb-2">المدينة</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-3 focus:ring-2 focus:ring-primary-container" placeholder="الرياض" type="text"/>
+</div>
+<div class="md:col-span-1">
+<label class="block font-label-bold text-label-bold mb-2">الرمز البريدي</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-3 focus:ring-2 focus:ring-primary-container" placeholder="12345" type="text"/>
+</div>
+<div class="md:col-span-2">
+<label class="block font-label-bold text-label-bold mb-2">رقم الهاتف</label>
+<div class="flex">
+<input class="w-full bg-surface-container-low border-none rounded-lg p-3 focus:ring-2 focus:ring-primary-container text-left" dir="ltr" placeholder="+966 5X XXX XXXX" type="tel"/>
+</div>
+</div>
+</form>
+</section>
+<!-- Payment Method Section -->
+<section class="bg-surface-container-lowest rounded-xl p-8 shadow-sm">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary">payments</span>
+<h2 class="font-headline-lg text-headline-lg">طريقة الدفع</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+<label class="relative flex flex-col items-center gap-2 p-4 border-2 border-primary-container bg-surface-container-lowest rounded-xl cursor-pointer">
+<input checked="" class="absolute top-2 left-2 text-primary focus:ring-primary" name="payment" type="radio"/>
+<span class="material-symbols-outlined text-3xl">credit_card</span>
+<span class="font-label-bold text-label-bold">بطاقة ائتمان</span>
+</label>
+<label class="relative flex flex-col items-center gap-2 p-4 border-2 border-transparent bg-surface-container-low rounded-xl cursor-pointer hover:border-primary-container transition-all">
+<input class="absolute top-2 left-2 text-primary focus:ring-primary" name="payment" type="radio"/>
+<span class="material-symbols-outlined text-3xl">account_balance_wallet</span>
+<span class="font-label-bold text-label-bold">Apple Pay</span>
+</label>
+<label class="relative flex flex-col items-center gap-2 p-4 border-2 border-transparent bg-surface-container-low rounded-xl cursor-pointer hover:border-primary-container transition-all">
+<input class="absolute top-2 left-2 text-primary focus:ring-primary" name="payment" type="radio"/>
+<span class="material-symbols-outlined text-3xl">payments</span>
+<span class="font-label-bold text-label-bold">الدفع عند الاستلام</span>
+</label>
+</div>
+<div class="space-y-4">
+<div>
+<label class="block font-label-bold text-label-bold mb-2">رقم البطاقة</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low border-none rounded-lg p-3 pr-12 focus:ring-2 focus:ring-primary-container" placeholder="0000 0000 0000 0000" type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-3 text-on-surface-variant">lock</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block font-label-bold text-label-bold mb-2">تاريخ الانتهاء</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-3 focus:ring-2 focus:ring-primary-container" placeholder="MM/YY" type="text"/>
+</div>
+<div>
+<label class="block font-label-bold text-label-bold mb-2">رمز الأمان (CVV)</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-3 focus:ring-2 focus:ring-primary-container" placeholder="123" type="text"/>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Order Summary (4 cols) -->
+<aside class="lg:col-span-4">
+<div class="sticky-summary bg-surface-container-lowest rounded-xl p-6 shadow-sm border border-outline-variant">
+<h2 class="font-headline-md text-headline-md mb-6">ملخص الطلب</h2>
+<div class="space-y-4 mb-6 border-b border-outline-variant pb-6">
+<!-- Item 1 -->
+<div class="flex gap-4">
+<div class="w-20 h-20 bg-primary-fixed rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A high-end red athletic sneaker floating against a soft pastel pink background with professional studio lighting. The shoe is crisp and modern, featuring intricate textures and a glossy finish. The overall aesthetic is clean, energetic, and high-fashion, matching a premium e-commerce visual style with soft shadows and high contrast." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6Np8zcqpzXbXZBqkqeoIbNpMzu_XSYufkcG6ZYRqvBALoHV0Tm9UZpcY0eWiEcfmvYf-PrXyeqSgfzndfAe5iDQu7BScdGXNn4tf8BqJIn4xJtYc-alrnZLLmyj3KuJZ_sfARrKQQFev1XglbqIhm1HyiZ7fp26Qgr9Gz7dn6JFnr6qB5oMAHjfOzPYc_mvO8-LPJOBY6Wttp4rr8KHE7ddMzlhZTwTjb3vk8C4E7KyVJ0tmO7Wp-yFVzwgNXn8cUkBsShf2CrFs"/>
+</div>
+<div class="flex-1">
+<h3 class="font-label-bold text-label-bold">نايكي إير ماكس</h3>
+<p class="text-body-sm text-on-surface-variant">المقاس: 42 | اللون: أحمر</p>
+<p class="font-price-display text-price-display mt-1">450 ر.س</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex gap-4">
+<div class="w-20 h-20 bg-secondary-container rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A pair of luxury cream-colored leather sneakers arranged on a minimalist blue surface. Soft, diffused lighting highlights the premium material and stitching. The scene is contemporary and sophisticated, using a youthful yet professional color palette to appeal to fashion-forward consumers." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHUzN-z1O5tHHuTAiZPS5XRq9n0S1svEjoP2O5jufV8b0Dlm3KUppQB7F1e3Z_sPeRpzT4T7ijIl9mas-2OvIzWkSF5NPWg6dYPajuOw6fBdBcuclZG6MVMpaE9PmHDnhXuVkAJwGugNBS2YuCf5JeTIR-8ho5rWVnPHwRZRLZvHMxXukM5tKOvF6zzHhA2alfJc9XliwVPQnKFutJLj7ARQnBFXRgV9WbQmRsdfBbcftQjPabbM0CEUxCZZAS_HjGOsDlm1wtkKU"/>
+</div>
+<div class="flex-1">
+<h3 class="font-label-bold text-label-bold">حذاء جلدي فاخر</h3>
+<p class="text-body-sm text-on-surface-variant">المقاس: 43 | اللون: بيج</p>
+<p class="font-price-display text-price-display mt-1">620 ر.س</p>
+</div>
+</div>
+</div>
+<div class="space-y-3 mb-8">
+<div class="flex justify-between font-body-lg text-body-lg">
+<span class="text-on-surface-variant">المجموع الفرعي</span>
+<span>1070 ر.س</span>
+</div>
+<div class="flex justify-between font-body-lg text-body-lg">
+<span class="text-on-surface-variant">الشحن</span>
+<span class="text-green-600">مجاني</span>
+</div>
+<div class="flex justify-between font-body-lg text-body-lg">
+<span class="text-on-surface-variant">الضريبة (15%)</span>
+<span>160.5 ر.س</span>
+</div>
+<div class="flex justify-between font-headline-md text-headline-md pt-3 border-t border-dashed border-outline-variant">
+<span>الإجمالي</span>
+<span class="text-primary">1230.5 ر.س</span>
+</div>
+</div>
+<button class="w-full bg-black text-white font-label-bold text-label-bold py-4 rounded-xl uppercase hover:opacity-90 transition-all flex items-center justify-center gap-2">
+<span>تأكيد وطلب</span>
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<p class="text-center text-body-sm text-on-surface-variant mt-4">
+                        بالنقر على "تأكيد"، فإنك توافق على <a class="underline" href="#">الشروط والأحكام</a>
+</p>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-high dark:bg-surface-dim mt-section-gap">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-container-margin py-section-gap max-w-7xl mx-auto border-t border-outline-variant">
+<div class="mb-8 md:mb-0">
+<h2 class="font-headline-md text-headline-md text-on-surface dark:text-on-surface mb-2">Sole &amp; Style</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">أحدث صيحات الأحذية والحقائب العالمية بين يديك.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 mb-8 md:mb-0">
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">About Us</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Shipping &amp; Returns</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Privacy Policy</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Contact</a>
+</div>
+<div class="text-center md:text-left">
+<p class="font-body-sm text-body-sm text-on-surface-variant">© 2024 Sole &amp; Style. All rights reserved.</p>
+<div class="flex gap-4 mt-4 justify-center md:justify-end">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">brand_awareness</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">share</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">public</span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple interaction for payment selection
+        const paymentOptions = document.querySelectorAll('input[name="payment"]');
+        paymentOptions.forEach(option => {
+            option.addEventListener('change', (e) => {
+                // Reset all borders
+                paymentOptions.forEach(opt => {
+                    opt.closest('label').classList.remove('border-primary-container');
+                    opt.closest('label').classList.add('border-transparent');
+                    opt.closest('label').classList.replace('bg-surface-container-lowest', 'bg-surface-container-low');
+                });
+                // Highlight selected
+                if (e.target.checked) {
+                    e.target.closest('label').classList.remove('border-transparent');
+                    e.target.closest('label').classList.add('border-primary-container');
+                    e.target.closest('label').classList.replace('bg-surface-container-low', 'bg-surface-container-lowest');
+                }
+            });
+        });
+
+        // Sticky header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body></html>

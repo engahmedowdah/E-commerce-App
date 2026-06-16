@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>اختر عنوان التوصيل - Sole &amp; Style</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;family=Noto+Sans+Arabic:wght@400;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "on-secondary-fixed-variant": "#334283",
+                        "inverse-primary": "#ffb1c4",
+                        "background": "#f8f9fa",
+                        "surface-dim": "#d9dadb",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-container": "#edeeef",
+                        "secondary-fixed-dim": "#b9c3ff",
+                        "surface": "#f8f9fa",
+                        "on-secondary-fixed": "#001257",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#2a2a2a",
+                        "tertiary-container": "#919191",
+                        "surface-container-high": "#e7e8e9",
+                        "on-primary-fixed": "#3f001a",
+                        "inverse-on-surface": "#f0f1f2",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-primary-fixed-variant": "#8f0043",
+                        "primary-fixed": "#ffd9e0",
+                        "outline": "#8d7076",
+                        "secondary-container": "#a7b5ff",
+                        "on-primary": "#ffffff",
+                        "primary": "#b90a5a",
+                        "on-surface": "#191c1d",
+                        "primary-container": "#ff4d8d",
+                        "on-secondary-container": "#364486",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#ffb1c4",
+                        "surface-variant": "#e1e3e4",
+                        "inverse-surface": "#2e3132",
+                        "secondary-fixed": "#dde1ff",
+                        "on-background": "#191c1d",
+                        "outline-variant": "#e1bec5",
+                        "on-tertiary-fixed": "#1b1b1b",
+                        "on-primary-container": "#5b0028",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-bright": "#f8f9fa",
+                        "secondary": "#4c5a9d",
+                        "on-surface-variant": "#594046",
+                        "tertiary": "#5e5e5e",
+                        "surface-tint": "#b90a5a",
+                        "on-secondary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "32px",
+                        "card-padding": "16px",
+                        "gutter": "16px",
+                        "container-margin": "24px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Noto Sans Arabic", "Plus Jakarta Sans"],
+                        "headline-lg": ["Noto Sans Arabic", "Plus Jakarta Sans"],
+                        "body-sm": ["Noto Sans Arabic", "Plus Jakarta Sans"],
+                        "headline-md": ["Noto Sans Arabic", "Plus Jakarta Sans"],
+                        "label-bold": ["Noto Sans Arabic", "Plus Jakarta Sans"],
+                        "price-display": ["Noto Sans Arabic", "Plus Jakarta Sans"],
+                        "headline-xl": ["Noto Sans Arabic", "Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "headline-md": ["18px", {"lineHeight": "24px", "fontWeight": "700"}],
+                        "label-bold": ["14px", {"lineHeight": "16px", "fontWeight": "700"}],
+                        "price-display": ["20px", {"lineHeight": "24px", "fontWeight": "800"}],
+                        "headline-xl": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Noto Sans Arabic', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-tab-indicator::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            right: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #ff4d8d;
+            border-radius: 99px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-24">
+<!-- Top App Bar -->
+<header class="w-full top-0 sticky z-50 bg-background flex items-center justify-between px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="text-primary hover:opacity-80 transition-opacity active:scale-95 duration-100 flex items-center justify-center">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-headline-md text-on-surface">تسليم إلى</h1>
+</div>
+<div class="flex items-center gap-2 px-3 py-1 bg-surface-container rounded-full">
+<img alt="السعودية" class="w-5 h-auto rounded-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm6CYFat54mKEKcgWWyB3W74Q9z1vwvOAUhZ8MB44ICxGz6Ke1byOlKF77_DN2hLqdYUpk_e4JFD7pElBYP9XnTVR6MyC7rZRfVpoUkfCHkEoaRqvKqTUgDvOaJo3VFUo9ZCCWGuVK_gCxSow8hAAOX20FC7B2XdRp2-Bp-60tnz6G_FRC9RW5JH8UxeaYf5WmfqofhG18Z6iJdrOgsBJm09crxlve6QuVenBHXnoNUp0rjXHIbTAD2Ixht0kQ99JYnPwRl8nF8m8"/>
+<span class="font-label-bold text-label-bold text-on-surface">السعودية</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</div>
+</header>
+<main class="px-container-margin pt-4">
+<!-- Tabs -->
+<div class="flex items-center gap-8 mb-6 border-b border-surface-variant">
+<button class="relative py-2 font-headline-md text-headline-md text-primary active-tab-indicator">العنوان</button>
+<button class="py-2 font-headline-md text-headline-md text-tertiary">نقطة نون/نقطة الاستلام</button>
+</div>
+<!-- Search Bar -->
+<div class="relative mb-6">
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-tertiary">search</span>
+<input class="w-full h-14 bg-surface-container-low border-none rounded-xl pr-12 pl-4 font-body-lg text-body-lg focus:ring-2 focus:ring-primary-container transition-shadow" placeholder="ابحث عن المبنى الخاص فيك، الشارع..." type="text"/>
+</div>
+<!-- Add New Address Button -->
+<button class="w-full h-14 bg-white border-2 border-dashed border-primary-container text-primary-container rounded-xl flex items-center justify-center gap-2 mb-8 hover:bg-primary-fixed duration-200 active:scale-95">
+<span class="material-symbols-outlined">add</span>
+<span class="font-label-bold text-label-bold">إضافة عنوان جديد</span>
+</button>
+<!-- Saved Addresses Section -->
+<div class="flex flex-col gap-4">
+<h2 class="font-label-bold text-label-bold text-tertiary mb-2">العناوين المحفوظة</h2>
+<!-- Address Card 1 (Active/Selected) -->
+<div class="bg-surface-container-lowest rounded-2xl p-card-padding border-2 border-primary-container shadow-xl transition-all duration-300 relative">
+<div class="flex justify-between items-start mb-2">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container/10 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">الرئيسية</h3>
+<p class="font-body-sm text-body-sm text-tertiary leading-relaxed mt-1">قريه الحميد، RPFM+H4 - بلجرشي - منطقة عسير، بلجرشي</p>
+</div>
+</div>
+<button class="text-tertiary hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<div class="border-t border-surface-variant my-3"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary-container text-sm">check_circle</span>
+<span class="font-body-sm text-body-sm">+966-53-5887767 ahmed alghamdi</span>
+</div>
+</div>
+</div>
+<!-- Address Card 2 -->
+<div class="bg-surface-container-lowest rounded-2xl p-card-padding border border-surface-variant hover:border-tertiary-fixed shadow-sm transition-all duration-300">
+<div class="flex justify-between items-start mb-2">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined">home</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">الرئيسية</h3>
+<p class="font-body-sm text-body-sm text-tertiary leading-relaxed mt-1">الحميد، RPFM+G2 - بلجرشي - مكة المكرمة، بلجرشي</p>
+</div>
+</div>
+<button class="text-tertiary hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<div class="border-t border-surface-variant my-3"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 text-tertiary">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+<span class="font-body-sm text-body-sm">+966-53-1061101 Mohammed Alghamdi</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Atmospheric Illustration/Pattern Placeholder -->
+<div class="mt-section-gap flex flex-col items-center opacity-30">
+<div class="w-32 h-32 rounded-full bg-gradient-to-tr from-primary-container/20 to-secondary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-primary-container/40">location_on</span>
+</div>
+<p class="font-body-sm text-body-sm mt-4">عناوينك آمنة معنا</p>
+</div>
+</main>
+<!-- Bottom Navigation Bar (Based on JSON) -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl shadow-[0_-4px_20px_rgba(0,0,0,0.05)] bg-surface-container-lowest flex justify-around items-center w-full h-20 px-4 pb-safe">
+<button class="flex flex-col items-center justify-center text-tertiary opacity-60 hover:text-primary-container transition-colors active:scale-90 duration-200 ease-out">
+<span class="material-symbols-outlined">storefront</span>
+<span class="font-label-bold text-label-bold">متجر</span>
+</button>
+<button class="flex flex-col items-center justify-center text-tertiary opacity-60 hover:text-primary-container transition-colors active:scale-90 duration-200 ease-out">
+<span class="material-symbols-outlined">search</span>
+<span class="font-label-bold text-label-bold">بحث</span>
+</button>
+<button class="flex flex-col items-center justify-center text-tertiary opacity-60 hover:text-primary-container transition-colors active:scale-90 duration-200 ease-out">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="font-label-bold text-label-bold">حقيبة</span>
+</button>
+<button class="flex flex-col items-center justify-center text-primary font-bold relative after:content-[''] after:absolute after:-bottom-1 after:w-1 after:h-1 after:bg-primary after:rounded-full active:scale-90 duration-200 ease-out">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-label-bold text-label-bold">بروفايل</span>
+</button>
+</nav>
+<script>
+        // Simple Interaction for address selection
+        const cards = document.querySelectorAll('.bg-surface-container-lowest');
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                cards.forEach(c => {
+                    c.classList.remove('border-primary-container', 'shadow-xl');
+                    c.classList.add('border-surface-variant');
+                    const icon = c.querySelector('.text-primary-container.text-sm');
+                    if(icon) {
+                        icon.classList.remove('text-primary-container');
+                        icon.classList.add('text-tertiary');
+                    }
+                });
+                card.classList.add('border-primary-container', 'shadow-xl');
+                card.classList.remove('border-surface-variant');
+                const checkIcon = card.querySelector('.text-sm');
+                if(checkIcon) {
+                    checkIcon.classList.remove('text-tertiary');
+                    checkIcon.classList.add('text-primary-container');
+                }
+            });
+        });
+    </script>
+</body></html>

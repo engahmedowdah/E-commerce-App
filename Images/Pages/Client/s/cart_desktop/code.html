@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .cart-item-shadow {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "background": "#f8f9fa",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#3f001a",
+                        "tertiary-container": "#919191",
+                        "on-background": "#191c1d",
+                        "surface-container-high": "#e7e8e9",
+                        "tertiary": "#5e5e5e",
+                        "surface-variant": "#e1e3e4",
+                        "surface-container-highest": "#e1e3e4",
+                        "outline-variant": "#e1bec5",
+                        "on-secondary-container": "#364486",
+                        "surface-container-low": "#f3f4f5",
+                        "primary": "#b90a5a",
+                        "on-surface": "#191c1d",
+                        "on-primary-fixed-variant": "#8f0043",
+                        "on-secondary-fixed-variant": "#334283",
+                        "inverse-on-surface": "#f0f1f2",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "primary-fixed": "#ffd9e0",
+                        "primary-fixed-dim": "#ffb1c4",
+                        "surface-bright": "#f8f9fa",
+                        "secondary-container": "#a7b5ff",
+                        "surface-tint": "#b90a5a",
+                        "surface-dim": "#d9dadb",
+                        "on-secondary-fixed": "#001257",
+                        "inverse-primary": "#ffb1c4",
+                        "on-tertiary-fixed": "#1b1b1b",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed-dim": "#b9c3ff",
+                        "primary-container": "#ff4d8d",
+                        "on-surface-variant": "#594046",
+                        "surface-container": "#edeeef",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "on-primary-container": "#5b0028",
+                        "on-error": "#ffffff",
+                        "secondary": "#4c5a9d",
+                        "on-error-container": "#93000a",
+                        "surface": "#f8f9fa",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-tertiary-container": "#2a2a2a",
+                        "inverse-surface": "#2e3132",
+                        "secondary-fixed": "#dde1ff",
+                        "outline": "#8d7076",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-margin": "24px",
+                        "card-padding": "16px",
+                        "section-gap": "32px",
+                        "gutter": "16px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "label-bold": ["Plus Jakarta Sans"],
+                        "price-display": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-sm": ["Plus Jakarta Sans"],
+                        "headline-xl": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "label-bold": ["14px", {"lineHeight": "16px", "fontWeight": "700"}],
+                        "price-display": ["20px", {"lineHeight": "24px", "fontWeight": "800"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "headline-xl": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-md": ["18px", {"lineHeight": "24px", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar -->
+<header class="bg-surface-container-lowest shadow-[0_4px_20px_rgba(0,0,0,0.05)] full-width top-0 sticky z-50">
+<nav class="flex justify-between items-center w-full px-container-margin py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-8">
+<span class="font-headline-lg text-headline-lg font-black text-primary tracking-tight">Sole &amp; Style</span>
+<div class="hidden md:flex items-center gap-6">
+<a class="font-body-lg text-body-lg text-on-surface-variant hover:text-primary transition-colors" href="#">Footwear</a>
+<a class="font-body-lg text-body-lg text-on-surface-variant hover:text-primary transition-colors" href="#">Bags</a>
+<a class="font-body-lg text-body-lg text-on-surface-variant hover:text-primary transition-colors" href="#">New Arrivals</a>
+<a class="font-body-lg text-body-lg text-on-surface-variant hover:text-primary transition-colors" href="#">Sale</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden lg:block">
+<input class="bg-surface-container-low border-none rounded-full px-4 py-2 text-body-sm w-64 focus:ring-2 focus:ring-primary-container" placeholder="Search..." type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-2 text-on-surface-variant">search</span>
+</div>
+<div class="flex items-center gap-4 text-primary">
+<span class="material-symbols-outlined cursor-pointer hover:opacity-80 transition-opacity" data-icon="favorite">favorite</span>
+<div class="relative">
+<span class="material-symbols-outlined cursor-pointer hover:opacity-80 transition-opacity" data-icon="shopping_cart">shopping_cart</span>
+<span class="absolute -top-2 -right-2 bg-primary-container text-white text-[10px] font-bold px-1.5 rounded-full">2</span>
+</div>
+<span class="material-symbols-outlined cursor-pointer hover:opacity-80 transition-opacity" data-icon="person">person</span>
+</div>
+</div>
+</nav>
+</header>
+<main class="max-w-7xl mx-auto px-container-margin py-section-gap min-h-screen">
+<h1 class="font-headline-xl text-headline-xl mb-section-gap">حقيبة التسوق</h1>
+<div class="flex flex-col lg:flex-row gap-section-gap">
+<!-- Product List -->
+<div class="flex-grow space-y-gutter">
+<!-- Item 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-card-padding flex gap-6 items-center cart-item-shadow">
+<div class="w-32 h-32 bg-[#FFD1DC] rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Sneaker" class="w-full h-full object-cover mix-blend-multiply" data-alt="A high-performance neon pink running shoe displayed against a soft pastel pink studio background. The lighting is clean and bright, emphasizing the energetic and youthful vibe of the footwear. The image follows a modern minimalist aesthetic with high clarity and professional product photography style, using soft ambient shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA27T0OCSRTYR36_r1LBCQpYXuC_c9gAk42n6ZrRODTv6CQdofHIJIkyBL60cKtnyLnFrRX_7lonxbswaxGIkI18UKq6w_FyXstvu9vwDDW_yPrQmtWoHwWlYiX2z0WvDT2278ZIPu3jGbzyJ5GVaez3xdPGnDEJyWQScNfQ53tSLLwgvSYfGTttVx1Q2160YArDfdoFsvZITL9b1FPQPuUcAO_8XCRqHAt95vqofHL3Jh66tSP58Uy611suCTSfC_YArRhZaiPsK0"/>
+</div>
+<div class="flex-grow flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-headline-md">حذاء نيون فليكس</h3>
+<button class="text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">المقاس: 42 | اللون: وردي نيون</p>
+<div class="flex justify-between items-end mt-4">
+<!-- Quantity Selector -->
+<div class="flex items-center bg-surface-container-low rounded-full px-3 py-1 gap-4">
+<button class="w-6 h-6 flex items-center justify-center font-bold hover:text-primary transition-colors">-</button>
+<span class="font-label-bold text-label-bold">1</span>
+<button class="w-6 h-6 flex items-center justify-center font-bold hover:text-primary transition-colors">+</button>
+</div>
+<span class="font-price-display text-price-display text-primary">450 SAR</span>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-card-padding flex gap-6 items-center cart-item-shadow">
+<div class="w-32 h-32 bg-[#E0F7FA] rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Sneaker" class="w-full h-full object-cover mix-blend-multiply" data-alt="Premium lifestyle sneakers in soft white and pastel blue accents, presented on a light airy background. The lighting is highly diffused, creating a serene and luxurious feel. The composition is clean and uncluttered, adhering to fashion-forward minimalism with a focus on tactile textures and soft rounded edges." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN2l4WvpbU6uymWHDQEl0_4kQ4d5E14a1j2uGFA1xSkbMWDvyPlOfo6LSgwM2hH9nrt-jeNQ1sZBNYHeiXabwlx8dTopWB9xE6W-d03ZXyFGtLMMVlP0Z7wl-c0rN0P2xXiLrHGvahf_LZh9hNLi6nvaRkjJTuNfm3WH6yvC52uFQg6g4ZUK_dtkTEyWfYt__DV_X7KTdJ6HcHMNp_8NILMI_lITsX7GRZsxISFsxx_b3vAqi1hbJlbzN7k_HSuI0y59Qd9nAr0Gk"/>
+</div>
+<div class="flex-grow flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-headline-md">حذاء كلاود ووكر</h3>
+<button class="text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">المقاس: 40 | اللون: أزرق سماوي</p>
+<div class="flex justify-between items-end mt-4">
+<!-- Quantity Selector -->
+<div class="flex items-center bg-surface-container-low rounded-full px-3 py-1 gap-4">
+<button class="w-6 h-6 flex items-center justify-center font-bold hover:text-primary transition-colors">-</button>
+<span class="font-label-bold text-label-bold">1</span>
+<button class="w-6 h-6 flex items-center justify-center font-bold hover:text-primary transition-colors">+</button>
+</div>
+<span class="font-price-display text-price-display text-primary">380 SAR</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Summary Panel -->
+<aside class="w-full lg:w-96 flex-shrink-0">
+<div class="bg-surface-container-lowest rounded-xl p-6 cart-item-shadow sticky top-28">
+<h2 class="font-headline-lg text-headline-lg mb-6">ملخص الطلب</h2>
+<div class="space-y-4 border-b border-outline-variant pb-6 mb-6">
+<div class="flex justify-between font-body-lg text-body-lg">
+<span class="text-on-surface-variant">المجموع الفرعي</span>
+<span class="font-label-bold">830 SAR</span>
+</div>
+<div class="flex justify-between font-body-lg text-body-lg">
+<span class="text-on-surface-variant">الشحن</span>
+<span class="text-primary-container font-label-bold">مجاني</span>
+</div>
+<div class="flex justify-between font-body-lg text-body-lg">
+<span class="text-on-surface-variant">الضريبة (15%)</span>
+<span class="font-label-bold">124.5 SAR</span>
+</div>
+</div>
+<div class="flex justify-between font-headline-lg text-headline-lg mb-8">
+<span>الإجمالي</span>
+<span class="text-primary">954.5 SAR</span>
+</div>
+<button class="w-full bg-black text-white font-label-bold text-label-bold py-4 rounded-xl uppercase tracking-widest hover:bg-primary-container active:scale-95 transition-all shadow-lg">
+                        إتمام الشراء
+                    </button>
+<div class="mt-6 flex flex-col gap-4">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary-container" data-icon="local_shipping">local_shipping</span>
+<span class="font-body-sm text-body-sm">توصيل سريع خلال 2-3 أيام عمل</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary-container" data-icon="verified_user">verified_user</span>
+<span class="font-body-sm text-body-sm">دفع آمن 100%</span>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-high border-t border-outline-variant full-width">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-container-margin py-section-gap max-w-7xl mx-auto">
+<div class="mb-6 md:mb-0">
+<span class="font-headline-md text-headline-md text-on-surface">Sole &amp; Style</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">© 2024 Sole &amp; Style. All rights reserved.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">About Us</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Shipping &amp; Returns</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Privacy Policy</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Contact</a>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions for quantity selectors
+        document.querySelectorAll('.bg-surface-container-low button').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const span = e.target.parentElement.querySelector('span');
+                let val = parseInt(span.innerText);
+                if (e.target.innerText === '+') {
+                    span.innerText = val + 1;
+                } else if (val > 1) {
+                    span.innerText = val - 1;
+                }
+            });
+        });
+    </script>
+</body></html>
