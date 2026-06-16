@@ -1,0 +1,18 @@
+import express from "express";
+import CreateProduct from "./routers/CreateProduct.routes.js";
+import DeleteProduct from "./routers/DeleteProduct.routes.js";
+import GetAllProducts from "./routers/GetAllProducts.routes.js";
+import GetProductByID from "./routers/GetProductByID.routes.js";
+import SearchWithFilters from "./routers/SearchWithFilters.routes.js";
+import UpdateProduct from "./routers/UpdateProduct.routes.js";
+import ActiveProductByID from "./routers/ActiveProductByID.routes.js";
+const product = express.Router();
+product.use("/", CreateProduct);
+product.use("/", DeleteProduct);
+product.use("/", GetProductByID);
+product.use("/", UpdateProduct);
+product.use("/active", ActiveProductByID);
+const products = express.Router();
+products.use("/", GetAllProducts);
+products.use("/filter", SearchWithFilters);
+export { product, products };

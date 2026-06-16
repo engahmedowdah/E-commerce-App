@@ -1,0 +1,33 @@
+.sidebar-card {
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: all 0.8s ease;
+    border-left: 4px solid transparent;
+}
+.sidebar-card-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.sidebar-card-header img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.5;
+    transition: all 0.2s ease;
+}
+.sidebar-card:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+.sidebar-card-text {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6b7280;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+.sidebar-card:hover .sidebar-card-text {
+    color: #111827;
+}

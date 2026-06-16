@@ -1,0 +1,18 @@
+import express from "express";
+import CreateCollection from "./routers/CreateCollection.routes.js";
+import DeleteCollection from "./routers/DeleteCollection.routes.js";
+import GetAllCollections from "./routers/GetAllCollections.routes.js";
+import GetCollectionByID from "./routers/GetCollectionByID.routes.js";
+import GetCollectionBySlug from "./routers/GetCollectionBySlug.routes.js";
+import UpdateCollection from "./routers/UpdateCollection.routes.js";
+import ActiveCollectionByID from "./routers/ActiveCollectionByID.routes.js";
+const collection = express.Router();
+collection.use("/", CreateCollection);
+collection.use("/", DeleteCollection);
+collection.use("/slug", GetCollectionBySlug);
+collection.use("/", UpdateCollection);
+collection.use("/active", ActiveCollectionByID);
+collection.use("/", GetCollectionByID);
+const collections = express.Router();
+collections.use("/", GetAllCollections);
+export { collection, collections };

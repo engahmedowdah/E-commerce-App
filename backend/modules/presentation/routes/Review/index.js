@@ -1,0 +1,12 @@
+import express from "express";
+import CreateReview from "./routers/CreateReview.routes.js";
+import DeleteReview from "./routers/DeleteReview.routes.js";
+import GetProductReviewsByProductID from "./routers/GetProductReviewsByProductID.routes.js";
+import GetReviewByID from "./routers/GetReviewByID.routes.js";
+const review = express.Router();
+review.use("/", CreateReview);
+review.use("/", DeleteReview);
+review.use("/", GetReviewByID);
+const reviews = express.Router();
+reviews.use("/", GetProductReviewsByProductID);
+export { review, reviews };

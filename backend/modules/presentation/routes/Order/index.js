@@ -1,0 +1,14 @@
+import express from "express";
+import CreateOrder from "./routers/CreateOrder.routes.js";
+import GetAllOrders from "./routers/GetAllOrders.routes.js";
+import GetOrderByID from "./routers/GetOrderByID.routes.js";
+import GetOrdersHistory from "./routers/GetOrdersHistory.routes.js";
+import UpdateOrder from "./routers/UpdateOrder.routes.js";
+const order = express.Router();
+order.use("/", CreateOrder);
+order.use("/", GetOrderByID);
+order.use("/", UpdateOrder);
+order.use("/history", GetOrdersHistory);
+const orders = express.Router();
+orders.use("/", GetAllOrders);
+export { order, orders };

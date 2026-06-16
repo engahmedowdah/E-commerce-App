@@ -1,0 +1,14 @@
+import express from "express";
+import CreatePayment from "./routers/CreatePayment.routes.js";
+import GetPaymentByID from "./routers/GetPaymentByID.routes.js";
+import GetAllPayments from "./routers/GetAllPayments.routes.js";
+import GetAllPaymentsByUserID from "./routers/GetAllPaymentsByUserID.routes.js";
+import UpdatePayment from "./routers/UpdatePayment.routes.js";
+const payment = express.Router();
+payment.use("/", CreatePayment);
+payment.use("/", GetPaymentByID);
+payment.use("/", UpdatePayment);
+const payments = express.Router();
+payments.use("/", GetAllPayments);
+payments.use("/user", GetAllPaymentsByUserID);
+export { payment, payments };

@@ -1,0 +1,16 @@
+import express from "express";
+import AddItemToCart from "./routers/AddItemToCart.routes.js";
+import GetCartByUserID from "./routers/GetCartByUserID.routes.js";
+import DeleteItemFromCart from "./routers/DeleteItemFromCart.routes.js";
+import UpdateItemQuantity from "./routers/UpdateItemQuantity.routes.js";
+import DeleteItemsFromCart from "./routers/DeleteItemsFromCart.routes.js";
+import GetAllCarts from "./routers/GetAllCarts.routes.js";
+const cart = express.Router();
+cart.use("/", AddItemToCart);
+cart.use("/", GetCartByUserID);
+cart.use("/", DeleteItemFromCart);
+cart.use("/", UpdateItemQuantity);
+cart.use("/clear", DeleteItemsFromCart);
+const carts = express.Router();
+carts.use("/", GetAllCarts);
+export { cart, carts };

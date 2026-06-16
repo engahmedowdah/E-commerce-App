@@ -1,0 +1,18 @@
+import express from "express";
+import CreateCountry from "./routers/CreateCountry.routes.js";
+import DeleteCountry from "./routers/DeleteCountry.routes.js";
+import GetAllCountries from "./routers/GetAllCountries.routes.js";
+import GetCountryByID from "./routers/GetCountryByID.routes.js";
+import GetCountryBySlug from "./routers/GetCountryBySlug.routes.js";
+import UpdateCountry from "./routers/UpdateCountry.routes.js";
+import ActiveCountryByID from "./routers/ActiveCountryByID.routes.js";
+const country = express.Router();
+country.use("/", CreateCountry);
+country.use("/", DeleteCountry);
+country.use("/slug", GetCountryBySlug);
+country.use("/", UpdateCountry);
+country.use("/active", ActiveCountryByID);
+country.use("/", GetCountryByID);
+const countries = express.Router();
+countries.use("/", GetAllCountries);
+export { country, countries };

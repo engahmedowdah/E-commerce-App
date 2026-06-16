@@ -1,0 +1,16 @@
+import express from "express";
+import UploadProductImage from "./routers/UploadProductImage.routes.js";
+import UploadUserLogo from "./routers/UploadUserLogo.routes.js";
+import ChangeImage from "./routers/ChangeImage.routes.js";
+import GetImageByID from "./routers/GetImageByID.routes.js";
+import GetImagesByProductID from "./routers/GetImagesByProductID.routes.js";
+import DeleteImage from "./routers/DeleteImage.routes.js";
+const image = express.Router();
+image.use("/user", UploadUserLogo);
+image.use("/change", ChangeImage);
+image.use("/", GetImageByID);
+image.use("/", DeleteImage);
+const images = express.Router();
+images.use("/product", UploadProductImage);
+images.use("/product", GetImagesByProductID);
+export { image, images };

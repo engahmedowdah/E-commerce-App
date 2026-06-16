@@ -1,0 +1,16 @@
+import express from "express";
+import CreatePermission from "./routers/CreatePermission.routes.js";
+import DeletePermission from "./routers/DeletePermission.routes.js";
+import GetAllPermissions from "./routers/GetAllPermissions.routes.js";
+import GetPermissionByID from "./routers/GetPermissionByID.routes.js";
+import UpdatePermission from "./routers/UpdatePermission.routes.js";
+import ActivePermissionByID from "./routers/ActivePermissionByID.routes.js";
+const permission = express.Router();
+permission.use("/", CreatePermission);
+permission.use("/", DeletePermission);
+permission.use("/", GetPermissionByID);
+permission.use("/", UpdatePermission);
+permission.use("/active", ActivePermissionByID);
+const permissions = express.Router();
+permissions.use("/", GetAllPermissions);
+export { permission, permissions };

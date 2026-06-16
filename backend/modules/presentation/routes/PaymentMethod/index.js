@@ -1,0 +1,16 @@
+import express from "express";
+import CreatePaymentMethod from "./routers/CreatePaymentMethod.routes.js";
+import DeletePaymentMethod from "./routers/DeletePaymentMethod.routes.js";
+import GetAllPaymentMethods from "./routers/GetAllPaymentMethods.routes.js";
+import GetPaymentMethodByID from "./routers/GetPaymentMethodByID.routes.js";
+import UpdatePaymentMethod from "./routers/UpdatePaymentMethod.routes.js";
+import ActivePaymentMethodByID from "./routers/ActivePaymentMethodByID.routes.js";
+const payment_method = express.Router();
+payment_method.use("/", CreatePaymentMethod);
+payment_method.use("/", DeletePaymentMethod);
+payment_method.use("/", GetPaymentMethodByID);
+payment_method.use("/", UpdatePaymentMethod);
+payment_method.use("/active", ActivePaymentMethodByID);
+const payment_methods = express.Router();
+payment_methods.use("/", GetAllPaymentMethods);
+export { payment_method, payment_methods };

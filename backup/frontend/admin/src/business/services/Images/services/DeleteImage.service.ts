@@ -1,0 +1,7 @@
+import type { IImage } from "../../../../shared/types/Image/IImage.types";
+import connect from "../../connect";
+const DeleteImage: ({ ImageID }: { ImageID: string }) => Promise<IImage> = async ({ ImageID }: { ImageID: string }) => {
+    const response: IImage = await connect.del({ endpoint: `/image`, body: { ImageID: ImageID } }) as IImage;
+    return response;
+};
+export default DeleteImage;
